@@ -1,0 +1,1673 @@
+Key,Title,Description,"Details(comments, project, dictionary)",Expert Estimate,Logged Time
+AEROGEAR-4331,Investigate Dagger2.0 integration for SDK services,"Investigate how to configure and use dagger2 to:
+- Propagate core services
+- Use core module in all services
+h4. Expected results
+Dagger should be configured for the project.
+Example dependency for core service should be implemented (logger,network)
+Example for using core dependency in service should be implemented
+","[comments]
+wtrocki$*$h4. Update
+Created alternative approach that is using Dagger like provider interface but without dagger:
+https://github.com/aerogear/aerogear-android-sdk/pull/10
+wtrocki$*$h4. Update
+I have done research for the work. Currently our SDK is implementing similar approach to Dagger2. 
+I posted some attempts to spike it as part of:
+https://github.com/secondsun/aerogear-android-sdk/pull/1
+Alternative, in-house option is done as part of the
+https://github.com/aerogear/aerogear-android-sdk/pull/2
+h4. Moving to dagger
+TL;DR - My take here is that dagger is perfect for end user application but not flexible choice for library.  
+Moving to dagger is not possible and will not provide any benefit.
+- Library is designed where injectors need to connected with providers on top level application.
+This will complicate user api as they will need to provide local bindings. 
+In our case this will be so cumbersome and will just overcomplicate our end user API.
+- Unable to provide Dagger Components on runtime complicates setup.
+Integration is done on compilation level. I could not manage to get that running with the library aproach where we mixing compiled libraries with source code providers.
+- current solution will require some refactoring to get that and this may interfere with current work we doing. 
+h4. Proposed solution
+While I do not recommend dagger I would like to spike Interface based aproach. 
+This will be alternative that will simplify user setup to something like this:
+https://gist.github.com/wtrocki/5774f883a9a2ae0b33c5aa63986cae45
+[project_info]
+Mobile Services AeroGear is an open-source, Red Hat project that brings security and development expertise to cross-platform enterprise mobile development. It is a coding platform that simplifies mobile development and cross-platform infrastructure setup.
+[terms_def]
+SDK$*$A software development kit is typically a set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform.
+Dagger$*$Dagger is a fully static, compile-time dependency injection framework for both Java and Android. It is an adaptation of an earlier version created by Square and now maintained by Google. Dagger aims to address many of the development and performance issues that have plagued reflection-based solutions.
+",57600,28800
+AMBARI-24426,[Log Search UI] Show user friendly component names in Log Index Filter screen,"Show the user friendly component names on the screen of the Log Index Filter, where the filter level can be set up.","[comments]
+hudson$*$SUCCESS: Integrated in Jenkins build Ambari-branch-2.7 #202 (See [https://builds.apache.org/job/Ambari-branch-2.7/202/])
+[AMBARI-24426] [Log Search UI] Show user friendly component names in Log (github: [https://gitbox.apache.org/repos/asf?p=ambari.git&a=commit&h=715ccd2369623ebd23519ca216d42a58445592b4])
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/components/log-index-filter/log-index-filter.component.html
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/modules/shared/components/dropdown-list/dropdown-list.component.ts
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/components/log-index-filter/log-index-filter.component.spec.ts
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/modules/shared/components/dropdown-button/dropdown-button.component.less
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/components/log-index-filter/log-index-filter.component.ts
+hudson$*$FAILURE: Integrated in Jenkins build Ambari-trunk-Commit #9892 (See [https://builds.apache.org/job/Ambari-trunk-Commit/9892/])
+[AMBARI-24426] [Log Search UI] Show user friendly component names in Log (github: [https://gitbox.apache.org/repos/asf?p=ambari.git&a=commit&h=872494eade848cad09eef7c81997a43bdce9b34c])
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/components/log-index-filter/log-index-filter.component.spec.ts
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/modules/shared/components/dropdown-button/dropdown-button.component.less
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/components/log-index-filter/log-index-filter.component.html
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/modules/shared/components/dropdown-list/dropdown-list.component.ts
+* (edit) ambari-logsearch/ambari-logsearch-web/src/app/components/log-index-filter/log-index-filter.component.ts
+[project_info]
+Ambari is a monitoring, administration and lifecycle management project for Apache Hadoop clusters. What is Apache Ambari? - Definition from Techopedia. Ambari offers software tools for provisioning and managing Hadoop data clusters
+. Along with other data tools, Ambari helps to support the effective use of ...
+[terms_def]
+UI$*$The user interface, in the industrial design field of human–computer interaction, is the space where interactions between humans and machines occur.
+",21600,3600
+GORA-622,maven-assemly-plugin complains that group id is too big and fails build on macOS Mojave 10.14.6 (18G87),"Building Gora branch under system detailed in the environment, I experience very similar results to what is described at OPENNLP-998
+Pull request coming up to upgrade the maven-assemly-plugin and then specify posix","[comments]
+djkevincr$*$[~lewismc] Thank you for addressing this issue.
+hudson$*$SUCCESS: Integrated in Jenkins build gora-trunk #1808 (See [https://builds.apache.org/job/gora-trunk/1808/])
+GORA-622 maven-assemly-plugin complains that group id is too big and (lewis.mcgibbney: rev 9975533547c7d2c15f454faf21d28f2a0a24dd58)
+* (edit) pom.xml
+[project_info]
+The Apache Gora™ open source framework provides an in-memory data model and persistence for big data. Gora supports persisting to column stores, key value stores, document stores, distributed in-memory key/value stores, in-memory data grids, in-memory caches, distributed multi-model stores, and hybrid in-memory architectures. Gora also enables analysis of data with extensive Apache Hadoop MapReduce and Apache Spark support. The Apache Gora™ open source framework provides an in-memory data model and persistence for big data. Gora supports persisting to column stores, key value stores, document stores, distributed in-memory key/value stores, in-memory data grids, in-memory caches, distributed multi-model stores, and hybrid in-memory architectures.
+[terms_def]
+Mojave$*$macOS Mojave is the fifteenth major release of macOS, Apple Inc.'s desktop operating system for Macintosh computers. Mojave was announced at Apple's Worldwide Developers Conference on June 4, 2018, and was released to the public on September 24, 2018.
+Gora$*$The Apache Gora™ open source framework provides an in-memory data model and persistence for big data. Gora supports persisting to column stores, key value stores, document stores, distributed in-memory key/value stores, in-memory data grids, in-memory caches, distributed multi-model stores, and hybrid in-memory architectures.
+OPENNLP$*$Apache OpenNLP is an open source Natural Language Processing Java library. It features an API for use cases like Named Entity Recognition, Sentence Detection, POS tagging and Tokenization.
+",3600,1800
+AMBARI-24551,[Log Search UI] get rid of redundant requests after undoing or redoing several history steps,"After undoing or redoing more than one history items several redundant API requests are sent. This occurs because changes for several filter controls are applied step-by-step, and each control change generates new request.","[comments]
+githubbot$*$aBabiichuk commented on a change in pull request #5: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
+URL: https://github.com/apache/ambari-logsearch/pull/5#discussion_r223692185
+##########
+File path: ambari-logsearch-web/src/app/services/history-manager.service.ts
+##########
+@@ -209,18 +190,14 @@ export class HistoryManagerService {
+* @returns {ListItem[]}
+*/
+get redoItems(): ListItem[] {
+-    const allItems = this.activeHistory.slice().reverse();
++    const allItems = [...this.activeHistory].reverse();
+let startIndex = allItems.findIndex((item: ListItem): boolean => {
+-        return item.value.previousChangeId === this.currentHistoryItemId && !item.value.isUndoOrRedo;
+-      }),
+-      endIndex = allItems.slice(startIndex + 1).findIndex((item: ListItem): boolean => item.value.isUndoOrRedo);
++      return item.value.previousChangeId === this.currentHistoryItemId;
++    });
+if (startIndex === -1) {
+startIndex = allItems.length;
+}
+-    if (endIndex === -1) {
+Review comment:
+This isUndoOrRedo/endIndex logic shouldn't be removed here. It's needed to handle the situation when after some undoing/redoing user goes on with non-historical filters changes, so there's nothing to redo. Sorry for my omission in previous comment.
+P.S. Getting rid of hasNoPendingUndoOrRedo looks OK to me.
+----------------------------------------------------------------
+This is an automated message from the Apache Git Service.
+To respond to the message, please log on GitHub and use the
+URL above to go to the specific comment.
+For queries about this service, please contact Infrastructure at:
+users@infra.apache.org
+githubbot$*$aBabiichuk commented on a change in pull request #5: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
+URL: https://github.com/apache/ambari-logsearch/pull/5#discussion_r233022631
+##########
+File path: ambari-logsearch-web/src/app/components/action-menu/action-menu.component.ts
+##########
+@@ -74,27 +72,13 @@ export class ActionMenuComponent  implements OnInit, OnDestroy {
+}
+ngOnInit() {
+-    this.subscriptions.push(
+-      this.selectedClusterName$.subscribe(
+-        (clusterName: string) => this.setModalSubmitDisabled(!(!!clusterName))
+-      )
++    this.selectedClusterName$.takeUntil(this.destroyed$).subscribe(
++      (clusterName: string) => this.setModalSubmitDisabled(!(!!clusterName))
+Review comment:
+Why not just `setModalSubmitDisabled(!clusterName)`?
+----------------------------------------------------------------
+This is an automated message from the Apache Git Service.
+To respond to the message, please log on GitHub and use the
+URL above to go to the specific comment.
+For queries about this service, please contact Infrastructure at:
+users@infra.apache.org
+githubbot$*$asfgit commented on issue #22: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
+URL: https://github.com/apache/ambari-logsearch/pull/22#issuecomment-438305725
+Refer to this link for build results (access rights to CI server needed): 
+https://builds.apache.org/job/Ambari-LogSearch-Github-PR-Builder/45/
+Test PASSed.
+----------------------------------------------------------------
+This is an automated message from the Apache Git Service.
+To respond to the message, please log on GitHub and use the
+URL above to go to the specific comment.
+For queries about this service, please contact Infrastructure at:
+users@infra.apache.org
+githubbot$*$asfgit commented on issue #5: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
+URL: https://github.com/apache/ambari-logsearch/pull/5#issuecomment-437946148
+Refer to this link for build results (access rights to CI server needed): 
+https://builds.apache.org/job/Ambari-LogSearch-Github-PR-Builder/39/
+Test FAILed.
+Test FAILured.
+----------------------------------------------------------------
+This is an automated message from the Apache Git Service.
+To respond to the message, please log on GitHub and use the
+URL above to go to the specific comment.
+For queries about this service, please contact Infrastructure at:
+users@infra.apache.org
+githubbot$*$aBabiichuk commented on a change in pull request #5: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
+URL: https://github.com/apache/ambari-logsearch/pull/5#discussion_r223692185
+##########
+File path: ambari-logsearch-web/src/app/services/history-manager.service.ts
+##########
+@@ -209,18 +190,14 @@ export class HistoryManagerService {
+* @returns {ListItem[]}
+*/
+get redoItems(): ListItem[] {
+-    const allItems = this.activeHistory.slice().reverse();
++    const allItems = [...this.activeHistory].reverse();
+let startIndex = allItems.findIndex((item: ListItem): boolean => {
+-        return item.value.previousChangeId === this.currentHistoryItemId && !item.value.isUndoOrRedo;
+-      }),
+-      endIndex = allItems.slice(startIndex + 1).findIndex((item: ListItem): boolean => item.value.isUndoOrRedo);
++      return item.value.previousChangeId === this.currentHistoryItemId;
++    });
+if (startIndex === -1) {
+startIndex = allItems.length;
+}
+-    if (endIndex === -1) {
+Review comment:
+This `isUndoOrRedo`/`endIndex` logic shouldn't be removed here. It's needed to handle the situation when after some undoing/redoing user goes on with non-historical filters changes, so there's nothing to redo. Sorry for my omission in previous comment.
+P.S. Getting rid of `hasNoPendingUndoOrRedo` looks OK to me.
+----------------------------------------------------------------
+This is an automated message from the Apache Git Service.
+To respond to the message, please log on GitHub and use the
+URL above to go to the specific comment.
+For queries about this service, please contact Infrastructure at:
+users@infra.apache.org
+githubbot$*$tobias-istvan opened a new pull request #5: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
+URL: https://github.com/apache/ambari-logsearch/pull/5
+# What changes were proposed in this pull request?
+We can prevent extra calls by using the `LogsContainerService` `resetFiltersForms` method.
+## How was this patch tested?
+It was tested manually checking the Network tab in dev tools and by running unit tests:
+```
+PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 269 of 269 SUCCESS (9.276 secs / 9.178 secs)
+?  Done in 35.58s.
+```
+Please review [Ambari Contributing Guide](https://cwiki.apache.org/confluence/display/AMBARI/How+to+Contribute) before opening a pull request.
+----------------------------------------------------------------
+This is an automated message from the Apache Git Service.
+To respond to the message, please log on GitHub and use the
+URL above to go to the specific comment.
+For queries about this service, please contact Infrastructure at:
+users@infra.apache.org
+githubbot$*$asfgit commented on issue #5: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
+URL: https://github.com/apache/ambari-logsearch/pull/5#issuecomment-438263607
+Refer to this link for build results (access rights to CI server needed): 
+https://builds.apache.org/job/Ambari-LogSearch-Github-PR-Builder/44/
+Test PASSed.
+----------------------------------------------------------------
+This is an automated message from the Apache Git Service.
+To respond to the message, please log on GitHub and use the
+URL above to go to the specific comment.
+For queries about this service, please contact Infrastructure at:
+users@infra.apache.org
+oleewere$*$as minor issue, moving it out to 2.8
+githubbot$*$tobias-istvan closed pull request #22: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
+URL: https://github.com/apache/ambari-logsearch/pull/22
+This is a PR merged from a forked repository.
+As GitHub hides the original diff on merge, it is displayed below for
+the sake of provenance:
+As this is a foreign pull request (from a fork), the diff is supplied
+below (as it won't show otherwise due to GitHub magic):
+diff --git a/ambari-logsearch-web/src/app/app-routing.module.ts b/ambari-logsearch-web/src/app/app-routing.module.ts
+index a55e51a81f..5c8c4a1c19 100644
+--- a/ambari-logsearch-web/src/app/app-routing.module.ts
++++ b/ambari-logsearch-web/src/app/app-routing.module.ts
+@@ -16,14 +16,15 @@
+* limitations under the License.
+*/
+-import {NgModule} from '@angular/core';
+-import {RouterModule, Routes} from '@angular/router';
+-import {LogsContainerComponent} from '@app/components/logs-container/logs-container.component';
+-import {LoginFormComponent} from '@app/components/login-form/login-form.component';
+-import {AuthGuardService} from '@app/services/auth-guard.service';
+-import {TabGuard} from '@app/services/tab.guard';
+-import {LogsBreadcrumbsResolverService} from '@app/services/logs-breadcrumbs-resolver.service';
+-import {LoginScreenGuardService} from '@app/services/login-screen-guard.service';
++import { NgModule } from '@angular/core';
++import { RouterModule, Routes } from '@angular/router';
++import { LogsContainerComponent } from '@app/components/logs-container/logs-container.component';
++import { LoginFormComponent } from '@app/components/login-form/login-form.component';
++import { AuthGuardService } from '@app/services/auth-guard.service';
++import { TabGuard } from '@app/services/tab.guard';
++import { FilterHistoryIndexGuard } from '@app/services/filter-history.guard';
++import { LogsBreadcrumbsResolverService } from '@app/services/logs-breadcrumbs-resolver.service';
++import { LoginScreenGuardService } from '@app/services/login-screen-guard.service';
+const appRoutes: Routes = [{
+path: 'login',
+@@ -43,7 +44,7 @@ const appRoutes: Routes = [{
+resolve: {
+breadcrumbs: LogsBreadcrumbsResolverService
+},
+-    canActivate: [AuthGuardService, TabGuard]
++    canActivate: [AuthGuardService, TabGuard, FilterHistoryIndexGuard]
+}, {
+path: 'logs',
+redirectTo: '/logs/serviceLogs',
+diff --git a/ambari-logsearch-web/src/app/app.module.ts b/ambari-logsearch-web/src/app/app.module.ts
+index 097bf04402..9026f67c07 100644
+--- a/ambari-logsearch-web/src/app/app.module.ts
++++ b/ambari-logsearch-web/src/app/app.module.ts
+@@ -59,7 +59,6 @@ import {ServiceLogsFieldsService} from '@app/services/storage/service-logs-field
+import {AuditLogsFieldsService} from '@app/services/storage/audit-logs-fields.service';
+import {TabsService} from '@app/services/storage/tabs.service';
+import {AuthService} from '@app/services/auth.service';
+-import {HistoryManagerService} from '@app/services/history-manager.service';
+import {reducer} from '@app/services/storage/reducers.service';
+import {AppComponent} from '@app/components/app.component';
+@@ -109,6 +108,7 @@ import {ClusterSelectionService} from '@app/services/storage/cluster-selection.s
+import {TranslateService as AppTranslateService} from '@app/services/translate.service';
+import {RoutingUtilsService} from '@app/services/routing-utils.service';
+import {TabGuard} from '@app/services/tab.guard';
++import {FilterHistoryIndexGuard} from '@app/services/filter-history.guard';
+import {LogsBreadcrumbsResolverService} from '@app/services/logs-breadcrumbs-resolver.service';
+import {LogsFilteringUtilsService} from '@app/services/logs-filtering-utils.service';
+import {LogsStateService} from '@app/services/storage/logs-state.service';
+@@ -116,6 +116,7 @@ import {LoginScreenGuardService} from '@app/services/login-screen-guard.service'
+import { AuthEffects } from '@app/store/effects/auth.effects';
+import { NotificationEffects } from '@app/store/effects/notification.effects';
++import { FilterHistoryManagerComponent } from './components/filter-history-manager/filter-history-manager.component';
+@NgModule({
+declarations: [
+@@ -158,7 +159,8 @@ import { NotificationEffects } from '@app/store/effects/notification.effects';
+TimerSecondsPipe,
+ComponentLabelPipe,
+BreadcrumbsComponent,
+-    ClusterFilterComponent
++    ClusterFilterComponent,
++    FilterHistoryManagerComponent
+],
+imports: [
+BrowserModule,
+@@ -217,10 +219,10 @@ import { NotificationEffects } from '@app/store/effects/notification.effects';
+AuditLogsFieldsService,
+TabsService,
+TabGuard,
++    FilterHistoryIndexGuard,
+LogsBreadcrumbsResolverService,
+AuthService,
+AuthGuardService,
+-    HistoryManagerService,
+ClusterSelectionService,
+LogsFilteringUtilsService,
+LogsStateService,
+diff --git a/ambari-logsearch-web/src/app/classes/models/filter-url-param-change.interface.ts b/ambari-logsearch-web/src/app/classes/models/filter-url-param-change.interface.ts
+new file mode 100644
+index 0000000000..2428fc0da6
+--- /dev/null
++++ b/ambari-logsearch-web/src/app/classes/models/filter-url-param-change.interface.ts
+@@ -0,0 +1,23 @@
++/**
++ * Licensed to the Apache Software Foundation (ASF) under one
++ * or more contributor license agreements.  See the NOTICE file
++ * distributed with this work for additional information
++ * regarding copyright ownership.  The ASF licenses this file
++ * to you under the Apache License, Version 2.0 (the
++ * ""License""); you may not use this file except in compliance
++ * with the License.  You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an ""AS IS"" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++export interface FilterUrlParamChange {
++  previousPath?: string | null;
++  currentPath: string;
++  time?: Date;
++}
+diff --git a/ambari-logsearch-web/src/app/classes/models/store.ts b/ambari-logsearch-web/src/app/classes/models/store.ts
+index f106b17a2b..3811de1e48 100644
+--- a/ambari-logsearch-web/src/app/classes/models/store.ts
++++ b/ambari-logsearch-web/src/app/classes/models/store.ts
+@@ -35,6 +35,7 @@ import { LogsState } from '@app/classes/models/logs-state';
+import { DataAvaibilityStatesModel } from '@app/modules/app-load/models/data-availability-state.model';
+import * as auth from '@app/store/reducers/auth.reducers';
++import * as filterHistory from '@app/store/reducers/filter-history.reducers';
+const storeActions = {
+'ARRAY.ADD': 'ADD',
+@@ -71,6 +72,7 @@ export interface AppStore {
+logsState: LogsState;
+dataAvailabilityStates: DataAvaibilityStatesModel;
+auth: auth.State;
++  filterHistory: filterHistory.FilterHistoryState;
+}
+export class ModelService {
+diff --git a/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.html b/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.html
+index e64a89c8c1..f8c65de82c 100644
+--- a/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.html
++++ b/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.html
+@@ -14,19 +14,7 @@
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+-
+-<!-- TODO use listClass=""history-dropdown"" for custom styling -->
+-<menu-button label=""{{'topMenu.undo' | translate}}"" [subItems]=""undoItems"" iconClass=""fa fa-arrow-left""
+-             class=""history-menu"" [class.disabled]=""!undoItems.length"" [isDisabled]=""!undoItems.length""
+-             listClass=""history-dropdown"" (buttonClick)=""undoLatest()"" (selectItem)=""undo($event)"">
+-</menu-button>
+-<menu-button label=""{{'topMenu.redo' | translate}}"" [subItems]=""redoItems"" iconClass=""fa fa-arrow-right""
+-             class=""history-menu"" [class.disabled]=""!redoItems.length"" [isDisabled]=""!redoItems.length""
+-             listClass=""history-dropdown"" (buttonClick)=""redoLatest()"" (selectItem)=""redo($event)"">
+-</menu-button>
+-<menu-button label=""{{'topMenu.history' | translate}}"" [subItems]=""historyItems"" iconClass=""fa fa-history""
+-             class=""history-menu"" [class.disabled]=""!historyItems.length"" [isDisabled]=""!historyItems.length""
+-             listClass=""history-dropdown"" [isRightAlign]=""true""></menu-button>
++<filter-history-manager></filter-history-manager>
+<menu-button label=""{{'topMenu.filter' | translate}}"" iconClass=""fa fa-filter""
+(buttonClick)=""openLogIndexFilter()""></menu-button>
+<menu-button *ngIf=""!captureSeconds"" label=""{{'filter.capture' | translate}}"" iconClass=""fa fa-caret-right""
+diff --git a/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.less b/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.less
+index a8c6e05d61..db9a86bc2b 100644
+--- a/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.less
++++ b/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.less
+@@ -19,81 +19,11 @@
+:host {
+display: block;
+-  menu-button {
++  /deep/ menu-button {
+margin: 0 1em;
+/deep/ .stop-icon {
+color: @exclude-color;
+}
+-    &.history-menu {
+-      /deep/ ul {
+-        li:not(.selection-all) {
+-          margin: 0;
+-          overflow: hidden;
+-          position: relative;
+-          transition: background-color 300ms ease-in, opacity 300ms ease-in, height 100ms 400ms ease-in;
+-          &:before {
+-            border-left: 1px solid darken(@unknown-color, 25%);
+-            bottom: 0;
+-            content: """";
+-            display: block;
+-            left: 12px;
+-            position: absolute;
+-            top: 0;
+-          }
+-          &:after {
+-            background: #fff;
+-            border: 1px solid darken(@unknown-color, 25%);
+-            border-radius: 100%;
+-            content: """";
+-            height: 12px;
+-            left: 7px;
+-            position: absolute;
+-            top: 6px;
+-            transition: background-color 300ms;
+-            width: 12px;
+-          }
+-
+-          .list-item-label.label-container {
+-            border-radius: 3px;
+-            display: flex;
+-            margin: 0 3px 0 25px;
+-            padding: 3px 25px 3px 1em;
+-            .item-label-text {
+-              flex-grow: 1;
+-              padding-right: 1em;
+-            }
+-            /deep/ history-item-controls {
+-              float: none;
+-              justify-self: right;
+-            }
+-          }
+-
+-          &.active > a, &:hover {
+-            color: #262626;
+-            text-decoration: none;
+-            background-color: transparent;
+-            .list-item-label.label-container {
+-              background-color: #f5f5f5;
+-            }
+-          }
+-        }
+-        li:not(.selection-all):first-child {
+-          &:before {
+-            top: 50%;
+-          }
+-        }
+-        li:not(.selection-all):last-child {
+-          &:before {
+-            bottom: 50%;
+-          }
+-        }
+-        li:not(.selection-all):hover {
+-          &:after {
+-            background: @unknown-color;
+-          }
+-        }
+-      }
+-    }
+}
+/deep/ .modal-body {
+min-height: 25vh;
+diff --git a/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.ts b/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.ts
+index 46a0a765bf..721ae93d74 100644
+--- a/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.ts
++++ b/ambari-logsearch-web/src/app/components/action-menu/action-menu.component.ts
+@@ -22,14 +22,13 @@ import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+-import { Subscription } from 'rxjs/Subscription';
+import { LogsContainerService } from '@app/services/logs-container.service';
+-import { HistoryManagerService } from '@app/services/history-manager.service';
+import { UserSettingsService } from '@app/services/user-settings.service';
+import { ListItem } from '@app/classes/list-item';
+import { ClustersService } from '@app/services/storage/clusters.service';
+import { UtilsService } from '@app/services/utils.service';
++import { Subject } from 'rxjs/Subject';
+@Component({
+selector: 'action-menu',
+@@ -60,11 +59,10 @@ export class ActionMenuComponent  implements OnInit, OnDestroy {
+selectedClusterName$: BehaviorSubject<string> = new BehaviorSubject('');
+-  subscriptions: Subscription[] = [];
++  destroyed$ = new Subject();
+constructor(
+private logsContainerService: LogsContainerService,
+-    private historyManager: HistoryManagerService,
+private settings: UserSettingsService,
+private route: ActivatedRoute,
+private router: Router,
+@@ -74,27 +72,13 @@ export class ActionMenuComponent  implements OnInit, OnDestroy {
+}
+ngOnInit() {
+-    this.subscriptions.push(
+-      this.selectedClusterName$.subscribe(
+-        (clusterName: string) => this.setModalSubmitDisabled(!(!!clusterName))
+-      )
++    this.selectedClusterName$.takeUntil(this.destroyed$).subscribe(
++      (clusterName: string) => this.setModalSubmitDisabled(!clusterName)
+);
+}
+ngOnDestroy() {
+-    this.subscriptions.forEach((subscription: Subscription) => subscription.unsubscribe());
+-  }
+-
+-  get undoItems(): ListItem[] {
+-    return this.historyManager.undoItems;
+-  }
+-
+-  get redoItems(): ListItem[] {
+-    return this.historyManager.redoItems;
+-  }
+-
+-  get historyItems(): ListItem[] {
+-    return this.historyManager.activeHistory;
++    this.destroyed$.next(true);
+}
+get captureSeconds(): number {
+@@ -105,26 +89,6 @@ export class ActionMenuComponent  implements OnInit, OnDestroy {
+this.isModalSubmitDisabled = isDisabled;
+}
+-  undoLatest(): void {
+-    if (this.undoItems.length) {
+-      this.historyManager.undo(this.undoItems[0]);
+-    }
+-  }
+-
+-  redoLatest(): void {
+-    if (this.redoItems.length) {
+-      this.historyManager.redo(this.redoItems[0]);
+-    }
+-  }
+-
+-  undo(item: ListItem): void {
+-    this.historyManager.undo(item);
+-  }
+-
+-  redo(item: ListItem): void {
+-    this.historyManager.redo(item);
+-  }
+-
+refresh(): void {
+this.logsContainerService.loadLogs();
+}
+diff --git a/ambari-logsearch-web/src/app/components/app.component.html b/ambari-logsearch-web/src/app/components/app.component.html
+index 47d461b60f..f788ab760f 100644
+--- a/ambari-logsearch-web/src/app/components/app.component.html
++++ b/ambari-logsearch-web/src/app/components/app.component.html
+@@ -29,4 +29,8 @@ <h1>{{'common.title' | translate}}</h1>
+<main-container *ngIf=""!(isAuthorized$ | async) || (isBaseDataAvailable$ | async)""></main-container>
+<simple-notifications [options]=""notificationServiceOptions""></simple-notifications>
++  <div class=""request-indicator"" [class.open]=""httpClient.requestInProgress | async"">
++    <i class=""fa fa-spin fa-gear""></i>
++    {{ 'common.loading' | translate }}
++  </div>
+</ng-container>
+diff --git a/ambari-logsearch-web/src/app/components/app.component.less b/ambari-logsearch-web/src/app/components/app.component.less
+index 3e566719ed..5d51fa8340 100644
+--- a/ambari-logsearch-web/src/app/components/app.component.less
++++ b/ambari-logsearch-web/src/app/components/app.component.less
+@@ -66,4 +66,29 @@
+justify-content: center;
+margin: 1rem 0;
+}
++
++  .request-indicator {
++    background: rgba(255,255,255,.7);
++    top: calc(-1 * (3em + .3em));
++    color: @info-color;
++    left: 50%;
++    margin-left: auto;
++    margin-right: auto;
++    opacity: .7;
++    padding: .3em;
++    position: fixed;
++    transition: top 500ms ease-in-out;
++    transform: translateX(-50%);
++    z-index: 1200;
++    &.open {
++      top: 0;
++    }
++    // &:before {
++    //   .circle-spinner(1em, 2px, @info-color);
++    //   content: ' ';
++    //   display: inline-block;
++    //   line-height: 1.1em;
++    // }
++  }
++
+}
+diff --git a/ambari-logsearch-web/src/app/components/app.component.ts b/ambari-logsearch-web/src/app/components/app.component.ts
+index 68d220e464..1d6e29ef50 100644
+--- a/ambari-logsearch-web/src/app/components/app.component.ts
++++ b/ambari-logsearch-web/src/app/components/app.component.ts
+@@ -29,7 +29,9 @@ import { notificationIcons } from '@modules/shared/services/notification.service
+import { Store } from '@ngrx/store';
+import { AppStore } from '@app/classes/models/store';
+import { AuthorizationStatuses } from '@app/store/reducers/auth.reducers';
+-import { isAuthorizedSelector, authStatusSelector, isCheckingAuthStatusInProgressSelector } from '@app/store/selectors/auth.selectors';
++import { isAuthorizedSelector, selectAuthStatus, isCheckingAuthStatusInProgressSelector } from '@app/store/selectors/auth.selectors';
++
++import { HttpClientService } from '@app/services/http-client.service';
+@Component({
+selector: 'app-root',
+@@ -44,7 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
+authorizationStatuses = AuthorizationStatuses;
+isAuthorized$: Observable<boolean> = this.store.select(isAuthorizedSelector);
+-  authorizationStatus$: Observable<AuthorizationStatuses> = this.store.select(authStatusSelector);
++  authorizationStatus$: Observable<AuthorizationStatuses> = this.store.select(selectAuthStatus);
+isCheckingAuthStatusInProgress$: Observable<boolean> = this.store.select(isCheckingAuthStatusInProgressSelector);
+authorizationCode$: Observable<number> = this.appState.getParameter('authorizationCode');
+isBaseDataAvailable$: Observable<boolean> = this.appState.getParameter('baseDataSetState')
+@@ -66,6 +68,7 @@ export class AppComponent implements OnInit, OnDestroy {
+constructor(
+private appState: AppStateService,
++    public httpClient: HttpClientService,
+private store: Store<AppStore>
+) {}
+diff --git a/ambari-logsearch-web/src/app/components/cluster-filter/cluster-filter.component.ts b/ambari-logsearch-web/src/app/components/cluster-filter/cluster-filter.component.ts
+index 086160be17..391d1171f9 100644
+--- a/ambari-logsearch-web/src/app/components/cluster-filter/cluster-filter.component.ts
++++ b/ambari-logsearch-web/src/app/components/cluster-filter/cluster-filter.component.ts
+@@ -128,10 +128,10 @@ export class ClusterFilterComponent implements OnInit, OnDestroy {
+.filter((state: DataAvailabilityValues) => state === DataAvailabilityValues.AVAILABLE)
+.first()
+.subscribe(() => {
+-          this.filterDropdown.updateSelection(clusterSelection);
++          this.filterDropdown.writeValue(clusterSelection);
+});
+} else {
+-      this.filterDropdown.updateSelection(null);
++      this.filterDropdown.clearSelection();
+}
+}
+diff --git a/ambari-logsearch-web/src/app/components/filter-button/filter-button.component.ts b/ambari-logsearch-web/src/app/components/filter-button/filter-button.component.ts
+index af14925bd2..d6f24e5291 100644
+--- a/ambari-logsearch-web/src/app/components/filter-button/filter-button.component.ts
++++ b/ambari-logsearch-web/src/app/components/filter-button/filter-button.component.ts
+@@ -19,7 +19,6 @@
+import {Component, forwardRef} from '@angular/core';
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {ListItem} from '@app/classes/list-item';
+-import {UtilsService} from '@app/services/utils.service';
+import {MenuButtonComponent} from '@app/components/menu-button/menu-button.component';
+@Component({
+@@ -36,65 +35,23 @@ import {MenuButtonComponent} from '@app/components/menu-button/menu-button.compo
+})
+export class FilterButtonComponent extends MenuButtonComponent implements ControlValueAccessor {
+-  private selectedItems: ListItem[] = [];
+-
+private onChange: (fn: any) => void;
+-  constructor(private utils: UtilsService) {
+-    super();
+-  }
+-
+-  get selection(): ListItem[] {
+-    return this.selectedItems;
+-  }
+-
+-  set selection(items: ListItem[]) {
+-    this.selectedItems = items;
+-    if (this.onChange) {
+-      this.onChange(items);
++  updateSelection(items: ListItem | ListItem[], callOnChange = true): void {
++    super.updateSelection(items);
++    if (callOnChange) {
++      this._onChange(this.selection);
+}
+}
+-  updateSelection(updates: ListItem | ListItem[]): void {
+-    if (updates && (!Array.isArray(updates) || updates.length)) {
+-      const items: ListItem[] = Array.isArray(updates) ? updates : [updates];
+-      if (this.isMultipleChoice) {
+-        items.forEach((item: ListItem) => {
+-          if (this.subItems && this.subItems.length) {
+-            const itemToUpdate: ListItem = this.subItems.find((option: ListItem) => this.utils.isEqual(option.value, item.value));
+-            if (itemToUpdate) {
+-              itemToUpdate.isChecked = item.isChecked;
+-            }
+-          }
+-        });
+-      } else {
+-        const selectedItem: ListItem = items.find((item: ListItem) => item.isChecked);
+-        this.subItems.forEach((item: ListItem) => {
+-          item.isChecked = !!selectedItem && this.utils.isEqual(item.value, selectedItem.value);
+-        });
+-      }
+-    } else {
+-      this.subItems.forEach((item: ListItem) => item.isChecked = false);
+-    }
+-    const checkedItems = this.subItems.filter((option: ListItem): boolean => option.isChecked);
+-    this.selection = checkedItems;
+-    this.selectItem.emit(checkedItems.map((option: ListItem): any => option.value));
+-    if (this.dropdownList) {
+-      this.dropdownList.doItemsCheck();
++  private _onChange(value) {
++    if (this.onChange) {
++      this.onChange(value);
+}
+}
+writeValue(items: ListItem[]) {
+-    let listItems: ListItem[] = [];
+-    if (items && items.length) {
+-      listItems = items.map((item: ListItem) => {
+-        return {
+-          ...item,
+-          isChecked: true
+-        };
+-      });
+-    }
+-    this.updateSelection(listItems);
++    this.selection = items;
+}
+registerOnChange(callback: any): void {
+diff --git a/ambari-logsearch-web/src/app/components/filter-history-manager/filter-history-manager.component.html b/ambari-logsearch-web/src/app/components/filter-history-manager/filter-history-manager.component.html
+new file mode 100644
+index 0000000000..c34a46e5e2
+--- /dev/null
++++ b/ambari-logsearch-web/src/app/components/filter-history-manager/filter-history-manager.component.html
+@@ -0,0 +1,29 @@
++<!--
++  Licensed to the Apache Software Foundation (ASF) under one or more
++  contributor license agreements.  See the NOTICE file distributed with
++  this work for additional information regarding copyright ownership.
++  The ASF licenses this file to You under the Apache License, Version 2.0
++  (the ""License""); you may not use this file except in compliance with
++  the License.  You may obtain a copy of the License at
++
++      http://www.apache.org/licenses/LICENSE-2.0
++
++  Unless required by applicable law or agreed to in writing, software
++  distributed under the License is distributed on an ""AS IS"" BASIS,
++  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++  See the License for the specific language governing permissions and
++  limitations under the License.
++-->
++<menu-button label=""{{'topMenu.undo' | translate}}"" [subItems]=""activeUndoHistoryListItems$ | async"" iconClass=""fa fa-arrow-left""
++  class=""history-menu"" [class.disabled]=""!(hasActiveUndoHistoryItems$ | async)"" [isDisabled]=""!(hasActiveUndoHistoryItems$ | async)""
++  listClass=""history-dropdown"" [isRightAlign]=""true"" (buttonClick)=""undo()"" (selectItem)=""onListItemClick($event)"">
++</menu-button>
++
++<menu-button label=""{{'topMenu.redo' | translate}}"" [subItems]=""activeRedoHistoryListItems$ | async"" iconClass=""fa fa-arrow-right""
++  class=""history-menu"" [class.disabled]=""!(hasActiveRedoHistoryItems$ | async)"" [isDisabled]=""!(hasActiveRedoHistoryItems$ | async)""
++  listClass=""history-dropdown"" [isRightAlign]=""true"" (buttonClick)=""redo()"" (selectItem)=""onListItemClick($event)"">
++</menu-button>
++
++<menu-button label=""{{'topMenu.history' | translate}}"" [subItems]=""activeHistoryListItems$ | async"" iconClass=""fa fa-history""
++  class=""history-menu"" [class.disabled]=""!(hasActiveHistoryItems$ | async)"" [isDisabled]=""!(hasActiveHistoryItems$ | async)""
++  listClass=""history-dropdown"" [isRightAlign]=""true"" (selectItem)=""onListItemClick($event)""></menu-button>
+diff --git a/ambari-logsearch-web/src/app/components/filter-history-manager/filter-history-manager.component.less b/ambari-logsearch-web/src/app/components/filter-history-manager/filter-history-manager.component.less
+new file mode 100644
+index 0000000000..1a0cd46950
+--- /dev/null
++++ b/ambari-logsearch-web/src/app/components/filter-history-manager/filter-history-manager.component.less
+@@ -0,0 +1,114 @@
++/**
++ * Licensed to the Apache Software Foundation (ASF) under one
++ * or more contributor license agreements.  See the NOTICE file
++ * distributed with this work for additional information
++ * regarding copyright ownership.  The ASF licenses this file
++ * to you under the Apache License, Version 2.0 (the
++ * ""License""); you may not use this file except in compliance
++ * with the License.  You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by appl",14400,13200
+BXMSDOC-482,[DOC] Documentation mentions Initiator role which is not in fact implement by BPM Suite yet,"Document URL: 
+https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BPM_Suite/6.1/html/Development_Guide/sect-Task_Permissions.html
+Section Number and Name: 
+?12.5.1. Task Permissions Matrix
+Describe the issue: 
+BPMN2 Spec defines ""Initiator"" in its set of user roles. 
+BPM Suite does not have it full implemented and by default it is not visible in our web process designer. Given this we should remove the role ""Initiator"" from our documentations to avoid confusion with users that are not able to use it.
+Suggestions for improvement: 
+Remove any Initiator mention or say that it is not full implemented yet.","[comments]
+mczernek$*$Marking this issue as resolved (peer review not needed due to the scope of this issue).
+mczernek$*$Still relevant, a quick fix.
+Impact: Dev Guide
+[project_info]
+Red Hat JBoss BRMS is a powerful open source business rules management system (BRMS). It helps organisations capture business logic and automate business decisions across heterogeneous physical, virtual, mobile and cloud environments.
+[terms_def]
+BPM$*$Red Hat JBoss BRMS. Red Hat JBoss BRMS is a powerful open source business rules management system (BRMS). It helps organisations capture business logic and automate business decisions across heterogeneous physical, virtual, mobile and cloud environments.
+BPMN2$*$Business Process Model and Notation (BPMN) is a graphical representation for specifying business processes in a business process model. Business Process Management Initiative (BPMI) developed BPMN, which has been maintained by the Object Management Group since the two organizations merged in 2005.
+URL$*$A Uniform Resource Locator, colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier, although many people use the two terms interchangeably.
+",7200,4800
+JBTIS-1031,Fuse - Fix 'DeploymentTest',Add handle for the prompt in the attachment (it appears if you want to remove a bundle from a server),"[comments]
+tsedmik$*$Another issue with deployment on windows machines:
+{code}
+Error Message
+Timeout after: 300 s.: Server expected state was Synchronized but current state is 
+Stacktrace
+org.jboss.reddeer.common.exception.WaitTimeoutExpiredException: Timeout after: 300 s.: Server expected state was Synchronized but current state is 
+at org.jboss.reddeer.common.wait.AbstractWait.timeoutExceeded(AbstractWait.java:183)
+at org.jboss.reddeer.common.wait.AbstractWait.wait(AbstractWait.java:136)
+at org.jboss.reddeer.common.wait.AbstractWait.<init>(AbstractWait.java:101)
+at org.jboss.reddeer.common.wait.AbstractWait.<init>(AbstractWait.java:71)
+at org.jboss.reddeer.common.wait.AbstractWait.<init>(AbstractWait.java:56)
+at org.jboss.reddeer.common.wait.WaitUntil.<init>(WaitUntil.java:47)
+at org.jboss.reddeer.eclipse.wst.server.ui.view.Server.waitForPublish(Server.java:341)
+at org.jboss.reddeer.eclipse.wst.server.ui.view.Server.publish(Server.java:253)
+at org.jboss.tools.runtime.reddeer.utils.FuseServerManipulator.publish(FuseServerManipulator.java:368)
+at org.jboss.tools.fuse.ui.bot.test.DeploymentTest.testServerDeployment(DeploymentTest.java:93)
+{code}
+tsedmik$*$I tested _DeploymentTest_ (DevStudioIS 10.3.0.GA, Fuse 6.3.0.R4) on Windows machines and it works as expected.
+apodhrad$*$pushed to master
+[project_info]
+The Integration Stack is an aggregation of Eclipse features and plugins comprised of JBoss tooling in support of Data Virtualization, BRMS/BPMS, SOA Tooling and legacy SOA 5.x development. It is formed by three Maven projects which produce Eclipse p2 update sites, Mylyn discovery update mechanisms augmenting JBoss Central and an aggregation of associated component target dependencies and JBoss Core tooling target dependencies. The p2 update sites are comprised of Final/GA and early-access repositories and offline zips files. The target dependencies take the form of generated .target files (tycho mojo) and a target p2 update repositories split along Final/early-access and community/production lines.
+The project covers both community (JBTIS), production (JBDSIS) and the target platform.
+Note that Fuse Tooling has moved to JBIDE / JBDS as of Jun 13, 2017. JBoss Tools is a set of plugins for Eclipse that complements, enhances and goes beyond the support that exists for JBoss and related technologies in the default Eclipse distribution.
+[terms_def]
+Fuse$*$Red Hat Fuse is an open source integration platform based on Apache Camel. It is a distributed integration platform that provides a standardized methodology, infrastructure, and tools to integrate services, microservices, and application components.
+",3600,3600
+ENTMQBR-1807,As a EAP developer I want lower-case table names to be upper-case in all tests using DB2 11.1,"Failing Test:
+org.jboss.qa.hornetq.test.soak.JdbcStoreSoakTestCase.soakTest
+LOG:
+03:30:45,263 INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 78) AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=true,jdbcDriverClassName=org.apache.derby.jdbc.EmbeddedDriver,jdbcConnectionUrl=null,messageTableName=mess_node_2,bindingsTableName=bind_node_2,largeMessageTableName=large_node_2,pageStoreTableName=p_node_2,)
+03:30:45,331 ERROR [org.apache.activemq.artemis.jdbc.store.drivers.AbstractJDBCDriver] (ServerService Thread Pool -- 78) 
+SQL STATEMENTS: 
+CREATE TABLE large_node_2 (ID BIGINT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1), FILENAME VARCHAR(255), EXTENSION VARCHAR(10), DATA BLOB(2G), PRIMARY KEY(ID))
+SQL EXCEPTIONS: 
+SQLState: 42710 ErrorCode: -601 Message: DB2 SQL Error: SQLCODE=-601, SQLSTATE=42710, SQLERRMC=DBALLO08.LARGE_NODE_2;TABLE, DRIVER=4.24.92
+03:30:45,334 WARN  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 78) AMQ222010: Critical IO Error, shutting down the server. file=NULL, message=Unable to start database driver: com.ibm.db2.jcc.am.SqlSyntaxErrorException: DB2 SQL Error: SQLCODE=-601, SQLSTATE=42710, SQLERRMC=DBALLO08.LARGE_NODE_2;TABLE, DRIVER=4.24.92
+at com.ibm.db2.jcc.am.b6.a(b6.java:810)
+at com.ibm.db2.jcc.am.b6.a(b6.java:66)
+at com.ibm.db2.jcc.am.b6.a(b6.java:140)
+at com.ibm.db2.jcc.am.k3.c(k3.java:2817)
+at com.ibm.db2.jcc.am.k3.d(k3.java:2801)
+at com.ibm.db2.jcc.am.k3.b(k3.java:2161)
+at com.ibm.db2.jcc.t4.ab.k(ab.java:445)
+at com.ibm.db2.jcc.t4.ab.c(ab.java:104)
+at com.ibm.db2.jcc.t4.p.b(p.java:38)
+at com.ibm.db2.jcc.t4.av.h(av.java:124)
+at com.ibm.db2.jcc.am.k3.ak(k3.java:2156)
+at com.ibm.db2.jcc.am.k3.a(k3.java:3359)
+at com.ibm.db2.jcc.am.k3.c(k3.java:783)
+at com.ibm.db2.jcc.am.k3.executeUpdate(k3.java:762)
+at org.jboss.jca.adapters.jdbc.WrappedStatement.executeUpdate(WrappedStatement.java:430)
+at org.apache.activemq.artemis.jdbc.store.drivers.AbstractJDBCDriver.createTableIfNotExists(AbstractJDBCDriver.java:243) [artemis-jdbc-store-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.jdbc.store.drivers.AbstractJDBCDriver.createTable(AbstractJDBCDriver.java:113) [artemis-jdbc-store-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.jdbc.store.file.JDBCSequentialFileFactoryDriver.createSchema(JDBCSequentialFileFactoryDriver.java:69) [artemis-jdbc-store-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.jdbc.store.drivers.AbstractJDBCDriver.start(AbstractJDBCDriver.java:82) [artemis-jdbc-store-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.jdbc.store.file.JDBCSequentialFileFactory.start(JDBCSequentialFileFactory.java:132) [artemis-jdbc-store-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.persistence.impl.journal.JDBCJournalStorageManager.init(JDBCJournalStorageManager.java:92) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.persistence.impl.journal.AbstractJournalStorageManager.<init>(AbstractJournalStorageManager.java:227) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.persistence.impl.journal.JournalStorageManager.<init>(JournalStorageManager.java:106) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.persistence.impl.journal.JDBCJournalStorageManager.<init>(JDBCJournalStorageManager.java:55) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.createStorageManager(ActiveMQServerImpl.java:2155) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.initialisePart1(ActiveMQServerImpl.java:2296) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.server.impl.LiveOnlyActivation.run(LiveOnlyActivation.java:64) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.internalStart(ActiveMQServerImpl.java:536) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.start(ActiveMQServerImpl.java:475) [artemis-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.apache.activemq.artemis.jms.server.impl.JMSServerManagerImpl.start(JMSServerManagerImpl.java:376) [artemis-jms-server-2.7.0-SNAPSHOT.jar:2.7.0-SNAPSHOT]
+at org.wildfly.extension.messaging.activemq.jms.JMSService.doStart(JMSService.java:206) [wildfly-messaging-activemq-14.0.0.Beta1-SNAPSHOT.jar:14.0.0.Beta1-SNAPSHOT]
+at org.wildfly.extension.messaging.activemq.jms.JMSService.access$000(JMSService.java:65) [wildfly-messaging-activemq-14.0.0.Beta1-SNAPSHOT.jar:14.0.0.Beta1-SNAPSHOT]
+at org.wildfly.extension.messaging.activemq.jms.JMSService$1.run(JMSService.java:100) [wildfly-messaging-activemq-14.0.0.Beta1-SNAPSHOT.jar:14.0.0.Beta1-SNAPSHOT]
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [rt.jar:1.8.0_171]
+at java.util.concurrent.FutureTask.run(FutureTask.java:266) [rt.jar:1.8.0_171]
+at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35) [jboss-threads-2.3.2.Final.jar:2.3.2.Final]
+at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1985) [jboss-threads-2.3.2.Final.jar:2.3.2.Final]
+at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1487) [jboss-threads-2.3.2.Final.jar:2.3.2.Final]
+at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1378) [jboss-threads-2.3.2.Final.jar:2.3.2.Final]
+at java.lang.Thread.run(Thread.java:748) [rt.jar:1.8.0_171]
+at org.jboss.threads.JBossThread.run(JBossThread.java:485) [jboss-threads-2.3.2.Final.jar:2.3.2.Final]
+","[comments]
+fnigro$*$I'm preparing a zip to test the fix (on wildfly) here: https://github.com/franz1981/wildfly/commit/2f2f7495fd61cbe5387d1f8a3ff8a09a807eb172
+[~eduda] If it will works I will push a PR to the [~jmesnil] branch of WildFly in order to solve WFLY-10678 as well
+martyn-taylor$*$[~fnigro] What was the outcome of this dev task.  Did you make any changed to Artemis?
+fnigro$*$To fix this I see 2 options: 
+# leave the eap test suite mirror as it is (ie using lower case table names letters) and just makes uses of https://issues.apache.org/jira/browse/ARTEMIS-1979; I will need (probably) to fix the SQL configuration of wildfly as well
+# change the table names on the eap test suite, but it would makes the eap test suite mirror divergent from the original one
+Given that it is preferred to not change the eap test suite if it won't embededd this change, I would just change the wildfly branch (if needed): probably it would be changed of EAP as well, given that https://issues.apache.org/jira/browse/ARTEMIS-1979 will port the change into EAP cherry-picking it from Artemis 1.x.
+[~eduda] wdyt?
+fnigro$*$[~martyn-taylor] I have made a change of Artemis https://issues.apache.org/jira/browse/ARTEMIS-1979 (it is referenced into the  https://issues.jboss.org/browse/WFLY-10678 issue).
+That fix isn't enough to allow the test to pass: it needs a change into wildfly as well (https://github.com/mtaylor/wildfly/pull/1).
+The test I have run was having both (broker + wildfly) commits in.
+I suppose that EAP to solve WFLY-10678 need me to cherry-pick the artemis commit into 1.x and EAP + updating wildfly as well (through [~jmesnil] help).
+[project_info]
+JBoss A-MQ is an open source JMS message broker that is based on Apache ActiveMQ for use in enterprise IT organizations. ... JBoss A-MQ is the JMS platform for scalable, high-performance SOA infrastructure to connect processes across heterogeneous systems. JBoss A-MQ delivers large amounts of data efficiently and reliably.
+[terms_def]
+EAP$*$The JBoss Enterprise Application Platform is a subscription-based/open-source Java EE-based application server runtime platform used for building, deploying, and hosting highly-transactional Java applications and services.
+SQL$*$SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
+",57600,43200
+FUSEDOC-861,Fabric console reference for the fabric:profile-edit is incorrect,"The console reference for the fabric:profile-edit command has some incorrect examples.
+https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Fuse/6.2/html/Console_Reference/ConsoleFabricProfileEdit.html
+The sections referring the to adding and removing bundles is incorrect.  The example shows the {{--bundle}} option being used when the actual option is {{--bundles}}
+The command help of fabric:profile-edit shows the following options:
+{code}
+JBossFuse:karaf@root> fabric:profile-edit --help
+DESCRIPTION
+fabric:profile-edit
+Edits the specified version of the specified profile (where the version defaults to the current default version)
+SYNTAX
+fabric:profile-edit [options] profile [version] 
+ARGUMENTS
+profile
+The target profile to edit
+version
+The version of the profile to edit. Defaults to the current default version.
+OPTIONS
+-i, --import-pid
+Imports the pids that are edited, from local OSGi config admin
+--help
+Display this help message
+--delimiter
+Specifies the delimiter to use for appends and removals.
+(defaults to ,)
+--delete
+Delete values. This option can be used to delete a feature, a bundle or a pid from the profile.
+-o, --overrides
+Edit overrides, specifying a comma-separated list of overrides to add (or delete).
+-r, --repositories
+Edit the features repositories
+-p, --pid
+Edit an OSGi configuration property, specified in the format <PID>/<Property>.
+--resource
+Selects a resource under the profile to edit. This option should only be used alone.
+-f, --features
+Edit features, specifying a comma-separated list of features to add (or delete).
+--remove
+Removes value from a delimited list. It is only usable with the system, config & pid options
+--set
+Set or create values (selected by default).
+(defaults to true)
+--append
+Append value to a delimited list. It is only usable with the system, config & pid options
+--fabs
+Edit fabs, specifying a comma-separated list of fabs to add (or delete).
+-n, --endorsed
+Edit endorsed libraries, specifying a comma-separated list of libs to add (or delete).
+-b, --bundles
+Edit bundles, specifying a comma-separated list of bundles to add (or delete).
+-s, --system
+Edit the Java system properties that affect installed bundles (analogous to editing etc/system.properties in a root container).
+-l, --libs
+Edit libraries, specifying a comma-separated list of libs to add (or delete).
+-c, --config
+Edit the Java system properties that affect the karaf container (analogous to editing etc/config.properties in a root container).
+-x, --extension
+Edit extension libraries, specifying a comma-separated list of libs to add (or delete).
+{code}","[comments]
+jmurphey$*$I will include a note in the document that users can use either --bundle or --bundles, but if they want to specify more than one bundle on the same command line, they must include the flag with each bundle.
+jmurphey$*$Checking jboss-fuse-6.2.0.redhat-123, either --bundle or --bundles is acceptable:
+JBossFuse:karaf@root> fabric:profile-edit --help
+DESCRIPTION
+fabric:profile-edit
+Edits the specified version of the specified profile
+SYNTAX
+fabric:profile-edit [options] profile [version] 
+ARGUMENTS
+profile
+The target profile to edit
+version
+The version of the profile to edit. Defaults to the current 
+default version.
+OPTIONS
+-i, --import-pid
+Imports the pids that are edited, from local OSGi config admin
+-f, --feature, --features
+Edit features. To specify multiple features, use this flag 
+multiple times. For example, --feature foo --feature bar.
+--help
+Display this help message
+-l, --lib, --libs
+Edit libraries. To specify multiple libraries, use this flag 
+multiple times.
+--delimiter
+Specifies the delimiter to use for appends and removals.
+(defaults to ,)
+-c, --config
+Edit the Java system properties that affect the karaf container 
+(analogous to editing etc/config.properties in a root 
+container). To specify multiple properties, use this flag 
+multiple times.
+--delete
+Delete values. This option can be used to delete a feature, a 
+bundle or a pid from the profile.
+-s, --system
+Edit the Java system properties that affect installed bundles 
+(analogous to editing etc/system.properties in a root 
+container). To specify multiple properties, use this flag 
+multiple times.
+-p, --pid
+Edit an OSGi configuration property, specified in the format 
+<PID>/<Property>. To specify multiple properties, use this flag 
+multiple times.
+-b, --bundle, --bundles
+Edit bundles. To specify multiple bundles, use this flag 
+multiple times.
+So I am closing this Jira.
+[project_info]
+Red Hat Fuse is an open source integration platform based on Apache Camel. It is a distributed integration platform that provides a standardized methodology, infrastructure, and tools to integrate services, microservices, and application components.
+[terms_def]
+Fabric$*$Fuse Fabric is an open-source integration platform for deep management of Java Containers (JVMs). It is a supported component of the JBoss Fuse Platform.
+Java$*$Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.
+PID$*$In computing, the process identifier (normally referred to as the process ID or PID) is a number used by most operating system kernels—such as those of UNIX, macOS and Microsoft Windows—to uniquely identify an active process.
+",28800,2700
+BXMSDOC-368,"Lack of supported policy for ""Integration Pack"" for the Drools integration with Camel","Document URL: 
+https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.1/html-single/Administration_And_Configuration_Guide/index.html#Configuring_Red_Hat_JBoss_BRMS_with_Apache_Camel
+Section Number and Name: 
+5.2. CONFIGURING RED HAT JBOSS BRMS WITH APACHE CAMEL
+Describe the issue:
+Although ""integration pack"" is not supported by B*MS 6.1, there is no memo about it. 
+Suggestions for improvement: 
+Please add a note that ""integration pack"" is not supported by B*MS 6.1
+Additional information:","[comments]
+kkufova$*$Not relevant for the 6.3 version, closing.
+mczernek$*$Still relevant, an easy and quick fix. 
+Impact: Admin Guide.
+[project_info]
+Red Hat JBoss BRMS is a powerful open source business rules management system (BRMS). It helps organisations capture business logic and automate business decisions across heterogeneous physical, virtual, mobile and cloud environments.
+[terms_def]
+Drools$*$Drools is a business rule management system with a forward and backward chaining inference based rules engine, more correctly known as a production rule system, using an enhanced implementation of the Rete algorithm. KIE is the new umbrella name to drools, optaPlanner, jBPM, Guvnor, uberFire and related technologies.
+Camel$*$Apache Camel is an open source framework for message-oriented middleware with a rule-based routing and mediation engine that provides a Java object-based implementation of the Enterprise Integration Patterns using an application programming interface to configure routing and mediation rules.
+JBOSS$*$JBoss is a division of Red Hat that provides support for the WildFly open source application server program (formerly called JBoss AS) and related middleware services. JBoss is an open source alternative to commercial offerings from IBM WebSphere and SAP NetWeaver.
+BRMS$*$Red Hat JBoss BRMS. Red Hat JBoss BRMS is a powerful open source business rules management system (BRMS). It helps organisations capture business logic and automate business decisions across heterogeneous physical, virtual, mobile and cloud environments.
+URL$*$A Uniform Resource Locator, colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier, although many people use the two terms interchangeably.
+",10800,7200
+IGNITE-10890,Web console: UIRouter cleanup,"1. Do not depend on _@uirouter/angularjs/lib/legacy/stateEvents_, replace all legacy $scope events with transition-based API.
+2. Remove _@uirouter/visualizer_, which is only used for development.
+The goal is to decrease bundle size and drop legacy APIs.","[comments]
+alexdel$*$[~Klaster_1] Please review - https://github.com/apache/ignite/pull/5829
+kuaw26$*$Looks good to me. Merged to master.
+pkonstantinov$*$Tested on the dev-branch
+Klaster_1$*$[~alexdel] looks good, [~kuaw26] please merge.
+alexdel$*$Please test queries notebook screen works right.
+[project_info]
+Apache Ignite Apache Ignite is an open-source distributed database, caching and processing platform designed to store and compute on large volumes of data across a cluster of nodes. Ignite was open-sourced by GridGain Systems in late 2014 and accepted in the Apache Incubator program that same year.
+[terms_def]
+API$*$An application programming interface is an interface or communication protocol between a client and a server intended to simplify the building of client-side software.
+",21600,10620
+HIVE-21462,Upgrading SQL server backed metastore when changing data type of a column with constraints,SQL server does not allow changing data type of a column which has a constraint or an index on it. The constraint or the index needs to be dropped before changing the data type and needs to be recreated after that. Metastore upgrade scripts aren't doing this and thus upgrade fails.,"[comments]
+hiveqa$*$| (x) *{color:red}-1 overall{color}* |
+\\
+\\
+|| Vote || Subsystem || Runtime || Comment ||
+|| || || || {color:brown} Prechecks {color} ||
+| {color:green}+1{color} | {color:green} @author {color} | {color:green}  0m  0s{color} | {color:green} The patch does not contain any @author tags. {color} |
+|| || || || {color:brown} master Compile Tests {color} ||
+| {color:blue}0{color} | {color:blue} mvndep {color} | {color:blue}  1m 46s{color} | {color:blue} Maven dependency ordering for branch {color} |
+| {color:green}+1{color} | {color:green} mvninstall {color} | {color:green}  7m 23s{color} | {color:green} master passed {color} |
+| {color:green}+1{color} | {color:green} javadoc {color} | {color:green}  7m 43s{color} | {color:green} master passed {color} |
+|| || || || {color:brown} Patch Compile Tests {color} ||
+| {color:blue}0{color} | {color:blue} mvndep {color} | {color:blue}  0m 25s{color} | {color:blue} Maven dependency ordering for patch {color} |
+| {color:green}+1{color} | {color:green} mvninstall {color} | {color:green}  7m 44s{color} | {color:green} the patch passed {color} |
+| {color:red}-1{color} | {color:red} whitespace {color} | {color:red}  0m  0s{color} | {color:red} The patch 21 line(s) with tabs. {color} |
+| {color:green}+1{color} | {color:green} javadoc {color} | {color:green}  7m 44s{color} | {color:green} the patch passed {color} |
+|| || || || {color:brown} Other Tests {color} ||
+| {color:green}+1{color} | {color:green} asflicense {color} | {color:green}  0m 13s{color} | {color:green} The patch does not generate ASF License warnings. {color} |
+| {color:black}{color} | {color:black} {color} | {color:black} 33m 22s{color} | {color:black} {color} |
+\\
+\\
+|| Subsystem || Report/Notes ||
+| Optional Tests |  asflicense  javac  javadoc  |
+| uname | Linux hiveptest-server-upstream 3.16.0-4-amd64 #1 SMP Debian 3.16.36-1+deb8u1 (2016-09-03) x86_64 GNU/Linux |
+| Build tool | maven |
+| Personality | /data/hiveptest/working/yetus_PreCommit-HIVE-Build-16592/dev-support/hive-personality.sh |
+| git revision | master / 230db04 |
+| Default Java | 1.8.0_111 |
+| whitespace | http://104.198.109.242/logs//PreCommit-HIVE-Build-16592/yetus/whitespace-tabs.txt |
+| modules | C: standalone-metastore/metastore-server . U: . |
+| Console output | http://104.198.109.242/logs//PreCommit-HIVE-Build-16592/yetus.txt |
+| Powered by | Apache Yetus    http://yetus.apache.org |
+This message was automatically generated.
+hiveqa$*$
+Here are the results of testing the latest attachment:
+https://issues.apache.org/jira/secure/attachment/12963097/HIVE-21462.02.patch
+{color:red}ERROR:{color} -1 due to no test(s) being added or modified.
+{color:green}SUCCESS:{color} +1 due to 15832 tests passed
+Test results: https://builds.apache.org/job/PreCommit-HIVE-Build/16592/testReport
+Console output: https://builds.apache.org/job/PreCommit-HIVE-Build/16592/console
+Test logs: http://104.198.109.242/logs/PreCommit-HIVE-Build-16592/
+Messages:
+{noformat}
+Executing org.apache.hive.ptest.execution.TestCheckPhase
+Executing org.apache.hive.ptest.execution.PrepPhase
+Executing org.apache.hive.ptest.execution.YetusPhase
+Executing org.apache.hive.ptest.execution.ExecutionPhase
+Executing org.apache.hive.ptest.execution.ReportingPhase
+{noformat}
+This message is automatically generated.
+ATTACHMENT ID: 12963097 - PreCommit-HIVE-Build
+ashutosh.bapat$*$Since dropping an unnamed constraint requires some SQL code in SQL server, it's better to name all the constraints explicitly to keep the scripts simple. So, there are additional changes in the scripts to name the new constraints created.
+daijy$*$+1 for 02.patch.
+ashutosh.bapat$*$Submitting 01 again for triggering ptests.
+daijy$*$Patch pushed to master. Thanks [~ashutosh.bapat]!
+daijy$*$+1
+hiveqa$*$| (x) *{color:red}-1 overall{color}* |
+\\
+\\
+|| Vote || Subsystem || Runtime || Comment ||
+|| || || || {color:brown} Prechecks {color} ||
+| {color:green}+1{color} | {color:green} @author {color} | {color:green}  0m  0s{color} | {color:green} The patch does not contain any @author tags. {color} |
+|| || || || {color:brown} master Compile Tests {color} ||
+| {color:blue}0{color} | {color:blue} mvndep {color} | {color:blue}  1m 44s{color} | {color:blue} Maven dependency ordering for branch {color} |
+| {color:green}+1{color} | {color:green} mvninstall {color} | {color:green}  7m 15s{color} | {color:green} master passed {color} |
+| {color:green}+1{color} | {color:green} javadoc {color} | {color:green}  7m 36s{color} | {color:green} master passed {color} |
+|| || || || {color:brown} Patch Compile Tests {color} ||
+| {color:blue}0{color} | {color:blue} mvndep {color} | {color:blue}  0m 25s{color} | {color:blue} Maven dependency ordering for patch {color} |
+| {color:green}+1{color} | {color:green} mvninstall {color} | {color:green}  7m 34s{color} | {color:green} the patch passed {color} |
+| {color:red}-1{color} | {color:red} whitespace {color} | {color:red}  0m  0s{color} | {color:red} The patch 21 line(s) with tabs. {color} |
+| {color:green}+1{color} | {color:green} javadoc {color} | {color:green}  7m 31s{color} | {color:green} the patch passed {color} |
+|| || || || {color:brown} Other Tests {color} ||
+| {color:green}+1{color} | {color:green} asflicense {color} | {color:green}  0m 13s{color} | {color:green} The patch does not generate ASF License warnings. {color} |
+| {color:black}{color} | {color:black} {color} | {color:black} 32m 48s{color} | {color:black} {color} |
+\\
+\\
+|| Subsystem || Report/Notes ||
+| Optional Tests |  asflicense  javac  javadoc  |
+| uname | Linux hiveptest-server-upstream 3.16.0-4-amd64 #1 SMP Debian 3.16.36-1+deb8u1 (2016-09-03) x86_64 GNU/Linux |
+| Build tool | maven |
+| Personality | /data/hiveptest/working/yetus_PreCommit-HIVE-Build-16556/dev-support/hive-personality.sh |
+| git revision | master / 36bd89d |
+| Default Java | 1.8.0_111 |
+| whitespace | http://104.198.109.242/logs//PreCommit-HIVE-Build-16556/yetus/whitespace-tabs.txt |
+| modules | C: standalone-metastore/metastore-server . U: . |
+| Console output | http://104.198.109.242/logs//PreCommit-HIVE-Build-16556/yetus.txt |
+| Powered by | Apache Yetus    http://yetus.apache.org |
+This message was automatically generated.
+hiveqa$*$
+Here are the results of testing the latest attachment:
+https://issues.apache.org/jira/secure/attachment/12962818/HIVE-21462.01.patch
+{color:red}ERROR:{color} -1 due to no test(s) being added or modified.
+{color:red}ERROR:{color} -1 due to 1 failed/errored test(s), 15833 tests executed
+*Failed tests:*
+{noformat}
+org.apache.hadoop.hive.cli.TestNegativeCliDriver.testCliDriver[udaf_invalid_place] (batchId=99)
+{noformat}
+Test results: https://builds.apache.org/job/PreCommit-HIVE-Build/16556/testReport
+Console output: https://builds.apache.org/job/PreCommit-HIVE-Build/16556/console
+Test logs: http://104.198.109.242/logs/PreCommit-HIVE-Build-16556/
+Messages:
+{noformat}
+Executing org.apache.hive.ptest.execution.TestCheckPhase
+Executing org.apache.hive.ptest.execution.PrepPhase
+Executing org.apache.hive.ptest.execution.YetusPhase
+Executing org.apache.hive.ptest.execution.ExecutionPhase
+Executing org.apache.hive.ptest.execution.ReportingPhase
+Tests exited with: TestsFailedException: 1 tests failed
+{noformat}
+This message is automatically generated.
+ATTACHMENT ID: 12962818 - PreCommit-HIVE-Build
+[project_info]
+Hive is a data warehouse infrastructure built on top of Hadoop that provides tools to enable easy data summarization, adhoc querying and analysis of large datasets data stored in Hadoop files. It provides a mechanism to put structure on this data and it also provides a simple query language called QL which is based on SQL and which enables users familiar with SQL to query this data. Apache Hive is a data warehouse software project built on top of Apache Hadoop for providing data query and analysis. Hive gives a SQL-like interface to query data stored in various databases and file systems that integrate with Hadoop.
+[terms_def]
+SQL$*$SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
+",86400,1800
+JBEAP-5152,move trace logging for SSO code in Undertow to use 'SECURITY_LOGGER',"There has been added SSO trace logging in Undertow in [this Jira|https://issues.jboss.org/browse/JBEAP-4256]. It is just fine but I think that such log messages should use Undertow's {{SECURITY_LOGGER}} as they relate to security. When user enables such logger, he/she should see all security related problems in undertow on one place. Also another advantage might be that now one has to raise log level of root-logger to TRACE, to see those messages.","[comments]
+swd847$*$I don't want to do this. The having trace messages in their own category allows for finer grained control, and as they are already in a sub package of io.undertow.security enabling TRACE on this will enable them as well.
+iweiss$*$Fair enough. I will rework the PR if there's no objection then.
+iweiss$*$I improved the trace messages a bit to make it easier to grep for the SSO ID.
+[project_info]
+JBoss Enterprise Application Platform:
+Cloud-ready, market-leading enterprise platform for next-generation, highly transactional enterprise Java applications JBoss Enterprise Application Platform
+[terms_def]
+SSO$*$Single sign-on is a property of access control of multiple related, yet independent, software systems. With this property, a user logs in with a single ID and password to gain access to any of several related systems.
+JBEAP$*$JBoss Enterprise Application Platform
+",3600,1800
+ENTMQCL-923,[jms] when using failover [re]connection attempts should stop upon non-temporary SASL failure,"When using a failover URI, the client continues to try and [re]connect upon encountering SASL failure for a given server. Realistically different servers in the failover list should behave similarly here, so continuing to attempt connection is likely to be futile and lead to a delay signalling the issue when the allowed attempts run out. When the SASL process fails with an outcome other than sys-temp, further [re]connection attempts should stop.","[comments]
+jdanek$*$Is the broker supposed to return SASL failure every time auth fails, or only if I was providing username and password?
+I have a test which uses {{factory.createConnection()}} (that is, without username and password), and if I delete GuestLoginModule from {{etc/login.conf}}, the auth fails, but I do not get real auth error from the Artemis broker.
+{noformat}
+javax.security.auth.login.LoginException: Invalid null input: name
+at java.base/javax.security.auth.login.LoginContext.init(LoginContext.java:235)
+at java.base/javax.security.auth.login.LoginContext.<init>(LoginContext.java:501)
+at org.apache.activemq.artemis.spi.core.security.ActiveMQJAASSecurityManager.getAuthenticatedSubject(ActiveMQJAASSecurityManager.java:185)
+at org.apache.activemq.artemis.spi.core.security.ActiveMQJAASSecurityManager.validateUser(ActiveMQJAASSecurityManager.java:94)
+at org.apache.activemq.artemis.core.security.impl.SecurityStoreImpl.authenticate(SecurityStoreImpl.java:135)
+at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.createSession(ActiveMQServerImpl.java:1408)
+at org.apache.activemq.artemis.protocol.amqp.broker.AMQPSessionCallback.init(AMQPSessionCallback.java:200)
+at org.apache.activemq.artemis.protocol.amqp.proton.AMQPSessionContext.initialise(AMQPSessionContext.java:71)
+at org.apache.activemq.artemis.protocol.amqp.proton.AMQPConnectionContext.onRemoteOpen(AMQPConnectionContext.java:433)
+at org.apache.activemq.artemis.protocol.amqp.proton.handler.Events.dispatch(Events.java:50)
+at org.apache.activemq.artemis.protocol.amqp.proton.handler.ProtonHandler.dispatch(ProtonHandler.java:494)
+at org.apache.activemq.artemis.protocol.amqp.proton.handler.ProtonHandler.flush(ProtonHandler.java:307)
+at org.apache.activemq.artemis.protocol.amqp.proton.handler.ProtonHandler.inputBuffer(ProtonHandler.java:272)
+at org.apache.activemq.artemis.protocol.amqp.proton.AMQPConnectionContext.inputBuffer(AMQPConnectionContext.java:158)
+at org.apache.activemq.artemis.protocol.amqp.broker.ActiveMQProtonRemotingConnection.bufferReceived(ActiveMQProtonRemotingConnection.java:147)
+at org.apache.activemq.artemis.core.remoting.server.impl.RemotingServiceImpl$DelegatingBufferHandler.bufferReceived(RemotingServiceImpl.java:643)
+at org.apache.activemq.artemis.core.remoting.impl.netty.ActiveMQChannelHandler.channelRead(ActiveMQChannelHandler.java:73)
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434)
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965)
+at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:808)
+at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:417)
+at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:317)
+at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118)
+DEBUG - Couldn't find any bindings for address=activemq.notifications on message=CoreMessage[messageID=77309411656,durable=true,userID=null,priority=0, timestamp=0,expiration=0, durable=true, address=activemq.notifications,size=244,properties=TypedProperties[_AMQ_NotifType=SECURITY_AUTHENTICATION_VIOLATION,_AMQ_NotifTimestamp=1539871547925]]@1180466632
+DEBUG - Message CoreMessage[messageID=77309411656,durable=true,userID=null,priority=0, timestamp=0,expiration=0, durable=true, address=activemq.notifications,size=244,properties=TypedProperties[_AMQ_NotifType=SECURITY_AUTHENTICATION_VIOLATION,_AMQ_NotifTimestamp=1539871547925]]@1180466632 is not going anywhere as it didn't have a binding on address:activemq.notifications
+WARN - AMQ119031: Unable to validate user from /127.0.0.1:50512. Username: null; SSL certificate subject DN: unavailable
+ActiveMQAMQPInternalErrorException[errorType=INTERNAL_ERROR message=AMQ119031: Unable to validate user from /127.0.0.1:50512. Username: null; SSL certificate subject DN: unavailable]
+at org.apache.activemq.artemis.protocol.amqp.proton.AMQPSessionContext.initialise(AMQPSessionContext.java:73)
+at org.apache.activemq.artemis.protocol.amqp.proton.AMQPConnectionContext.onRemoteOpen(AMQPConnectionContext.java:433)
+at org.apache.activemq.artemis.protocol.amqp.proton.handler.Events.dispatch(Events.java:50)
+at org.apache.activemq.artemis.protocol.amqp.proton.handler.ProtonHandler.dispatch(ProtonHandler.java:494)
+at org.apache.activemq.artemis.protocol.amqp.proton.handler.ProtonHandler.flush(ProtonHandler.java:307)
+at org.apache.activemq.artemis.protocol.amqp.proton.handler.ProtonHandler.inputBuffer(ProtonHandler.java:272)
+at org.apache.activemq.artemis.protocol.amqp.proton.AMQPConnectionContext.inputBuffer(AMQPConnectionContext.java:158)
+at org.apache.activemq.artemis.protocol.amqp.broker.ActiveMQProtonRemotingConnection.bufferReceived(ActiveMQProtonRemotingConnection.java:147)
+at org.apache.activemq.artemis.core.remoting.server.impl.RemotingServiceImpl$DelegatingBufferHandler.bufferReceived(RemotingServiceImpl.java:643)
+at org.apache.activemq.artemis.core.remoting.impl.netty.ActiveMQChannelHandler.channelRead(ActiveMQChannelHandler.java:73)
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434)
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965)
+at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:808)
+at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:417)
+at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:317)
+at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118)
+Caused by: ActiveMQSecurityException[errorType=SECURITY_EXCEPTION message=AMQ119031: Unable to validate user from /127.0.0.1:50512. Username: null; SSL certificate subject DN: unavailable]
+at org.apache.activemq.artemis.core.security.impl.SecurityStoreImpl.authenticate(SecurityStoreImpl.java:157)
+at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.createSession(ActiveMQServerImpl.java:1408)
+at org.apache.activemq.artemis.protocol.amqp.broker.AMQPSessionCallback.init(AMQPSessionCallback.java:200)
+at org.apache.activemq.artemis.protocol.amqp.proton.AMQPSessionContext.initialise(AMQPSessionContext.java:71)
+... 21 more
+DEBUG - Request received error: Unrecoverable error: AMQ119031: Unable to validate user from /127.0.0.1:50512. Username: null; SSL certificate subject DN: unavailable [condition = amqp:internal-error]
+{noformat}
+In this situation, the qpid-jms-client continues trying to reconnect.
+Source code of the test (with embedded broker configured correctly, without GuestLoginModule):
+https://github.com/jdanekrh/cli-java/blob/9bb2cdd8021567216fd71295a00990d83eeeb0a5/cli-qpid-jms/src/test/java/ConnectWithoutPassword.java#L42-L56 (branch jd_broker_test of the repo).
+I suspect this may be incorrect (or at least inconvenient) behavior on the broker side.
+e-tool$*$Since the problem described in this issue should be resolved in a recent advisory, it has been closed.
+For information on the advisory, and where to find the updated files, follow the link below.
+If the solution does not work for you, open a new bug report.
+https://access.redhat.com/errata/RHEA-2018:3621
+rgemmell$*$Changed upstream via https://issues.apache.org/jira/browse/QPIDJMS-412
+[project_info]
+AMQ JMS is a Java Message Service (JMS) 2.0 client for use in messaging applications that send and receive AMQP messages. AMQ JMS is part of AMQ Clients, a suite of messaging libraries supporting multiple languages and platforms.
+[terms_def]
+SASL$*$Simple Authentication and Security Layer is a framework for authentication and data security in Internet protocols. It decouples authentication mechanisms from application protocols, in theory allowing any authentication mechanism supported by SASL to be used in any application protocol that uses SASL.
+URI$*$A Uniform Resource Identifier is a string of characters that unambiguously identifies a particular resource. To guarantee uniformity, all URIs follow a predefined set of syntax rules, but also maintain extensibility through a separately defined hierarchical naming scheme.
+",57600,43200
+BXMSDOC-397,'Deploy To Runtime' in release of managed repository can not be used with BRMS business central,"Document URL: 
+https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.2/html/Administration_And_Configuration_Guide/Managing_Assets.html
+Section Number and Name: 
+1.4. Managing Assets
+Describe the issue: 
+In the Release Configuration shapshot at the bottom of ""1.4. Managing Assets"",
+'Deploy To Runtime' is checked and 'http://localost:8080/business-central' is specified for 'Server URL'. But if Release gets performed like this example,
+Release(i.e. deployment) fails with the following warning.
+22:52:05,418 INFO  [org.drools.compiler.kie.builder.impl.KieRepositoryImpl] (EJB default - 8) KieModule was added: MemoryKieModule[releaseId=example:proj1:1.0.1]
+22:52:05,492 INFO  [org.kie.scanner.embedder.MavenEmbedderUtils] (EJB default - 8) Not in OSGi: using plexus based maven parser
+22:52:05,585 WARN  [org.jbpm.process.workitem.rest.RESTWorkItemHandler] (EJB default - 8) Unsuccessful response from REST server (status: 404, endpoint: http://localhost:8080/business-central/rest/deployment/example:proj1:1.0.1/deploy, response: <html><head><title>JBWEB000065: HTTP Status 404 - RESTEASY001185: Could not find resource for relative : /deployment/example:proj1:1.0.1/deploy of full path: http://localhost:8080/business-central/rest/deployment/example:proj1:1.0.1/deploy</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>JBWEB000065: HTTP Status 404 - RESTEASY001185: Could not find resource for relative : /deployment/example:proj1:1.0.1/deploy of full path: http://localhost:8080/business-central/rest/deployment/example:proj1:1.0.1/deploy</h1><HR size=""1"" noshade=""noshade""><p><b>JBWEB000309: type</b> JBWEB000067: Status report</p><p><b>JBWEB000068: message</b> <u>RESTEASY001185: Could not find resource for relative : /deployment/example:proj1:1.0.1/deploy of full path: http://localhost:8080/business-central/rest/deployment/example:proj1:1.0.1/deploy</u></p><p><b>JBWEB000069: description</b> <u>JBWEB000124: The requested resource is not available.</u></p><HR size=""1"" noshade=""noshade""></body></html>
+22:52:05,588 WARN  [org.jbpm.process.audit.VariableInstanceLog] (EJB default - 8) Variable content was trimmed as it was too long (more than 255 characters)
+22:52:05,591 INFO  [stdout] (EJB default - 8) End assets management process: BuildProject  Wed Jan 20 22:52:05 JST 2016
+22:52:05,604 INFO  [stdout] (EJB default - 8) End assets management process: ReleaseProject  Wed Jan 20 22:52:05 JST 2016
+This is because deploy to runtime is only valid for BPMS at the moment as it relies on BPMS rest endpoints.
+Suggestions for improvement: 
+Please clearly mention that 'Deploy To Runtime' can be used only for BPMS but not for BRMS.
+Additional information:","[comments]
+mczernek$*$The Jira might need removal of one whole section for BRMS. If I'm not here, I asked Jiri to post it into the SME review, so that it can be picked up and incorporated by other writers.
+kkufova$*$Peer review done by me, closing.
+Another ticket will be created (removal of the section for BRMS).
+mczernek$*$Still relevant, the issue is pointing to a [picture|https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.3/html/Administration_And_Configuration_Guide/images/6575.jpg] that shows ""deploy to runtime,"" which is not valid for BRMS. 
+Impact: Admin Guide
+A good candidate for our triage mtg.
+[project_info]
+Red Hat JBoss BRMS is a powerful open source business rules management system (BRMS). It helps organisations capture business logic and automate business decisions across heterogeneous physical, virtual, mobile and cloud environments.
+[terms_def]
+BRMS$*$Red Hat JBoss BRMS. Red Hat JBoss BRMS is a powerful open source business rules management system (BRMS). It helps organisations capture business logic and automate business decisions across heterogeneous physical, virtual, mobile and cloud environments.
+HTTP$*$The Hypertext Transfer Protocol is an application protocol for distributed, collaborative, hypermedia information systems.
+BPMS$*$jBPM is an open-source workflow engine written in Java that can execute business processes described in BPMN 2.0. jBPM is a toolkit for building business applications to help automate business processes and decisions.
+URL$*$A Uniform Resource Locator, colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier, although many people use the two terms interchangeably.
+EJB$*$Enterprise JavaBeans (EJB) is one of several Java APIs for modular construction of enterprise software. EJB is a server-side software component that encapsulates business logic of an application.
+",10800,6000
+AEROGEAR-2174,create the basic interfaces/methods/API for performing security checks,"*What*
+Summers has created this gist: https://gist.github.com/secondsun/2e674103c85363f0a602011d44b6b44a.
+We should take the idea and translate that into Java classes/interfaces. This will set the foundation allow us to start implementation for all the other checks.
+We may need:
+1 interface for the tests
+1 class for the SecurityService
+1 interface for the result - it should have concrete implementation","[comments]
+vsazel$*$[~mziccardi] It is possible to include some comment about what was done regarding testing it?
+akeating1$*$Unassigning this for the moment to focus on the documentation task, as this is a blocker for some other tasks.
+[project_info]
+Mobile Services AeroGear is an open-source, Red Hat project that brings security and development expertise to cross-platform enterprise mobile development. It is a coding platform that simplifies mobile development and cross-platform infrastructure setup.
+[terms_def]
+Java$*$Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.
+API$*$An application programming interface is an interface or communication protocol between a client and a server intended to simplify the building of client-side software.
+",57600,53400
+BEAM-7542,java.lang.ClassCastException when writing BYTES to BigQuery,"When trying to use BigQueryIO.write() with BigQueryUtils.toTableRow() with a BYTES field it breaks with 
+{noformat}
+java.lang.ClassCastException: [B cannot be cast to java.nio.ByteBuffer at org.apache.beam.sdk.io.gcp.bigquery.BigQueryUtils.fromBeamField(BigQueryUtils.java:280){noformat}
+BigQueryUtils.fromBeamField() attempts to cast fieldValue to java.nio.ByteBuffer but it is a byte[].
+Unit tests are not covering BYTES field type.","[comments]
+viktor.gerdin$*$PR submitted. That vglocus guy is me.
+kedin$*$Awesome, thank you for the contribution!
+kanterov$*$[~kedin] it looks like a big oversight and low hanging fruit to fix, WDYT about having it as a part of 2.14.0?
+iemejia$*$[~viktor.gerdin] please open the PR for this, we still have until next wednesday to get it in.
+viktor.gerdin$*$[~kedin] I have a working copy running my pipeline and would gladly commit these for the greater good.
+kedin$*$I think we should try to get this into 2.14. I can help review and merge it. But my understanding is that if it's not a regression then we shouldn't block the release just for this fix.
+[~viktor.gerdin], is this issue being actively worked on?
+tvalentyn$*$I came across an integration test that exercises BYTES recently: https://github.com/apache/beam/blob/82bf1ae76288b5c679beb58fa06a85b1dd3127d8/sdks/java/io/google-cloud-platform/src/test/java/org/apache/beam/sdk/io/gcp/bigquery/BigQueryToTableIT.java#L92 , not sure if it covers the codepath discussed here. Note that Bigquery IO expects BYTES to be base64-encoded by the user of the IO.
+[project_info]
+Apache Beam is a programming model, SDKs, and runners for defining and executing data processing pipelines. Apache Beam is an open source unified programming model to define and execute data processing pipelines, including ETL, batch and stream processing.
+[terms_def]
+BigQuery$*$BigQuery is a RESTful web service that enables interactive analysis of massive datasets working in conjunction with Google Storage. It is a serverless Platform as a Service that may be used complementarily with MapReduce.
+",86400,3600
+IGNITE-8958,Web console: upgrade to AngularJS 1.7,"AngularJS 1.7 provides more features that will improve migration to Angular, so let's update and fix any issues that will probably occur along the way.","[comments]
+Klaster_1$*$I've removed the ""javascript:void(0)"" href from dropdown template, please test the fix.
+vsisko$*$Tested. Dialog does not appear.
+Klaster_1$*$Why update to 1.7: fixed angular1-async-filter filter support. There was a relevant ticket in AngularJS repo, but I can't find it yet.
+Klaster_1$*$I've rebased the branch to the latest master.
+Klaster_1$*$Apparently, sce 1.7 adds ""unsafe:"" protocol to ""javascript:void 0"" hrefs, which in turn triggers an unknown protocol behavior in xdg-open (or something very similar). I'll see if I can remove the ""unsafe"" prefix or ""js:void 0"".
+kuaw26$*$Looks good. Merged to master.
+Klaster_1$*$[~vsisko] can you attach a screenshot? I'm not sure what a ""browser dialog Open xdg-open"" is.
+Klaster_1$*$[~pkonstantinov] please test everything for regressions. The only thing I stumbled upon was a single E2E test regression, which I fixed (also fixes IGNITE-8094).
+[~anovikov] please review.
+vsisko$*$# On switch of project version (on some other actions too) browser dialog *Open xdg-open* is shown. See ignite-8958-1 image.
+[project_info]
+Apache Ignite Apache Ignite is an open-source distributed database, caching and processing platform designed to store and compute on large volumes of data across a cluster of nodes. Ignite was open-sourced by GridGain Systems in late 2014 and accepted in the Apache Incubator program that same year.
+[terms_def]
+AngularJS$*$AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
+",172800,16200
+AMBARI-24059,Ambari Views auto create instance should support matching to all known stacks,"The Ambari Views framework currently defines a set of configuration tags that can be used to configure the auto-instance deployment of a view.  Currently, this configuration allows for a matching stack to be explicitly configured, or a wildcard ('*"") can be used to allow more flexible matching against a set of stack version numbers. 
+The current configuration already supports this type of matching: 
+ 
+{code:java}
+<auto-instance>
+<name>AUTO_INSTANCE</name>
+<label>View Name</label>
+<stack-id>HDP-*</stack-id>
+:
+</auto-instance>{code}
+This configuration needs to be more flexible in order to allow a given View implementation to specify that it can match to any stack, including those defined outside of the ""HDP"" stack name. 
+The Ambari Views Registry should be updated to allow for specifying a wilcard character in order to instruct the Views framework to match against any stack, regardless of whether the stack begins with the ""HDP"" stack name. 
+{code:java}
+<auto-instance>
+<name>AUTO_INSTANCE</name>
+<label>View Name</label>
+<stack-id>*</stack-id>
+:
+</auto-instance>{code}
+This change should allow for greater flexibility for service and view developers, in cases where a given service's view can be used by more than one stack.  ","[comments]
+rnettleton$*$Patch merged into trunk.
+hudson$*$SUCCESS: Integrated in Jenkins build Ambari-trunk-Commit #9436 (See [https://builds.apache.org/job/Ambari-trunk-Commit/9436/])
+[AMBARI-24059] Ambari Views auto create instance should support matching (github: [https://gitbox.apache.org/repos/asf?p=ambari.git&a=commit&h=ab70364cf6432f71952f36d012e16cb2373f9a94])
+* (edit) ambari-server/src/test/java/org/apache/ambari/server/view/ViewRegistryTest.java
+* (edit) ambari-server/src/main/java/org/apache/ambari/server/view/ViewRegistry.java
+[project_info]
+Ambari is a monitoring, administration and lifecycle management project for Apache Hadoop clusters. What is Apache Ambari? - Definition from Techopedia. Ambari offers software tools for provisioning and managing Hadoop data clusters
+. Along with other data tools, Ambari helps to support the effective use of ...
+[terms_def]
+Views$*$Apache Ambari includes the Ambari Views Framework, which enables developers to create UI components, or Views, that “plug into” the Ambari Web interface. ... Views are deployed on the Ambari Server, which enables Ambari Admins to create View instances and set access privileges for users and groups.
+",259200,5400
+FUSEDOC-871,"add the doc for org.apache.karaf.jaas.modules.properties.AutoEncryptionSupport in ""Encrypting Stored Passwords"" section""","In  JBoss FUSE 6.2 we introduce a org.apache.karaf.jaas.modules.properties.AutoEncryptionSupport class to automatically encrypt the passwords in users.properties without login if users configure the jaas realm to enable the encryption. So in ""Encrypting Stored Passwords"" section, besides the encryption properties in <jaas:module...,  aslo need add AutoEncryptionSupport bean configuration like
+{code}
+<bean class=""org.apache.karaf.jaas.modules.properties.AutoEncryptionSupport""
+init-method=""init"" destroy-method=""destroy"">
+<argument>
+<map>
+<entry key=""org.osgi.framework.BundleContext"" value-ref=""blueprintBundleContext""/>
+<entry key=""users"" value=""$[karaf.base]/etc/users.properties""/>
+<entry key=""encryption.name"" value=""jasypt""/>
+<entry key=""encryption.enabled"" value=""true""/>
+<entry key=""encryption.prefix"" value=""{CRYPT}""/>
+<entry key=""encryption.suffix"" value=""{CRYPT}""/>
+<entry key=""encryption.algorithm"" value=""SHA-256""/>
+<entry key=""encryption.encoding"" value=""base64""/>
+<entry key=""encryption.iterations"" value=""100000""/>
+<entry key=""encryption.saltSizeBytes"" value=""16""/>
+</map>
+</argument>
+</bean>
+{code}","[comments]
+jmurphey$*$Thanks Freeman!
+jmurphey$*$Freeman, where in the example blueprint file (Example of a login module with jasypt encryption) does this bean go? Assuming that is the place you were pointing to in the description.
+jmurphey$*$Found answer to above question of where to place the new bean block of code in the blueprint.xml file - plm2-new.xmll file.
+jmurphey$*$Freeman, in your description above, what exactly do you mean ""without login"" in  ""... to automatically encrypt the passwords in users.properties without login ...""?
+jmurphey$*$And all user passwords in the etc/users.properties file are encrypted at the same time, right?
+jmurphey$*$So what triggers the autoencryption event? When does it happen?
+[project_info]
+Red Hat Fuse is an open source integration platform based on Apache Camel. It is a distributed integration platform that provides a standardized methodology, infrastructure, and tools to integrate services, microservices, and application components.
+[terms_def]
+JBoss$*$JBoss is a division of Red Hat that provides support for the WildFly open source application server program (formerly called JBoss AS) and related middleware services. JBoss is an open source alternative to commercial offerings from IBM WebSphere and SAP NetWeaver.
+SHA$*$The Secure Hash Algorithms are a family of cryptographic hash functions published by the National Institute of Standards and Technology as a U.S. Federal Information Processing Standard, including: SHA-0: A retronym applied to the original version of the 160-bit hash function published in 1993 under the name ""SHA"".
+",57600,12600
+QPID-6756,[Java Client] Allow Client to make connection over a provided Socket,"In environments where clients are unable to make outbound connections, such as firewall rules, allow incoming sockets connections to be provided to the Client API.
+","[comments]
+rgodfrey$*$Reimplement the functionality previously provided by [QPID-784]
+jira-bot$*$Commit 1705289 from [~godfrer] in branch 'java/trunk'
+[ https://svn.apache.org/r1705289 ]
+QPID-6756 : Allow a connection to use a pre-opened socket
+lorenz.quack$*$Reviewed. Looks good.
+[project_info]
+Qpid provides multiple language implementations of the Advanced Messaged Queuing Protocol (AMQP) specification and related technologies including transactions, queuing, distribution, security, management and heterogeneous multi-platform support for messaging. Apache Qpid is an open-source messaging system which implements the Advanced Message Queuing Protocol. It provides transaction management, queuing, distribution, security, management, clustering, federation and heterogeneous multi-platform support.
+[terms_def]
+API$*$An application programming interface is an interface or communication protocol between a client and a server intended to simplify the building of client-side software.
+",14400,3600
+JBEAP-11450,Adding application-security-domain in EJB subsystem requires server reload,"When application-security-domain is added in EJB subsystem then it is not used until server is reloaded. However CLI command does not set server to {{reload-required}} state, see:
+{code}
+/subsystem=ejb3/application-security-domain=other:add(security-domain=ApplicationDomain)
+{""outcome"" => ""success""}
+{code}","[comments]
+iweiss$*$Correcting myself. I was running an old build of EAP 7.x branch. After updating and rebuilding it I no longer see this issue.
+[~olukas], can you repeat the test please with the latest EAP 7.x branch build and/or ER3 please?
+brian.stansberry$*$Is the HTTP over EJB aspect necessary to reproduce this? It adds a complicating factor that I'm not sure is relevant.
+brian.stansberry$*$If the deployment is deployed before the  /subsystem=ejb3/application-security-domain=other:add(security-domain=ApplicationDomain) call and is not redeployed after, then this is not a bug. The software functions as designed. The settings in place when the deployment is deployed remain in effect until the deployment is redeployed (with a server reload or restart counting as one way to redeploy.) The :add operation does not require reload because it immediately alters the way the server will process the deployment of an application; no reload is necessary. Wanting an already processed deployment to automatically pick up the changed settings without a redeploy is an Enhancement request.
+If a new deployment is deployed, or an existing deployment is redeployed, after the /subsystem=ejb3/application-security-domain=other:add(security-domain=ApplicationDomain) call and the settings are not reflected in the behavior of that deployment, then that is a bug, as the software is not functioning as designed. But Ingo's testing shows that is not the case.
+olukas$*$[~brian.stansberry] Thanks for clarification. In that case this issue is not a bug.
+mjurc$*$[~brian.stansberry]: I do not think so. I think that this is result of the Elytron security domains being associated with deployments at their deploy, so if the {{application-security-domain}} is added after deployment, the Elytron security domain does not get associated to deployment.
+olukas$*$[~iweiss] Sorry for late answer - I was sick last week.
+I tried this issue with EAP 7.1.0.ER3 and it seems that issue still occurs there. I think this should be reopened.
+Issue has been resolved with ""cannot reproduce bug"". Do you say that in Steps to Reproduce, in step 3), after calling {{/subsystem=ejb3/application-security-domain=other:add(security-domain=ApplicationDomain)}} you are able to correctly authenticate with EJB client (before reload the server)?
+iweiss$*$I can reproduce the issue. I will work on it.
+iweiss$*$[~brian.stansberry] Deploying the server application after {{/subsystem=ejb3/application-security-domain=other:add()}} and trying to access it without a reload fails. After a reload, then, it works as expected.
+I will work on it from this perspective. I failed to mention that WildFly master works without a reload, so this issue is isolated to EAP 7.x branch.
+{code:java}
+~/Development/mock-artifacts/ejbclient/eap7.1-httpclient/client (master ?) ? mvn exec:exec
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for client:client:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 72, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building client 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.2.1:exec (default-cli) @ client ---
+Aug 16, 2017 4:46:56 PM org.wildfly.security.Version <clinit>
+INFO: ELY00001: WildFly Elytron version 1.1.0.CR4-redhat-1
+Aug 16, 2017 4:46:57 PM org.wildfly.naming.client.Version <clinit>
+INFO: WildFly Naming version 1.0.0.CR1-redhat-1
+Aug 16, 2017 4:46:57 PM org.jboss.ejb.client.EJBClient <clinit>
+INFO: JBoss EJB Client version 4.0.0.CR6-redhat-1
+Aug 16, 2017 4:46:57 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.5.0.CR2-redhat-1
+Aug 16, 2017 4:46:57 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.5.0.CR2-redhat-1
+Aug 16, 2017 4:46:57 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 5.0.0.CR5-redhat-1
+Aug 16, 2017 4:46:57 PM org.wildfly.httpclient.common.HttpTargetContext lambda$acquireSessionAffinity$1
+ERROR: WFHTTP000003: Failed to acquire session
+java.io.IOException: WFHTTP000005: Invalid response code 401 (full response ClientResponse{responseHeaders={www-authenticate=[Basic realm=""Application Realm""], x-powered-by=[Undertow/1], server=[JBoss-EAP/7], content-length=[77], content-type=[text/html], date=[Wed, 16 Aug 2017 15:46:57 GMT]}, responseCode=401, status='', protocol=HTTP/2.0})
+at org.wildfly.httpclient.common.HttpTargetContext$1$1.lambda$completed$0(HttpTargetContext.java:204)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+Aug 16, 2017 4:46:57 PM org.wildfly.httpclient.common.HttpTargetContext lambda$acquireSessionAffinity$1
+ERROR: WFHTTP000003: Failed to acquire session
+java.nio.channels.ClosedChannelException
+at io.undertow.client.http2.Http2ClientConnection.close(Http2ClientConnection.java:296)
+at io.undertow.client.http.HttpClientConnection.close(HttpClientConnection.java:461)
+at org.xnio.IoUtils.safeClose(IoUtils.java:152)
+at org.wildfly.httpclient.common.HttpConnectionPool$ClientConnectionHolder.done(HttpConnectionPool.java:273)
+at org.wildfly.httpclient.common.HttpTargetContext$1$1.lambda$completed$0(HttpTargetContext.java:209)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+Aug 16, 2017 4:46:57 PM org.wildfly.httpclient.common.HttpTargetContext lambda$acquireSessionAffinity$1
+ERROR: WFHTTP000003: Failed to acquire session
+java.nio.channels.ClosedChannelException
+at io.undertow.client.http2.Http2ClientConnection.close(Http2ClientConnection.java:296)
+at io.undertow.client.http.HttpClientConnection.close(HttpClientConnection.java:461)
+at org.xnio.IoUtils.safeClose(IoUtils.java:152)
+at org.wildfly.httpclient.common.HttpConnectionPool$ClientConnectionHolder.done(HttpConnectionPool.java:273)
+at org.wildfly.httpclient.common.HttpTargetContext$1$1.lambda$completed$0(HttpTargetContext.java:209)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+Exception in thread ""main"" javax.ejb.EJBException: java.io.IOException: WFHTTP000005: Invalid response code 401 (full response ClientResponse{responseHeaders={www-authenticate=[Basic realm=""Application Realm""], x-powered-by=[Undertow/1], server=[JBoss-EAP/7], content-length=[77], content-type=[text/html], date=[Wed, 16 Aug 2017 15:46:57 GMT]}, responseCode=401, status='', protocol=HTTP/2.0})
+at org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:204)
+at org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:107)
+at com.sun.proxy.$Proxy0.whoami(Unknown Source)
+at client.Client.main(Client.java:38)
+Caused by: java.io.IOException: WFHTTP000005: Invalid response code 401 (full response ClientResponse{responseHeaders={www-authenticate=[Basic realm=""Application Realm""], x-powered-by=[Undertow/1], server=[JBoss-EAP/7], content-length=[77], content-type=[text/html], date=[Wed, 16 Aug 2017 15:46:57 GMT]}, responseCode=401, status='', protocol=HTTP/2.0})
+at org.wildfly.httpclient.common.HttpTargetContext$1$1.lambda$completed$0(HttpTargetContext.java:204)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+{code}
+brian.stansberry$*$Work on EAP 7.1 has proceeded to the point where only changes for issues with Blocker priority will be considered. As this issue is not a release blocker, the Target Release is being adjusted to reflect the fact it will not be fixed in 7.1.0.GA. If you believe this issue should be a 7.1.0.GA release blocker, please as soon as possible notify either the component lead for this issue's component, or Kabir Khan, Rostislav Svoboda, Bilge Ozpeynrci or Mike McComas.
+[project_info]
+JBoss Enterprise Application Platform:
+Cloud-ready, market-leading enterprise platform for next-generation, highly transactional enterprise Java applications JBoss Enterprise Application Platform
+[terms_def]
+EJB$*$Enterprise JavaBeans (EJB) is one of several Java APIs for modular construction of enterprise software. EJB is a server-side software component that encapsulates business logic of an application.
+CLI$*$A command-line interface is a means of interacting with a computer program where the user issues commands to the program in the form of successive lines of text. The program which handles the interface is called a command-line interpreter or command-line processor.
+",14400,10800
+IGNITE-9596,Web console: invisible checkbox is visible,"How it looks:
+!image-2018-09-14-10-58-23-054.png!
+How to reproduce:
+1. Connect to a cluster
+2. Open queries
+3. Click ""+Add scan""
+4. Scroll down to filter input with ""Cs"" appendix.","[comments]
+Klaster_1$*$I think ""height: 0"" on a checkbox was a bad idea and can/should be replaced with another approach.
+pkonstantinov$*$Tested on the master.
+kuaw26$*$Looks good to me. Merged to master.
+alexdel$*$Please check. Checkbox is hidden.
+pkonstantinov$*$Tested on the branch with Firefox, Chrome, Edge, Safari.
+[project_info]
+Apache Ignite Apache Ignite is an open-source distributed database, caching and processing platform designed to store and compute on large volumes of data across a cluster of nodes. Ignite was open-sourced by GridGain Systems in late 2014 and accepted in the Apache Incubator program that same year.
+",10800,1800
+AEROGEAR-4319,Test and verify integration with server side metrics,"Test SDK with metrics apb server to check if implementation works with backeng.
+Validate if interfaces are matching and functionality is working.
+This ticket should be done only when backend work is finished
+*Suggestion*
+* provision Metrics APB
+* push data from the App (automatically done when using the Metrics SDK)
+* verify correct metrics show up in Grafana Dashboard
+* check the behaviour in failure scenarios, and if fails in a reasonable manner e.g. no network on device, metrics service isn't running
+As part of this task, evaluate if/how much of this could be automated.
+","[comments]
+jgallaso$*$[~davidmartin] [~wtrocki] Automate if possible (or rather as much as possible) or manual testing is good enough at this point?
+(Edited by error oops)
+jgallaso$*$[~davidmartin] [~peter.braun] [~darahayes]
+Currently the integration test is failing due to a backend error (1) and additionally another bug has been found in the SDK (2). It is worth mention they are already known and that a workaround exists.
+1. From the server side (aerogear-app-metrics) there's a limitation for the size of field ""clientId"" that makes the server returns an Internal error:
+{noformat}
+{
+""error"": ""Internal Server Error"",
+""message"": ""Internal Server Error"",
+""statusCode"": 500
+}
+{noformat}
+From the client side there is (likely) a bug that triggers a NPE, in [NetworkMetricsPublisher|https://github.com/aerogear/aerogear-android-sdk/blob/master/core/src/main/java/org/aerogear/mobile/core/metrics/publisher/NetworkMetricsPublisher.java#L60] , {{httpResponse.getRequestError()}} returns null.
+Edit: Tickets:
+Bug in http: https://issues.jboss.org/browse/AGDROID-769
+Backend clientId limitation: https://issues.jboss.org/browse/AGIOS-665
+davidmartin$*$https://issues.jboss.org/browse/AGDROID-733 could be done at/around the same time as it would be showing similar things
+[project_info]
+Mobile Services AeroGear is an open-source, Red Hat project that brings security and development expertise to cross-platform enterprise mobile development. It is a coding platform that simplifies mobile development and cross-platform infrastructure setup.
+[terms_def]
+SDK$*$A software development kit is typically a set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform.
+APB$*$An Ansible Playbook Bundle (APB) is a lightweight application definition (meta-container). They are used to define and deploy complex groups of applications, deployment configs, deployments, and services to an OpenShift Origin cluster running the Ansible Service Broker.
+Grafana$*$Grafana is an open source metric analytics & visualization suite. It is most commonly used for visualizing time series data for infrastructure and application analytics but many use it in other domains including industrial sensors, home automation, weather, and process control
+",28800,16500
+AEROGEAR-4322,Spike : Android Core POC for error handling.,"This task is to put together some pseduo code to demonstrate how service modules will be able to depend on each other and be composed.  This should show off error handling and http request retries.
+Scenario : a RESTful endpoint is secured by KeyCloak.
+If the token expires then the HttpRequest will fail with a error.  If the token is refreshed, the service call would work.  The code will demonstrate how to build libraries which can resolve certain simple issues and either retry a request or give the developer more useful feedback.","[comments]
+lfitzgerald$*$[~supittma] could you add a time estimate to this task when you get a chance, thanks. :)
+lfitzgerald$*$[~supittma] as this work relates to service modules does it belong under the EPIC for IdM as we are using this one to architect out the Android SDK Modules rather than the `Android Mobile Core` Epic?
+lfitzgerald$*$Cool. thanks for the update. And thanks for adding the time estimation. :)
+supittma$*$No.  This is cross cutting functionality, not IDM functionality.
+supittma$*$[~lfitzgerald] Added.  I also added https://issues.jboss.org/browse/AGDROID-701 which was work that needs to be in place before this can be done.
+supittma$*$Notes and brainstorming here : https://docs.google.com/document/d/1RhG4YRnkJpckmED1yeIeGhgohaLbygO4t0ffxANwF-8/edit#
+supittma$*$Every module will integrate with error handling, not just IDM.
+For instance, if you have KeyCloak securing Sync and a sync call fails because your account got deleted, sync will have to be alerted to that error and Core will negotiate with the keycloak module to fix it.
+Likewise, if the sync call fails because of a collision, core will have to negotiate to fix the error.
+lfitzgerald$*$I'm not sure what you mean by cross cutting here?
+[project_info]
+Mobile Services AeroGear is an open-source, Red Hat project that brings security and development expertise to cross-platform enterprise mobile development. It is a coding platform that simplifies mobile development and cross-platform infrastructure setup.
+[terms_def]
+Android$*$Android is a mobile operating system developed by Google. It is based on a modified version of the Linux kernel and other open source software, and is designed primarily for touchscreen mobile devices such as smartphones and tablets.
+Core$*$Core Software means the computer software (in source and object code format, and including all associated libraries and other components necessary for the compilation and execution thereof) comprising the current (as of the Closing Date and each Credit Date) commercial production versions of the applications commonly
+POC$*$Proof of concept
+HttpRequest$*$An HTTP request header is a component of a network packet sent by a browser or client to the server to request for a specific page or data on the Web server. It is used in Web communications or Internet browsing to transport user requests to the corresponding website's Web server.
+",86400,28800
+LOG4J2-2532,SyslogAppender with RFC5424 and TLS is prepending messagelength,"If I want to log via Syslog (RFC5424) the logs seem to have the length of the message in front of the message which results in parser errors at the syslogserver.
+{{config:}}
+{{<?xml version=""1.0"" encoding=""UTF-8""?>}}
+{{ <Configuration status=""INFO"">}}
+{{ <Appenders>}}
+{{  <Syslog name=""local"" host=""localhost"" port=""10001"" format=""RFC5424"" newLine=""true"" id=""App"" mdcId=""9999"">}}
+{{   <SSL>}}
+{{    <TrustStore location=""trust.jks"" password=""testtest"" />}}
+{{   </SSL>}}
+{{  </Syslog>}}
+{{ </Appenders>}}
+{{ <Loggers>}}
+{{  <Root level=""debug"">}}
+{{   <AppenderRef ref=""local""/>}}
+{{  </Root>}}
+{{ </Loggers>}}
+{{ </Configuration> }}
+{{Result (with openssl s_server -key private.pem -cert public.pem -accept 10001):}}
+{{67 <134>1 2019-01-14T13:26:14.947+01:00 apu localhorst 12866 - - Test}}
+Expected result:
+{{<134>1 2019-01-14T13:26:14.947+01:00 apu localhorst 12866 - - Test}}","[comments]
+AZMax$*$I created a pull-request (#252) in Github.
+Hope this helps...
+rgoers$*$Resolving this since its behavior matches the RFC.
+Post-Prime$*$definitely: [https://tools.ietf.org/html/rfc5425#section-4.3]
+rgoers$*$[~garydgregory] added the useTlsMessageFormat option when he implemented LOG4J2-644. I don't know why the 2 byte length prefix is required. Perhaps Gary does.
+rgoers$*$I just took a look at [https://tools.ietf.org/html/rfc5425.] It says the 2 byte length prefix is required for TLS syslog messages.
+[project_info]
+Apache Log4j 2.0 is the main development branch for logging services designed for Java 7 and later. Apache Log4j is a Java-based logging utility. It was originally written by Ceki Gülcü and is part of the Apache Logging Services project of the Apache Software Foundation.
+[terms_def]
+RFC5424$*$is a syslog protocol which is a standard for message logging. It allows separation of the software that generates messages, the system that stores them, and the software that reports and analyzes them.
+TLS$*$Transport Layer Security, and its now-deprecated predecessor, Secure Sockets Layer, are cryptographic protocols designed to provide communications security over a computer network. Several versions of the protocols find widespread use in applications such as web browsing, email, instant messaging, and voice over IP.
+UTF$*$UTF-8 is a variable width character encoding capable of encoding all 1,112,064 valid code points in Unicode using one to four 8-bit bytes. The encoding is defined by the Unicode Standard, and was originally designed by Ken Thompson and Rob Pike. The name is derived from Unicode Transformation Format – 8-bit.
+SSL$*$Secure Sockets Layer (SSL) was the most widely deployed cryptographic protocol to provide security over internet communications before it was preceded by TLS (Transport Layer Security) in 1999. Despite the deprecation of the SSL protocol and the adoption of TLS in its place, most people still refer to this type of technology as ‘SSL’.
+",3600,3000
+AEROGEAR-5552,Allow to override dependency when importing AeroGear Services IOS SDK,"h4. Motivation 
+SDK can depend on external dependencies like alamofire. 
+Alamofire is really popular networking library and it may be used in the user application.
+Having two different versions of the same library will cause conflict on build.
+Users will need to change their version to comply with our version, which is not acceptable aproach.
+This problem is really well described and mentioned in many bugs. 
+For example:
+https://github.com/CocoaPods/CocoaPods/issues/461
+We will need to figure out solution the same as we done on Android when we decided to use BOM version management.
+h4. How
+We need to replicate the same work we have done for Android by allowing developers to avoid dependency problems or document how to handle that situations.
+","[comments]
+wtrocki$*$Initial investigation finished:
+Common solution is to provide wide version range for dependencies - never fixed version as this will cause conflicts for others.
+However we cannot really say and test many use cases as our modules are now linked as development pods:
+!Screen Shot 2018-01-29 at 2.31.54 PM.png|thumbnail! 
+When conflict happens it's it's usually because invalid version ranges:
+{code}
+[!] CocoaPods could not find compatible versions for pod ""Alamofire"":
+In Podfile:
+AGSCore (from `../modules/core`) was resolved to 1.0.0, which depends on
+Alamofire (= 4.6.0)
+Alamofire (< 4.5)
+{code}
+Going to adjust ranges in PR.
+wtrocki$*$Specified ranges are really wide. I researched option to ask people to import alamofire directly in the application.That could be alternative but I do not think that we want to that at this point.
+Another alternative will be to use Framework that offers namespaces, but this will prevent us from modular architecture.
+wtrocki$*$After talk with [~danielpassos] we agreed that we cannot ignore that issue as this will be huge limitation for the SDK developers.
+[project_info]
+Mobile Services AeroGear is an open-source, Red Hat project that brings security and development expertise to cross-platform enterprise mobile development. It is a coding platform that simplifies mobile development and cross-platform infrastructure setup.
+[terms_def]
+AeroGear$*$AeroGear is an open-source, Red Hat project that brings security and development expertise to cross-platform enterprise mobile development. It is a coding platform that simplifies mobile development and cross-platform infrastructure setup.
+IOS$*$iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that presently powers many of the company's mobile devices, including the iPhone, and iPod Touch; it also powered the iPad prior to the introduction of iPadOS in 2019.
+SDK$*$A software development kit is typically a set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform.
+Android$*$Android is a mobile operating system developed by Google. It is based on a modified version of the Linux kernel and other open source software, and is designed primarily for touchscreen mobile devices such as smartphones and tablets.
+BOM$*$Bill Of Materials
+",57600,28800
+AMBARI-23382,Ambari-server sync-ldap: Sync event creation failed,"As described here [ambari-server sync-ldap no longer working|https://community.hortonworks.com/questions/119756/ambari-server-sync-ldap-no-longer-working.html] sync-ldap fails with 
+{{REASON: Sync event creation failed. Error details: hostname '127.0.0.1' doesn't match }}
+As pointed out by [Berry Osterlund |https://community.hortonworks.com/users/13196/berryosterlund.html]this is because the default behavior for ssl cert verification changed in python 2.7.5-58. 
+ 
+ambari_server/serverUtils.py hardcodes ""SERVER_API_HOST = '127.0.0.1'""
+Thinking we can provide the full hostname dyanmically.","[comments]
+quirogadf$*$Starting work on this. But don't think I have access to assign to myself or update status.
+quirogadf$*$Started a pull request
+[https://github.com/apache/ambari/pull/806]
+hudson$*$FAILURE: Integrated in Jenkins build Ambari-trunk-Commit #9020 (See [https://builds.apache.org/job/Ambari-trunk-Commit/9020/])
+[AMBARI-23382] Ambari-server sync-ldap: Sync event creation failed (rlevas: [https://gitbox.apache.org/repos/asf?p=ambari.git&a=commit&h=674807e82eb1ee2187a28947f007d8afabf373c6])
+* (edit) ambari-server/src/test/python/TestAmbariServer.py
+* (edit) ambari-server/src/main/python/ambari_server/serverUtils.py
+* (edit) ambari-server/src/test/python/TestServerUtils.py
+[project_info]
+Ambari is a monitoring, administration and lifecycle management project for Apache Hadoop clusters. What is Apache Ambari? - Definition from Techopedia. Ambari offers software tools for provisioning and managing Hadoop data clusters
+. Along with other data tools, Ambari helps to support the effective use of ...
+",14400,7200
+JBEAP-4256,add trace logging to the SSO code in undertow,"Please add trace logging to the SSO code in wildfly/undertow.
+For example, it would be helpful if the sso code logged that it was getting triggered, if re-authentication was happening, etc.
+This is going to be very difficult to support if we do not have this type of information.","[comments]
+iweiss$*$[~jstourac] I think you are right. I remember creating a logger for {{io.undertow.security}} and it worked fine. If that doesn't work I think, at this point, that we need to create another issue to have this fixed. What do you think?
+jstourac$*$I agree - trace messages were added and work. This is just a user experience problem. I have created new [Jira for that here|https://issues.jboss.org/browse/JBEAP-5152] and linked to this one too.
+jstourac$*$Hi [~iweiss], those trace messages seems fine, I am just curious - would not be better to use {{SECURITY_LOGGER}} like [here|https://github.com/undertow-io/undertow/commit/c9d0a2bdf3e0d4b3412cac5169c07f023fe27697]? Because now to see those trace messages I have to raise {{ROOT_LOGGER}} to TRACE level. In case of {{SECURITY_LOGGER}} usage, I would be able to set only that one and see without being overhelmed by tons of other not related TRACE messages.
+jstourac$*$Verified with 7.0.1.CP.CR2. Log messages seems OK, there have been created new [Jira to move them into Undertow security logger|https://issues.jboss.org/browse/JBEAP-5152] instead. This one can be verified, though.
+[project_info]
+JBoss Enterprise Application Platform:
+Cloud-ready, market-leading enterprise platform for next-generation, highly transactional enterprise Java applications JBoss Enterprise Application Platform
+[terms_def]
+SSO$*$Single sign-on is a property of access control of multiple related, yet independent, software systems. With this property, a user logs in with a single ID and password to gain access to any of several related systems.
+",57600,28800
+CALCITE-2738,Add support for copying of RexDynamicParam and RexRangeRef to RexCopier,"Copying of RexDynamicParam and RexRangeRef are not supported now, but I think, that the implementation is similar to other RexNodes, so I can do it.","[comments]
+zabetak$*$Fixed in [a3f81bb7b088fd8c1d0c1df3b0f2b0cf122633de|https://github.com/apache/calcite/commit/a3f81bb7b088fd8c1d0c1df3b0f2b0cf122633de]. Thanks for the PR [~ashlanderr]!
+michaelmior$*$Resolved in release 1.20.0 (2019-06-24)
+[project_info]
+Calcite is a framework that allows efficient translation of queries involving heterogeneous and federated data. Apache Calcite is an open source framework for building databases and data management systems. It includes a SQL parser, an API for building expressions in relational algebra, and a query planning engine.
+",3600,1800
+WFCORE-2348,Error while starting WildFly as service in domain mode using init scripts.,"When starting WildFly as a service in domain mode using init scripts there appears in  console.log error:
+/usr/bin/dirname: unrecognized option '--domain-config=domain.xml'
+Try '/usr/bin/dirname --help' for more information.","[comments]
+brian.stansberry$*$Thanks!
+jira-bugzilla-migration$*$Radovan STANCEL <rstancel@redhat.com> changed the Status of [bug 1425754|https://bugzilla.redhat.com/show_bug.cgi?id=1425754] from ASSIGNED to POST
+brian.stansberry$*$There is no downstream dependency here. These files are not used in EAP. There is no docs/contrib folder in the EAP distribution.
+jira-bugzilla-migration$*$Petr Penicka <ppenicka@redhat.com> changed the Status of [bug 1425754|https://bugzilla.redhat.com/show_bug.cgi?id=1425754] from VERIFIED to CLOSED
+[project_info]
+The core runtime of WildFly WildFly, formerly known as JBoss AS, or simply JBoss, is an application server authored by JBoss, now developed by Red Hat. WildFly is written in Java and implements the Java Platform, Enterprise Edition specification. It runs on multiple platforms.
+[terms_def]
+WildFly$*$WildFly, formerly known as JBoss AS, or simply JBoss, is an application server authored by JBoss, now developed by Red Hat. WildFly is written in Java and implements the Java Platform, Enterprise Edition specification. It runs on multiple platforms.
+",14400,10800

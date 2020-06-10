@@ -1,0 +1,566 @@
+Issue Key,Round Number,Round Kappa,Crowd Estimate,Crowd Justification,Auto Quality Class
+AEROGEAR-4331,1,0.76,20,"1 day for researching and reading the Dagger documentation.
+1 day for installing and configuring the framework
+1 day for testing and writing the example code",B
+AEROGEAR-4331,1,0.76,8,I have a group of guys and we could figure it out in that time. If we couldn't we would pass the job to someone else,B
+AEROGEAR-4331,1,0.76,8,The task requires to use core core module in all services h4. It would definitely require a full day time.,B
+AEROGEAR-4331,1,0.76,20,"Learning a new framework environment could require some days, expecially if with no previous experience with it. Considering that i've found many tutorials about dagger 2.0 integrations with sdk services, half of a week will be enough to master it.",C
+AEROGEAR-4331,1,0.76,40,"Capture and estimate configuring dagger2 for the project. Implement and unit test dagger2 configuration for the project implementation, Assuming core services are already implemented and running.",B
+AEROGEAR-4331,1,0.76,8,"It would take a day to figure out the steps, configure Dagger, and a dependency for core service should be implemented to use the core module in all services h4.",B
+AMBARI-24426,1,0.67,40,GOOD,D
+AMBARI-24426,1,0.67,40,This requirement will probably take between a few days and a week depending on the experience of the programmer. Building a user interface is fairly straightforward if the requirement is straight forward and does not have to include many bells and whistles.,B
+AMBARI-24426,1,0.67,1,You can copy a template from a previous page.,D
+AMBARI-24426,1,0.67,20,"Requires creation of mapping between user friendly components and actual component names,
+also need to display user friendly names on the screen , no backend changes may be required",B
+AMBARI-24426,1,0.67,40,Medium complexity task,D
+AMBARI-24426,1,0.67,4,"I think that this issue should only take half a day at the most, because it seems to simply be getting information that already exists in the Log Index. It sounds like the difficult job, which is creating a functioning user-friendly UI is already done, so simply getting the names of these components within the Log Index should not be difficult. Depending on which programming language is being used, rapid prototyping should also allow members on the team to check the Log Index, while someone else tests the UI. It seems like a problem that should take half a day, or less.",B
+AMBARI-24426,1,0.67,20,Will need to further test out the script to work out all of the bugs.,B
+AMBARI-24426,1,0.67,4,"Fairly straightforward task, no mission creep. There will be plenty of code modules to develop this specific functionality, but II l",C
+AMBARI-24426,1,0.67,4,the task consists in modifying some log filters and show user friendly component names. Half of a day is enough.,D
+AMBARI-24426,1,0.67,8,good,D
+AMBARI-24426,1,0.67,8,"This will likely just involve cosmetic changes to the UI and aggregating existing data into a more user friendly format. It does not sound like difficult coding, but it does sound like the team are having a bit of trouble for some reason so a day sounds reasonable.",C
+AMBARI-24426,1,0.67,4,"Need to update the property the page is using to display the information, test, and update any existing unit tests that rely on the text currently being displayed",B
+AMBARI-24426,2,0.76,20,"I think it should take a couple of days to fix as it may require binding user interface with a property containing friendly names , also a mapping file may need to be created/updated to include mapping between user friendly names and actual property value.",B
+AMBARI-24426,2,0.76,8,"Configure the user friendly messages 
+Access it dynamically based on the preference
+Display the messages",D
+AMBARI-24426,2,0.76,20,"Depends on the knowledge of the programmer but in half week (8 hours a day) should be more than ready. The build of a user friendly experience is a really easy task, depending of the subject of the site, but after some basic knowledge is really easy to see the must have.",C
+AMBARI-24426,2,0.76,4,User-friendly names are subject to interpretation and should be achievable relatively quickly albeit still subject to later refinement based on additional requirements when they become available. Take what's already available and make it more pleasant.,B
+AMBARI-24426,2,0.76,20,"I think while all of the information should be readily accessible from the database, I also believe that any new feature added will necessarily take more than a day to flesh out any noticeable bugs. Given that this feature could be implemented by someone new to the team (which would a common case as this will help them familiarize themselves with the system), I think it would take a little longer as well.",B
+AMBARI-24426,2,0.76,20,"While this should typically only take a day, it would be good to give the extra time in case any issues arise. Half a week gives plenty of time for one person to accomplish this task.",B
+AMBARI-24426,2,0.76,8,"Since this mostly seems like a UI issue, a function (3 hours) to map the data onto human-friendly output and the UI for the filter level (3 hours) should be enough. If necessary, a function to flag the content (2 hours) can be written as well, to give the filter levels something to operate on. All in all, this is about a day of work.",B
+AMBARI-24426,2,0.76,20,ww,D
+GORA-622,1,0.74,-1,NICE,D
+GORA-622,1,0.74,8,The change that probably is needed has already be done elsewhere. Testing is what will require time.,B
+GORA-622,1,0.74,40,GOOD,D
+GORA-622,1,0.74,8,"Amend the group id field to hold the value , simple change to the group id field which should not take long to do depending on number of instances of group id",B
+GORA-622,1,0.74,1,"After doing a google search, seems like the problem is due to a XML file configuration (posix configuration). Setting the file should fix the issue. One hour will be enough.",B
+GORA-622,1,0.74,40,"Identify pull request issue with existing build, Make necessary changes in the project code repository to overcome build ID fix.",B
+GORA-622,1,0.74,4,SOME URGENT WORK,D
+GORA-622,1,0.74,20,This may involve making some code changes to shorten the group id so that build may pass.,B
+GORA-622,1,0.74,1,Looks to just require an upgrade to recent plugin versions and a setting that we're on darwin vs linux.,D
+GORA-622,1,0.74,4,Need to review and test the Pull Request that already exists to patch the issue,B
+GORA-622,2,0.67,40,"One has to make necessary changes in the project code, pull request issue and overcome bull ID fix.",B
+GORA-622,2,0.67,8,Testing may require more time as change has already been done.,B
+GORA-622,2,0.67,20,I think this will take half a week for one person to research and test. It sounds like the issue has been experienced in an existing pull request so this person will need to test their solution in this environment and make adjustments as needed.,B
+GORA-622,2,0.67,8,no,D
+GORA-622,2,0.67,80,GOOD,D
+GORA-622,2,0.67,8,Probably this is a configuration change. Or need to fix the pull request issue in the code and test it,B
+GORA-622,2,0.67,1,"Sounds like all you have to do is use posix and that solves the issue, and it's been added already anyway, just need to do the pull request and make sure everything compiles.",B
+GORA-622,2,0.67,20,"This will take a couple of days mainly to identify the issue (from the pull request), fix is likely to be minor",C
+GORA-622,3,0.76,20,Code fix required to accommodate group id length to run maven/jenkin deployment successfully for the plug in support,B
+GORA-622,3,0.76,8,GOOD EXPERIENCE,D
+GORA-622,3,0.76,20,Testing may require more time as change has already been done.,B
+GORA-622,3,0.76,4,"The workaround itself - 1 hour with minor tests. Working around ID's too big often has known fixes.
+Fixing stuff that the workaround broke - 2 or three hours.",B
+GORA-622,3,0.76,40,"I think a week is enough, it's a complicated job, but who knows no difficulties
+",C
+GORA-622,3,0.76,8,pinpointing to see there are no issues and making sure it is not affecting any other components by chance,C
+GORA-622,3,0.76,8,Given fixes are known. Just have to implement and copy new data,B
+GORA-622,3,0.76,20,This issue really boils down to how long it will take to execute the pull request and using posix make sure that everything compiles correctly without any errors. This could take up to half a week depending on the skill of the worker on the issue.,B
+AMBARI-24551,1,0.67,40,"Requires refactoring of how the API requests are designed to be called , may require considerable code changes and testing effort.",B
+AMBARI-24551,1,0.67,4,"I think something like this would only take an hour to fix, but I always like to give more time in case the problem ends up being more complex then you think. The problem is probably a simple typo",B
+AMBARI-24551,1,0.67,4,"This is a quick fix, but the time required to find the specific documentation for the problem in Google is what the main problem would be. This might take a while, including some forum posts.",B
+AMBARI-24551,1,0.67,20,I got to gather information I'm going to need when making changes,B
+AMBARI-24551,1,0.67,8,"Consider asking to work on this issue to someone who knows how the API are built. Reading the logs will explain the reason why the requests are sent, and a day should be enough to fix the issue.",C
+AMBARI-24551,1,0.67,20,Analyse server/client side scripting and necessary code change required to kill active or passive request at server side so that redundant and undoing/redoing issues can be resolved.,B
+AMBARI-24551,2,0.81,20,"Potentially very quick depend on the number of calls and places this API(s) are used in, the time required would likely scale with how heavily the API is used and how big the project is and the amount of refactoring per instance required.",B
+AMBARI-24551,2,0.81,20,"May require considerable code refactoring keeping in view , API calls need to revisited.",B
+AMBARI-24551,2,0.81,8,Implement security code changes at Client side API to restrict or block history details at end user.,B
+AMBARI-24551,2,0.81,20,Need to add more logging to figure out the duplicate requests being sent. do code changes to prevent it and test them,B
+AMBARI-24551,2,0.81,1,good,D
+AMBARI-24551,2,0.81,40,"Might require refactoring how API requests are submitted, depending how this currently has been implemented, it might require considerable code changes and testing effort.
+",B
+BXMSDOC-482,1,0.79,20,GOOD,D
+BXMSDOC-482,1,0.79,4,"Updating the documentation (by removing the ""Initiator"" role or mentioning that it is not fully implemented yet) will need 1 - 2 hours for a person who is familiar with it. Otherwise it might take a full day.",B
+BXMSDOC-482,1,0.79,20,"Documentation is pretty long . For this task a search function can be used, but who does it needs to be precise in order to remove the mentions.",C
+BXMSDOC-482,1,0.79,8,"This involves removing references from documentations about a not (fully) implemented feature.
+Should not take much effort since only documentation needs to be modified.",B
+BXMSDOC-482,1,0.79,4,Seems like the biggest part of this task require to modify the project's documentation. 2-3 hours / half a day should be enough if made by someone with a general knowledge of the project.,B
+BXMSDOC-482,1,0.79,1,Since removing the initiator role from the documentations and make it fully implemented and this may require a hour's time.,B
+BXMSDOC-482,1,0.79,80,NOTHING,D
+BXMSDOC-482,1,0.79,8,A day this is a simple error.,C
+BXMSDOC-482,1,0.79,1,nice,D
+BXMSDOC-482,1,0.79,1,If it's just a single document that needs to be updated it should take someone a handful of minutes to update the documentation to remove references to a role that doesn't exist.,B
+JBTIS-1031,1,0.48,80,"Well to add a handle to a prompt, it requires deliberate and comprehensive programming. A lot of coding will be needed to complete this task. It requires precise coding that will do the task.",B
+JBTIS-1031,1,0.48,40,"Have to make sure that pulling the bundle down removes it from the queue, you want to ensure it loads properly if it doesn't then figure out if we attempt to re-download the bundle or show error.",D
+JBTIS-1031,1,0.48,1,good,D
+JBTIS-1031,1,0.48,8,"sounds like an issue with test running specific machines, the issue description sounds like the solution was trivial",B
+JBTIS-1031,1,0.48,4,Removing a bundle and adding handle from the server would require a day or less time. This task is a bit difficult so it will require half a daytime.,B
+JBTIS-1031,1,0.48,80,This task a long and would require more amount of time. Adding a prompt is also a bit long task. This task requires proper justification. This is a FIx Deployment test.,B
+JBTIS-1031,1,0.48,4,"Adding a handle won't take all day, and it should take no more than half the day.",C
+JBTIS-1031,1,0.48,1,"Based on the comments this issue looks to have already been resolved.
+",B
+JBTIS-1031,2,0.76,8,I estimate a day to correct the problem by one developer. Most of the time would be spent determining the cause of the problem. The fix should be relatively easy. Testing should be performed by the developer prior to submitting the fix for release.,A
+JBTIS-1031,2,0.76,8,"It requires to add a handle for the prompt when one tries to remove a bundle from server , this may be a simple code fix hence one day should be enough.",B
+JBTIS-1031,2,0.76,4,code the event handler for prompts...Check the output while prompt occur,D
+JBTIS-1031,2,0.76,8,"It most definitely does not require more than one person, but does require extensive focus",C
+JBTIS-1031,2,0.76,8,NOTHING,D
+JBTIS-1031,2,0.76,1,time to test and make sure it runs smooth,B
+JBTIS-1031,2,0.76,8,From the comments it appears the issue has been resolved so it would just be a matter of deploying and testing the fix.,B
+JBTIS-1031,2,0.76,8,"This is a trivial modification to an existing codebase. Patch and test should not take more than a day, provided familiarity with the codebase and that the existing codebase is clean.",B
+JBTIS-1031,2,0.76,4,"The issue seems really easy to solve, just adding a handle for the prompt. The solution sounds fairly easy but it can also take a couple of hours.",B
+ENTMQBR-1807,1,0.79,20,"The change is simple , but the volume of changes (number of test affected) may be huge and requires those tests to be re-run and ensure that they are still passing.",B
+ENTMQBR-1807,1,0.79,1,"Simple script using regex
+",D
+ENTMQBR-1807,1,0.79,4,"This issue requires the use of a program like JBoss, which can be installed and patched in Windows 10. From there, start a server with the program and run the code.",B
+ENTMQBR-1807,1,0.79,20,"Although its not very create how the ""create table"" script is applied before tests. 
+To fix the table names to upper case, simple search for the ""CREATE TABLE"" should tell how many files/instances needs to be changed. Change itself is simple. 
+Considering an application is complex, and requires a bit of testing, half a week is required.
+",B
+ENTMQBR-1807,1,0.79,8,need to set to upper case table names in tests,B
+ENTMQBR-1807,1,0.79,8,"Depending on the level of expertise of the developer, I estimate it should take less than a day to resolve this issue, but as a generous estimate I suggest one full day in order to allow for double-checking and revisions as needed.",C
+ENTMQBR-1807,1,0.79,8,"*change the table names 
+* More time for smoke testing required for dependencies ",B
+FUSEDOC-861,1,0.79,4,First I will think on which process i will follow and then starts to coding and develop and test,B
+FUSEDOC-861,1,0.79,4,ok,D
+FUSEDOC-861,1,0.79,8,None of the changes are complicated and are normal syntax errors you would expect.,B
+FUSEDOC-861,1,0.79,4,"Fixes will take a couple hours, allow time for testing and documentation",B
+FUSEDOC-861,1,0.79,8,changing the code to accomodate editing or deleting the profile.,B
+FUSEDOC-861,1,0.79,8,no,D
+FUSEDOC-861,1,0.79,20,"With google it can cut some time, but it appears that the team is already aware of the issue and what is causing it, so probably the most part of the time they will spent in the coding part of the problem and not on the ""knowing what is wrong""",B
+BXMSDOC-368,1,0.67,20,"To fix the issue, someone just needs to add a note to the already existing document that the integration pack is not supported. Most of the time will be finding where to add the note and getting approval from everyone else after a review.",B
+BXMSDOC-368,1,0.67,4,Updating the documents to add the note about integration pack not being supported.,D
+BXMSDOC-368,1,0.67,4,I am ready to sumbit,D
+BXMSDOC-368,1,0.67,8,I would rewrite the Integration pack to be compatible with B*MS 6.1,D
+BXMSDOC-368,1,0.67,40,I would have to get more info but a week at minimum until then. I will have to contact my team as well as the developers team to find out more about any updates or changes to supporting software.,B
+BXMSDOC-368,1,0.67,40,Went with my gut,D
+BXMSDOC-368,1,0.67,80,"YES , OBVIOUSLY",D
+BXMSDOC-368,1,0.67,8,Need to change the code to display or intimate the end user that policy does not support camel integration pack,B
+BXMSDOC-368,1,0.67,1,Just display a notification if integration pack is not supported,D
+BXMSDOC-368,1,0.67,1,"From what I understand, the issue is that the document does not contain a memo about supporting ""integration pack"". It only mentions to add a note to the documentation, which should only take a few minutes to update.",B
+BXMSDOC-368,1,0.67,4,"Each individual lays a card face down representing their estimate for the story. Units used vary - they can be days duration, ideal days or story points. During discussion, numbers must not be mentioned at all in relation to feature size to avoid anchoring.
+Everyone calls their cards simultaneously by turning them over.
+People with high estimates and low estimates are given a soap box to offer their justification for their estimate and then discussion continues.
+Repeat the estimation process until a consensus is reached. The developer who was likely to own the deliverable has a large portion of the ""consensus vote"", although the Moderator can negotiate the consensus.",D
+BXMSDOC-368,1,0.67,1,good,D
+BXMSDOC-368,1,0.67,8,"At first I thought this was a difficult problem but we actually had done one very similar in class, so in my estimate a person with my knowledge (without knowing the problem before) would need almost a day to figure it out, or maybe just an afternoon",B
+BXMSDOC-368,2,0.67,1,It seems to be a simple case of updating the memo too make users aware that the integration pack is not supported,C
+BXMSDOC-368,2,0.67,20,"This sounds like a simple task, but running down how or why there is no support available for the Integration Pack requires some consultation among developers and program managers. Given that developers, tech writers, and others may not return calls or answer messaging regarding this lack of support, so to confirm that the company and staff are all on the same page - and avoid pesky, time consuming support calls, it will take a little time for one person.",B
+BXMSDOC-368,2,0.67,1,"The issue only asks that a note be left regarding the problem. It won't take long to write a memo. In fact, it should only take a minute or two to write the required note.",B
+BXMSDOC-368,2,0.67,8,Make the necessary code changes to display a message to the user for not supporting the integration pack,B
+BXMSDOC-368,2,0.67,80,nice,D
+BXMSDOC-368,2,0.67,40,Get in touch with team and developers team to change updates and developing software,B
+BXMSDOC-368,2,0.67,40,"I estimate a week of analysis for one person, dedicating 2 hours a day to better understand the problem and to draw up a technical opinion on the situation.",A
+BXMSDOC-368,2,0.67,8,Depending on whether they are only going to make a note or if they actually plan on working on changing the integration pack is the difference between a full day and a couple hours on this one.,B
+BXMSDOC-368,3,0.67,1,Adding a note is quite easy so It might take an hour to solve the problem depending on time availability. The problem asks for a note so thats the lowest estimate in the table.,B
+BXMSDOC-368,3,0.67,20,"It should take about half a week to make the necessary adjustments to the code and test it , in order to display a message to the user for not supporting the integration pack",B
+BXMSDOC-368,3,0.67,1,This is literally just requesting a memo. No fix necessary. I don't think this will take more than an hour.,C
+BXMSDOC-368,3,0.67,8,Make a few changes to code to display a message,B
+BXMSDOC-368,3,0.67,8,This requires updating the documentation a day should be enough taking into account review process and publishing the document.,C
+BXMSDOC-368,3,0.67,4,Per the Issues comments it's an easy and quick fix.,C
+BXMSDOC-368,3,0.67,80,nice,D
+BXMSDOC-368,3,0.67,1,The issue only asks that a note be left regarding the problem. It won't take long to write.,B
+BXMSDOC-368,3,0.67,8,Need to contact team and make code changes.,B
+IGNITE-10890,1,0.76,80,"This may require significant code changes and refactoring the existing code base, also this requires a lot of testing since we will be potentially touching a lot of areas.",B
+IGNITE-10890,1,0.76,8,it was good software to developed apps,D
+IGNITE-10890,1,0.76,40,"updating the code should not take long, performing tests thoroughly will define how successful the change is",B
+IGNITE-10890,1,0.76,20,"Schedule one day to write up necessary docs, write code, test, and schedule execution. Execution should take place on a different day during downtime, and the following day should be available for cleanup and followup -- proof of good results and complete documentation.",B
+IGNITE-10890,1,0.76,20,To remove all the legacy code in the API and unit test working as expected,B
+IGNITE-10890,1,0.76,4,good,D
+IGNITE-10890,1,0.76,20,"Development effort will be low. Considering Unit Tests it will be half a weeks efforts. 
+Depending on the amount of the functionality testing efforts will be more. ",B
+HIVE-21462,1,0.67,20,GOOD,D
+HIVE-21462,1,0.67,8,"Developing the Script that drops constraints and recreating it might not take time.
+The testing effort will be more in this case. 
+Some databases simply allows disabling constraints instead of dropping them .
+Also renaming a existing column and adding new column and copying data from old column and then dropping a old column might be possible alternative solution. 
+so figuring out a most performant approach will require some trials and effort could be a day or two.",B
+HIVE-21462,1,0.67,4,"Any operations to change its data type will lead to below error. ... which makes things simple ,by dropping the clustered index at final stage and also ... If you already have data in the pk_column make sure the source and target ... This script assumes there aren't any non-primary key constraints",B
+HIVE-21462,1,0.67,40,"You need to update the Metastore scripts to Drop the Constraints, Update Data Type and Reapply the constraints. We will need to test installation and upgrade of the servers so would require at least a week for validation based on the complexity of the solutions.",B
+HIVE-21462,1,0.67,4,Couple hours to write and test code then QA in a sandbox.,B
+HIVE-21462,1,0.67,4,"* Drop the constraints  
+* Change the SP
+* check other dependencies ",B
+HIVE-21462,2,0.67,40,"one week for one person         update the Metastore scripts .( ie.e fix the code itself)
+then some time to write and test code .  if multiple sources are using the code, it is best to check compatibility with those services. 
+then QA in a sandbox. ",B
+HIVE-21462,2,0.67,40,"You need to update the Metastore scripts to Drop the Constraints, Update Data Type and Reapply the constraints. We will need to test installation and upgrade of the servers so would require at least a week for validation based on the complexity of the solutions.
+",B
+HIVE-21462,2,0.67,40,Should be a one man job. Previous jobs of this type have usually been 3 days one person. But you want them to fixed the first time so give them the week they will not be rushed and fix it properly,B
+HIVE-21462,2,0.67,8,It is a small and common issue in SQL so it will not require much research and time to fix,C
+HIVE-21462,2,0.67,80,"Is an operation that require a lot of concentration and work to do, without considering all the validation time that a person will take to update data and servers.",B
+HIVE-21462,2,0.67,20,"You need to update the Metastore scripts to eliminate he Constraints, Data Type and Reapply the constraints will need updated. We will need to test installation and upgrade of the servers so would require at least a week for validation based on the complexity of the solutions.",B
+HIVE-21462,2,0.67,4,"Any operations to change its data type will lead to below error. ... which makes things simple ,by dropping the clustered index at final stage and also ... If you already have data in the pk_column make sure the source and target ... This script assumes there aren't any non-primary key constraints",B
+HIVE-21462,2,0.74,40,Updating the metastore scripts and then implementing the server changes and upgrades would likely take a few days + a few extra days to fully test the stability of the servers. 1 week sounds about reasonable.,B
+HIVE-21462,2,0.74,4,Since upgrading could be done without changing the index or column it requires half a day to resolve,B
+HIVE-21462,2,0.74,20,Analyse impact of data type changes from UI end. Fix the any data compatibility by the changing the data type of the column. Verify the existing data intact or need modifications.,B
+HIVE-21462,2,0.74,40,A week is necesary to be sure all the code will work fine,C
+HIVE-21462,2,0.74,1,It is not a hard project,C
+HIVE-21462,2,0.74,8,A couple hours to write and test code then QA in a sandbox.,B
+HIVE-21462,2,0.74,20,The scripts will need to be updated to drop and recreate the indexes. A couple days of testing may be required to validate nominal performance.,B
+HIVE-21462,3,0.67,20,"It totally depends on the interconnectedness of the data that needs to be reconstrained. A simple case would be on a few hours, but if it is a simple case, why did it fail in the first place.",B
+HIVE-21462,3,0.67,20,Need to make sure the data is being input properly and read properly from the database and double check how it's being done,C
+HIVE-21462,3,0.67,40,A lot of work has to be done concerning the constraint and the index. This will take at least a couple of days if not a week or two to complete. The problem is complicated and time consuming.,B
+HIVE-21462,3,0.67,4,"Changing one column should not take a lot of time to implement. Depending on the complexity of the database and how many indexes or constraints are dependent on that column, but assuming a reasonably sized database with normal complexity, it is probably only one or two indexes or constraints that are affected. Once that is determined, it's simply a matter of scripting out the drop/recreates before and after the column rename. It's also a change that should be relatively easy to test in development and vet in Q&A.",B
+HIVE-21462,3,0.67,1,Can easily be done manually. Drop constraint/index. Change data type. Re-create index. Done,B
+HIVE-21462,3,0.67,8,"Any operations to change its data type will lead to below error. ... which makes things simple ,by dropping the clustered index at final stage and also ... If you already have data in the pk_column make sure the source and target ... This script assumes there aren't any non-primary key constraints",B
+JBEAP-5152,1,0.79,40,Seems easy enough to do in one week.,C
+JBEAP-5152,1,0.79,20,"This would likely take me a bit of time to track down. Additionally, I would also need to parallel code this.",B
+JBEAP-5152,1,0.79,40,good,D
+JBEAP-5152,1,0.79,8,To enable and make security logger configuration code changes and unit test for sample transaction to verify Security logger implemented successfully,B
+JBEAP-5152,1,0.79,8,This involves modifying the log messages so I don't think it should take much time assuming the log messages are coming from something like a resource file and not scattered all over the application.,B
+JBEAP-5152,1,0.79,4,"i believe there will be a lengthy debugging process, but i think it can be resolved within a days time with the appropriate people working on the resolution.",C
+JBEAP-5152,1,0.79,20,"Its about configuring  SECURITY_LOGGER and setting a logging level to TRACE.
+Setting root logger to TRACE will slow down the SSO server.
+So bit of testing is required to ensure the SECURITY_LOGGER is only at TRACE level and producing proper logging without impacting non SECURITY_LOGGER log level. 
+Also effort will be required to re-produce the scenario that actually results in security logger handled event, so estimated at half a week.
+SSO is critical system, so it must be tested throughly with extra care.",B
+JBEAP-5152,1,0.79,4,It should not take weeks to enable this feature. It will take come time to test this feature to verify that it works correctly.,B
+ENTMQCL-923,1,0.74,1,"It's just a stop in a function, it will take 10 minutes to complete, it's easy. It's just a java function. The developper just need to change a stack of execution",B
+ENTMQCL-923,1,0.74,40,no,D
+ENTMQCL-923,1,0.74,1,We can fix it by rebooting the server.,D
+ENTMQCL-923,1,0.74,20,"We would need a day or so to id the problem, a half a day to set up a plan and then execute.",A
+ENTMQCL-923,1,0.74,8,"I believe this issue can be resolved in a day, probably less. I would need to look at the code first to confirm.",B
+ENTMQCL-923,1,0.74,20,thank,D
+ENTMQCL-923,1,0.74,8,"It's a connectivity/broken link type of issue. You would get the system administrators to trace the issue and repair the link. A day may be too generous or not quite enough ( 2 days max ). Dependent on how fast they( system admins ) can trace it. If its a customer facing issue, it tends to be pretty quick!",B
+ENTMQCL-923,1,0.74,40,that url is searched wrong,D
+ENTMQCL-923,1,0.74,4,"A few settings changes should solve the issue. Since the error is based on sasl failure, it won’t require too in depth of a dive into the code",B
+ENTMQCL-923,1,0.74,20,To me this is redirection to fail-over URI and fail-over URI is not configured properly. By pointing to the correct working fail-over server. The fail-over server in the list must be identical in configuration and testing all this will take 2-3 days to setup properly,B
+ENTMQCL-923,2,0.83,20,"At max this will require some minor code changes to stop the re connection attempts on non-temporary fail-over, but still set up and testing will take some time.",B
+ENTMQCL-923,2,0.83,8,A team member could check for the failure. It would probably take two to four lines of code to check for the return value and stop executing.,B
+ENTMQCL-923,2,0.83,20,"It will take one day to write the unit and coverage tests to verify the desired functionality. The second day, the implementation can be completed. About half to a full day will be needed to fix any bugs and add more test cases.",B
+ENTMQCL-923,2,0.83,20,"I suspect that the issue may in fact have a very simple fix solved by ensuring that basic settings are correctly assigned. However, if nothing is wrong in the settings or altering them does not change the outcome, it will take more than a day to correctly locate and identify the issue, as it is most likely that the URI is not submitting the appropriate data string to the SASL.",B
+ENTMQCL-923,2,0.83,40,I think a day of troubleshooting with the code should be enough to address the issue as it seems to be an issue with the loop to attempt to reconnect.,C
+ENTMQCL-923,2,0.83,8,The sasl failure does not pose such a threat to your time that it would take over a day in settings changes. It really just comes down to who is working on it and whether they have a history in sasl failure.,B
+BXMSDOC-397,1,0.67,1,"Looking into this problem on JBoss Dev website, I was able to find a suggestion for fixing this. It seems that there is a forward slash to the path that needs to be removed.",C
+BXMSDOC-397,1,0.67,8,"This seemed to be a file missing issue, can be fixed once the resource is identified. If the said resource does not exist at all in the system then more than a day might be required. Might be a name mismatch ( a wild guess )",B
+BXMSDOC-397,1,0.67,40,"Based on the error messages, the issue appears to be related to incorrect config file or path. I am not familiar with this technology but 1 week should be sufficient to research and fix the issue.",C
+BXMSDOC-397,1,0.67,1,I believe this will take 1 hour. The issue comments indicate the problem is with a photo. It sounds like all that needs to be done is to remove the photo or upload a new photo with the same name but a different image.,A
+BXMSDOC-397,1,0.67,40,A new rest method may need to be implemented which responds to the expected endpoint.,B
+BXMSDOC-397,1,0.67,-1,nice,D
+BXMSDOC-397,1,0.67,8,If deployment fails it may take about a whole day and if it runs fine then about half a day.,B
+BXMSDOC-397,1,0.67,80,No well defined solution so even that estimate may be too soon. Once the solution is defined half a day.,D
+BXMSDOC-397,1,0.67,4,"This looks like a documentation issue, which shouldn't take long at all, maybe just delete a sentence or paragraph. I put half a day just to be sure, since it seems multiple teams are involved.",B
+BXMSDOC-397,2,0.79,20,"This looks like an attempt to release an updated software version. The system is producing a series of error codes and warning message which an experienced developer should understand. Something is missing at the specified location (The deployment package). There is insufficient information to identify whether this a simple fix, or whether more extensive work is needed, this might depend on the size of package and the amount of code to be verified.",B
+BXMSDOC-397,2,0.79,40,A new rest service needs to be implemented which listens to the desired endpoint.,B
+BXMSDOC-397,2,0.79,8,i think its an easy fix ( file imported incorrectly / incorrect naming ) not truly sure but to be safe i would ssay a day. might have more underlying issues.,B
+BXMSDOC-397,2,0.79,8,It appears to be merely a file or a simple code issue. I notice it mentioned character length being too long. That should be a fairly easy code fix. I estimate a day to allow for the code change and UAT to be performed and any defects sent back for resolution.,B
+BXMSDOC-397,2,0.79,20,NICE,D
+BXMSDOC-397,2,0.79,8,"the issue has been peer reviewed already.Should not be a major problem, but rather something small the submitter and the reviewer missed",C
+BXMSDOC-397,2,0.79,8,"I think the issue can be solved with just a few modifications, It shouldnt be more than a days worth of work. One of the others described it as a documentation error and I think that describes it best which wont be a terribly hard fix",C
+BXMSDOC-397,2,0.79,20,Seems to me that issue can be addressed in 1 to 2 days. But to be in the safe side its better to keep a buffer and time for testing and make it half a week,B
+BXMSDOC-397,2,0.79,8,"This seems to be only a documentation issue with maybe some lines of code having to be added, but likely not. There is a missing file issue, so looking on the server side for that file having been misplaced might solve the issue itself.",B
+AEROGEAR-2174,1,0.5,80,None,D
+AEROGEAR-2174,1,0.5,20,NO,D
+AEROGEAR-2174,1,0.5,-1,"It's a whole project, not an issue, it will take a lot of time to make this, this is something big",B
+AEROGEAR-2174,1,0.5,80,"We only need a basic interface and we do not need a high level of abstraction or even the *most* correct abstraction, just something to get the ball rolling in this direction. While we say basic, it's still something new to introduce to our system so we should take the proper precautions and first inspect what details should be considered.",B
+AEROGEAR-2174,1,0.5,-1,This effort would take about 3 weeks. 1 week will be used to detail out the design in terms of integrations and 2 weeks of development and testing effort.,B
+AEROGEAR-2174,1,0.5,8,Writing the interface is straightforward an almost done in the gist (however there is a typo 'Secutiry' for 'Security'). A concrete implementation of one security test case will take the rest of the day-,B
+AEROGEAR-2174,1,0.5,8,This looks pretty simple. Assuming the rest of the testing framework is already in place it should only take a few hours. Added some extra time for padding.,B
+AEROGEAR-2174,2,0.83,8,"This involves implementing a framework to perform security checks , complete with interfaces and concrete classes though not much of implementation in it (one test case maybe) should be simple enough.",B
+AEROGEAR-2174,2,0.83,8,"I agree with the others, it won't take long to implement the interface, so most of the day would involve creating, testing, and refining some actual tests.",B
+AEROGEAR-2174,2,0.83,20,I JUST TRY TO SOLVE THIS,D
+AEROGEAR-2174,2,0.83,8,This is fairly straightforward. Just implementing an idea that another group has already implemented in another language. This should be maybe a day's work including all of the testing.,B
+AEROGEAR-2174,2,0.83,20,ensuring each class get converted correctly will take sometime,B
+AEROGEAR-2174,2,0.83,8,Java application program interface (API),D
+AEROGEAR-2174,2,0.83,8,VERY NICE,D
+AEROGEAR-2174,2,0.83,20,good,D
+AEROGEAR-2174,2,0.83,20,Writing and interface may be tricky errors rise in this case 3 interfaces need to be written and this might take more than one day maybe 2 or 3 to make sure all the coding is correct and the interface is working as expected.,B
+BEAM-7542,1,0.71,4,Data type casting problem. Probably a misunderstanding of accepted class parameters.,D
+BEAM-7542,1,0.71,8,"It's a typecast problem, one developper can fix it just by thinking about the types and re writing the functions",C
+BEAM-7542,1,0.71,20,no,D
+BEAM-7542,1,0.71,8,It's not uncommon for a software engineer to spend a whole day fixing a bug like this one.,C
+BEAM-7542,1,0.71,40,"Seems like a bug that needs to be fixed and included in the next version of the software.
+The exact time depends on the project roadmap of releasing new versions and also on the size of the team that is working on the project. Considering this is an Apache project, I estimate the whole process might take a few days to a week to release a new version with the fix included.",B
+BEAM-7542,1,0.71,8,"Without knowing the underlying architect, I suspect that this is due to a small error when converting complex data types. Most of the time will be spent on tracking down where in the code the error occurs. It will probably take less than 1 hour to then fix the error.",B
+BEAM-7542,1,0.71,4,here need to cast the value to appropriate type and also need to update the unit test.,B
+BEAM-7542,1,0.71,8,a small iisue can take one day to enough clear the issue,C
+BEAM-7542,1,0.71,4,"I think adding code to cast some values and adding appropriate tests will not take very long, maybe a couple hours.",B
+BEAM-7542,1,0.71,4,Simple structure based issue. I'm not certain the solution but I'm certain Stack overflow can surface a solution quick,D
+BEAM-7542,1,0.71,1,"I think we should try to get this into 2.14. I can help review and merge it. But my understanding is that if it's not a regression then we shouldn't block the release just for this fix.
+",D
+BEAM-7542,1,0.71,8,"Bigquery IO 
+expects BYTES to be base64-encoded by the user of the IO.",D
+BEAM-7542,1,0.71,4,"For a typical full-stack developer, half a day.  If the expert is a back-end developer even less than an hour is possible.
+",A
+BEAM-7542,1,0.71,8,This is technical exception due to incorrect typecasting should not take much effort to fix and test.,B
+BEAM-7542,2,0.79,8,"This is a straightforward defect related to wrong typecasting , should not take more than one day to fix.",C
+BEAM-7542,2,0.79,40,super,D
+BEAM-7542,2,0.79,1,This is a simple cast modification and unit test addition. An experienced programmer and tester should be able to complete this in under an hour.,B
+BEAM-7542,2,0.79,8,"Planning poker is based on a list of features to be delivered, several copies of a deck of cards and optionally, an egg timer that can be used to limit time spent in discussion of each item.",D
+BEAM-7542,2,0.79,4,Adding code and running a couple tests,B
+BEAM-7542,2,0.79,8,I think this could probably just take one day depending on how much the person handling it has experienced such issues in the past,B
+BEAM-7542,2,0.79,8,Bytes field type is not identified so the problem is going to take a while at least a day if not two or three days. The problem might require coding and changing variants.,B
+BEAM-7542,2,0.79,4,"I think adding code to cast some values and adding appropriate tests will not take very long, maybe a couple hours.",B
+IGNITE-8958,1,0.59,20,Good,D
+IGNITE-8958,1,0.59,1,Won't take long,C
+IGNITE-8958,1,0.59,-1,It's impossible to estimate but the can't estimate button is not working,D
+IGNITE-8958,1,0.59,20,very good,D
+IGNITE-8958,1,0.59,40,"It will depend on the size of the system and how many people will work on it. As long as it is a small group of people, it will probably take about 4 days to make the updates, 2 more to fix any issues that may arise, and as a precaution one day for any other issues that may occur.",B
+IGNITE-8958,1,0.59,4,"Need to update the Angular version. and check thoroughly for any issue, however angular is totally different from anngularjs",C
+IGNITE-8958,1,0.59,8,"I believe that with the current team that they have, they should be able to upgrade and fully test in about a day. That should be more than enough time to work out any small bugs.",B
+IGNITE-8958,1,0.59,8,"There is a useful tool ngMigration which will help with the migration along with determining the best migration route based on code and scheme. The tool doesnt take into account everything, but it helps make migrating easier. Also, allowed for time to using the Angular CLI and some time to migrate to TypeScript and testing. Obviously, this is an estimate, but seems like it can be a reality.",B
+IGNITE-8958,1,0.59,80,"There is not enough information to make an informed estimate actually because I am not getting any real sense about the size of the system( I've never programmed web based frontends using Java type languages), but from the description of the issues and the comments within them, there is clearly a team involved which indicates it is a large(ish) system. You also have regression testing, plus testing of the conversion. I am making assumption that this is purely a conversion task and you are not adding new functionality. So I would say two weeks minimum - you have the conversion task itself, first pass bug fixing for errors introduced during the conversion, regression testing and although not mention, system testing as well. On top of this, you will have documents to update, test scripts to write/update and processes involved with moving the code through your development, test and production landscape.",B
+IGNITE-8958,1,0.59,20,Based on the issue comments most of the work is done. It just needs regression testing. 20 hours,B
+IGNITE-8958,1,0.59,4,it seemed like the right choice,D
+IGNITE-8958,1,0.59,40,IT WILL TAKE ME ABOUT A WEEK TO THOROUGHLY SEEK OUT ANY AND ALL GLITCHES WITHIN THE CODING,C
+IGNITE-8958,1,0.59,20,If your upgrading from an older version of Angularjs to AngularJS 1.7 then you might hit some compatibility issues and will have to mitigate those but overall most things will not have to be rewritten. Depending on the dependencies the project has you might also need to upgrade those packages.,B
+IGNITE-8958,2,0.76,40,Upgrading to newer version may cause some functionality to break so a week is fair amount of time to allow the team to fix any issues that may come up.,B
+IGNITE-8958,2,0.76,20,nice job,D
+IGNITE-8958,2,0.76,40,A week seems to be enough time to complete this job if working full time hours completing it.,C
+IGNITE-8958,2,0.76,40,"There is not very much information regarding the scope of the problem. If upgrading versions of a popular web framework requires an issue to be posted, then the team is clearly focused on making sure their software is completely compatible. How much time this will really take depends upon how much code will need to be updated to the latest version of AngularJS.",B
+IGNITE-8958,2,0.76,8,GOOD,D
+IGNITE-8958,2,0.76,40,nice,D
+IGNITE-8958,2,0.76,80,GUI is the most integral part of the System and hence when we move from one version of Angular JS to another we have to do lot of testing to make sure that we dont have any deprecated API and it works as expected. If the number of models and controllers are more then it will take longer time to port the code.,B
+IGNITE-8958,2,0.76,40,"Without any more information, it's difficult to make an assessment. I've done a bit of upgrading code to a new version of a language though, and for a mid-ish size project, I'd say about a week.",B
+IGNITE-8958,2,0.76,8,This can be done in a day but it depends on how much needs to change in order to update.,C
+IGNITE-8958,2,0.76,40,If one more person this time falls,C
+IGNITE-8958,2,0.76,-1,"Mistakes can be found along the way, many of the issues are not noticeable from the start and finding them and fixing them can take time especially when you aren't aware of them.",B
+AMBARI-24059,1,0.74,40,"The developper of the framework need to change a whole fonctionnality. The architecture will change a lot, this is why it will take at least one weak",B
+AMBARI-24059,1,0.74,8,almost all stacks would need the HDFS service - so instead of ... Ambari by default supports Python scripts for management,B
+AMBARI-24059,1,0.74,1,"The Ambari Views Registry should be updated to allow for specifying a wilcard character in order to instruct the Views framework to match against any stack, regardless of whether the stack begins with the ""HDP"" stack name.",D
+AMBARI-24059,1,0.74,20,It takes a long time to refactor views and complex objects which have interactions with other aspects of the code. I suspect this is a hard task to complete.,C
+AMBARI-24059,1,0.74,40,It will take a while,C
+AMBARI-24059,1,0.74,4,Change to line of code.,B
+AMBARI-24059,1,0.74,8,it would seem code needs to be rewritten to be more flexible. if it has not been written with OOP in mind it might require a bit more time,B
+AMBARI-24059,1,0.74,20,"This requires extending an already existing filter functionality... to allow more match terms , should ideally involve small code changes to tweak the matching process to allow other terms.",B
+AMBARI-24059,2,0.83,20,"This requires some changes in the existing filter functionality , typically should take a couple of days.",B
+AMBARI-24059,2,0.83,40,"A week is a solid estimate for this type of project. The worker will be changing fundamentally how the search code works. Sure it already exists, but your adding a wildcard feature, which will allow any input from the user.",B
+AMBARI-24059,2,0.83,4,This is a simple update to the registry to allow wildcards. An experienced developer should be able to modify this element with minimal effort.,D
+AMBARI-24059,2,0.83,20,"Understanding the already existing code base will take a bit of time in and of itself, and then performing the change may take a day or two.",B
+AMBARI-24059,2,0.83,20,"This depends on whether OOP has been taken into consideration in initial writing of the code. If it hasn't, it could take half a week. But if it has, it might only take about a day. It also depends on whether the worker has an extensive history in coding.",B
+AMBARI-24059,2,0.83,20,Code needs to be changed and programmed to be more flexible but this change can be complicated.,B
+FUSEDOC-871,1,0.56,80,GOOD,D
+FUSEDOC-871,1,0.56,4,To embed code and considering fact of bug fixing it would take half day.,B
+FUSEDOC-871,1,0.56,-1,NICE,D
+FUSEDOC-871,1,0.56,-1,"Through google research, I found a website called jboss.org. On the website, it stated it will take about a month to solve this issue.",B
+FUSEDOC-871,1,0.56,8,"Need to include the module for encryption
+change the existing code -  depends on how code is written
+test the code change",B
+FUSEDOC-871,1,0.56,4,GOOD,D
+FUSEDOC-871,1,0.56,4,"Honestly- it depends on how many passwords there are to encrypt. But, it shouldn't take too much time. Maybe a few hours. Depends on how fast the program is set up to run.",B
+FUSEDOC-871,1,0.56,20,As per the documentation this effort requires creating application security policy at server side with the encrypted password hence my estimate is about 2 day i.e. half a week. For implementing and testing the policy.,B
+FUSEDOC-871,2,0.75,4,good,D
+FUSEDOC-871,2,0.75,40,"While the actual code appears to be easy enough to deploy, the biggest issue is making sure this is secure - given the significant issues to the program users if the particular code is poorly protected. Simply taking code publicly available on the Jboss/Apache site is not going to automatically address all the security (and in fact might be easier to exploit). Estimate may take longer if the customer has more stringent security concerns or there are complications with inserting code in what is already within the program.",B
+FUSEDOC-871,2,0.75,20,Encryption algorithms are readily available. Trying to integrate this into the current system with proper testing should be fairly easy but this is generally where issues tend to pop up.,C
+FUSEDOC-871,2,0.75,40,"You would need to auto-establish a folder (the creation of a allowable file), with an encrypted data file containing the user's password, encrypted with a fluent, changing key, which the code can call from a cloud-based database. I've written similar code for encrypting text files, which were scrambled by a ""phrase"" of numbers\letters taken from an (always available), innocent-looking public file.",B
+FUSEDOC-871,2,0.75,40,"Anything that is this tedious, I would recommend writing a script to automate this. I would recommend writing said script in Python.",D
+FUSEDOC-871,2,0.75,8,"Its a class, so the methods that the class uses are well documented. Implementing the class would take a couple of minutes to an hour. The bulk of the time would be running unit tests to ensure that no bugs are introduced
+",B
+FUSEDOC-871,2,0.75,20,"Since this step mainly involves security policy implementation and documentation, one person needs to do enough research and testing to ensure the system doesn't break. Compatibility is vital and will take time to be tested and hence half a week should be dedicated to the combined efforts.",B
+FUSEDOC-871,2,0.75,20,Spec seems pretty clear and redhats documentation about implementation would be helpful to reference.,D
+FUSEDOC-871,2,0.75,8,"From the issue title, it seems as though the doc is already written and just needs to be placed in the correct section. This would only take a little bit of time, plus time for bug fixing if need be. In addition, my time estimate is in line with the average estimate, so I am comfortable with this.",B
+QPID-6756,1,0.7,40,Implement message listener to read messages from the queue and implement the logic. Queue based messages are more secure and able to easily configure the firewall rules and authentication. One week is sufficient to develop and test the code if the environment is already ready.,B
+QPID-6756,1,0.7,20,The comments suggest 1) the code just needs to accept some kind of connection object rather than handling low-level networking and 2) there was already an implementation available somewhere which maybe had to be reworked or rebased onto the current code. Based on my experience it could take up to a couple days to implement and thoroughly test something in this situation.,B
+QPID-6756,1,0.7,8,This typically should not involve coding but adjusting the firewall settings in user's environment to allow incoming socket connections.So this should not take much development effort .,B
+QPID-6756,1,0.7,8,"Socket programming to client API - half a day
+check the connnections - 1/2 a day",A
+QPID-6756,1,0.7,80,good,D
+QPID-6756,1,0.7,4,"Customizing the firewall rules and allowing specific ports, services and IP etc. may be the issue. This will work out if fixed immediately, otherwise the problem would not take more than half a day I suppose.",B
+QPID-6756,1,0.7,40,1.Need to analyse firewall rules in detailed which is blocking outbound calls. 2. Impact analysis of security threat by removing firewall rules for the applicaiton being developed need to be done. 3. To make necessary socket layer changes.,B
+QPID-6756,2,0.67,40,This is just configuration of ready api. 2 days Configuration and unit testing 2 days for QA. and 1 day testing,B
+QPID-6756,2,0.67,40,finish within a week.,D
+QPID-6756,2,0.67,20,GOOD,D
+QPID-6756,2,0.67,8,Very nice,D
+QPID-6756,2,0.67,40,User needs time to find the firewall rules as well as the impeding applications. They also need time to write the code as well as test and debug. Also any red tape that needs to be gone through in terms of deploying and then testing again.,B
+QPID-6756,2,0.67,40,Socket layer changes would need to be created. Research to make custom modifications for users system. Time needed to test probable error causing events.,B
+QPID-6756,2,0.67,8,Shouldn't take too long,B
+QPID-6756,2,0.67,8,"Determine the settings that need to be made to allow the connection could take a few minutes to several hours depending on unknown issues. Then it should be reviewed by the security officer before making firewall changes, which may take another few hours depending on the workload.",B
+QPID-6756,3,0.79,20,"It is a job that can be done in a relatively short time if you have the right knowledge, you need to run tests to check for bugs and defects but all in all it is a query that should not cause many problems.",B
+QPID-6756,3,0.79,40,"goodnswer:
+The rationale or justification for doing any research must be gleaned from the existing literature on the subject. You will need to conduct a thorough literature survey and identify gaps in the current literature. The best way to write this is to introduce the current literature in the background/Introduction section and then highlight the gaps in the literature that have not been addressed or are yet to be understood. This will help set up the need for the current study and thus justify the need for this research",C
+QPID-6756,3,0.79,20,"There are changes that need to be made to the settings to allow the connection, but I don't think that fix should take more than a day or two. Give it another couple days for the security officer to confirm it.",B
+QPID-6756,3,0.79,40,Socket layer changes would need to be created. Research to make custom modifications for users system. Time needed to test probable error causing events.,B
+QPID-6756,3,0.79,40,"This should take a couple of days until approved and fully checked so probably between half a week and a week, I don't believe it will take more than that time but it needs to be fully tested before its launched for clients.",B
+QPID-6756,3,0.79,80,Socket layer changes would need to be created. Research to make custom modifications for users system. Time needed to test probable error causing events.,B
+JBEAP-11450,1,0.67,80,good,D
+JBEAP-11450,1,0.67,4,need to chage the code to reload without comprimising security. Unit and Security testing will take one hour.,B
+JBEAP-11450,1,0.67,8,Looks to be a small change with some modification in CLI command to allow reload server.,B
+JBEAP-11450,1,0.67,8,It seems like the issue may be fixed by editing a script that modifies the CLI command. It might take the rest of the day to test for bugs or other things that may be affected by the change.,B
+JBEAP-11450,1,0.67,1,"Add CLI command - 1/2  hour
+testing - 1/2 hour",B
+JBEAP-11450,1,0.67,40,"In planning poker, members of the group make estimates by playing numbered cards face-down to the table, instead of speaking them aloud. The cards are revealed, and the estimates are then discussed. By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.",B
+JBEAP-11450,2,0.62,1,Sounds like it needs a simple restart function created to add in the necessary commands,B
+JBEAP-11450,2,0.62,1,excellent,D
+JBEAP-11450,2,0.62,8,GOOD,D
+JBEAP-11450,2,0.62,20,"the average estimate with standard deviation is half a week. Using this method provides the least amount of bias in the data which ensures accuracy, ultimately resulting in the best a",B
+JBEAP-11450,2,0.62,20,"If it comes down to a line of code, then the fix should only take a handful of minutes. However, from the comments it seems that the reproducibility of the issue is dependent on version, which could be a bit trickier. And considering the fact that it could be a release blocker, there could be a lot of red tape involved in getting the issue resolved fully.",B
+JBEAP-11450,2,0.62,20,This could be tricky to understand the root cause and require a large amount of research so a day for research and a day or two for the fix.,A
+JBEAP-11450,2,0.62,4,The problem seems complicated a lot of trial and error must be done in order to rule out mistakes. I believe this can take a day or two for completion. If the mistake is found fast then it can take even less time maybe half a day or a few hours.,A
+JBEAP-11450,3,0.71,8,Sounds like a simple scripting change but you will need some time to test the change before pushing it to production.,B
+JBEAP-11450,3,0.71,20,"It takes a lot of research, but probably could be done in at least 2 days.",C
+JBEAP-11450,3,0.71,20,"The problem seems complicated enough, I believe with luck it can be done in a day but most likely will take two or three days to complete and make sure everything works according to planed.",B
+JBEAP-11450,3,0.71,20,The problem seems complicated a lot of trial and error must be done in order to rule out mistakes. I believe this can take a day or two for completion. If the mistake is found fast then it can take even less time maybe half a day or a few hours.,A
+JBEAP-11450,3,0.71,1,Sounds like it needs a simple restart function created to add in the necessary commands.,B
+JBEAP-11450,3,0.71,8,"I'm setting up a day because fixing bugs requieres wiggle room for the developer to situate himself in the bug, but it sounds like a simple configuration issue that should be solved in half a day.",B
+IGNITE-9596,1,0.5,40,"Honestly it should just take a few days to modify and test the code or less. The check box is hidden, that's usually only one line of code or that's in a block of code. Nevertheless, it should be changing one value like true/false or 0 to 1 to unhide the element.",B
+IGNITE-9596,1,0.5,4,Setting visibility should be fairly simple. Simply need to figure out the state of all relevant variables after performing the reproduction steps and then see what needs to be updated to hide the checkbox. That process might take time if it's not easy to debug or view the state.,B
+IGNITE-9596,1,0.5,1,"According to the comments, the checkbox had ""height:0"". I'm not sure why that was the case, but my guess is that the fix is to remove or change that style, which would only take a few minutes. Then the page should be tested, which may take another 30-60 minutes. So an hour or less is my estimate.",B
+IGNITE-9596,1,0.5,4,"The work scope seems quite simple, but time must be planned for the unexpected when quoting workload",C
+IGNITE-9596,1,0.5,8,Anyone with experience should be able to edit the code for this in a couple hours and it should be able to run smoothly,C
+IGNITE-9596,1,0.5,40,The first day is for initializing the compilers and 3 days for coding. There will be 2 days for finding the errors and halt the project.,B
+IGNITE-9596,1,0.5,1,Sounds like a css issue. A simple function can be written with some javascript to toggle the display.,B
+IGNITE-9596,2,0.62,8,There isnt that much that needs to be done so there is no reason that this shouldnt take more than a day.,C
+IGNITE-9596,2,0.62,1,good,D
+IGNITE-9596,2,0.62,20,"one day for coding and two days for testing. I think its a CSS issue too, so testing with the visibility options would be good. Might have to test it on various browsers too, because it might show up on one but not on the other.",B
+IGNITE-9596,2,0.62,1,"With just the information provided, it does like the issue is CSS related. Correcting the CSS and adding the javascript should be exceedingly basic for anyone with the faintest idea what they are doing. However, this sounds like a large project, so FINDING the real error point could take some time.",B
+IGNITE-9596,2,0.62,1,It's just an invisible checkbox. The problem is just matter of changing a single attribute/argument in a single line of code. It probably doesn't even involve compiling code since its a web interface. Seems like something many people have experienced since it's a web interface so it's probably easy to look up on the internet.,B
+IGNITE-9596,2,0.62,1,"Looks like a simple CSS issue, the checkbox can be hidden with a javascript widget, or the CSS can be reviewed for any omissions and rectified.",C
+IGNITE-9596,2,0.62,8,GOOD,D
+IGNITE-9596,2,0.62,8,"the bug reported is a user interface bug when interacting with the system. the javascript and CSS is not hiding the checkbox appropriately on user input. it will take a couple of hours to write a unit test to verify, and then the rest of the day to fix the bug and verify the fix",B
+IGNITE-9596,2,0.62,1,"This task is just about setting a flag or property to the right value. 1 hour for finding it and changing it when found. 
+Since we know which element is supposed to show up, we just have to check all values and properties of said element. 50 minutes can then be spent for testing, which is enough to finish within one hour.",B
+IGNITE-9596,3,0.76,1,"Probably take an hour if the issue comes down to simply changing the attribute. If it's a deeper issue it might take a few hours to address (i.e. if Bootstrap and custom CSS aren't playing well together). As a previous estimator said, this problem is likely common and well-documented so a quick trip to StackExchange will likely be fruitful.",B
+IGNITE-9596,3,0.76,1,The feature seems to have been there or worked before. So something changed that should only take an hour to fix.,B
+IGNITE-9596,3,0.76,4,"The update would be a fairly quick thing to do, but there is a PR request that would have to be done, followed by any JIRA task updates, peer reviews and business acceptance. The work is the smallest amount of it for this task description.",C
+IGNITE-9596,3,0.76,8,Most likely a small CSS issue but will take some time to test on multiple browsers.,B
+IGNITE-9596,3,0.76,4,"Visibility on a checkbox may be ridiculously easy if it's just a bug, but if it's a layout issue, something a little more major may be involved. But even so, I wouldn't expect it to take more than a few hours of trial and error to get it displaying properly.",B
+IGNITE-9596,3,0.76,1,None,D
+IGNITE-9596,3,0.76,40,NICE,D
+IGNITE-9596,3,0.76,1,"The problem is CSS related so correcting this error can be simple but at times also challenging, with someone experience in the field it can take an hour maybe two.",B
+AEROGEAR-4319,1,0.83,80,it have to solve connectivity of interfaces implementation.,D
+AEROGEAR-4319,1,0.83,80,"This looks like doing manual testing of full functionality of SDK in both positive and negative scenarios , also involves verifying correct metrics which in itself may have several scenarios. All in all a huge effort.",D
+AEROGEAR-4319,1,0.83,8,"*UI validation - 2 hours
+* Check push data function - 2 hours
+* verify correct metrics show up in Grafana Dashboard - 2 hours
+* automation check - 2 hours
+",A
+AEROGEAR-4319,1,0.83,8,It honestly depends on the other program and how accurate it runs. If it isn't working properly- the other software can't do its job and therefore- can't run. If the other runs in a timely manner then it won,B
+AEROGEAR-4319,1,0.83,8,"The issue is more of a testing. SDK, Ansible Playbook Bundle, Graffana should take more or less than a day to check failure and evaluation.",B
+AEROGEAR-4319,1,0.83,8,"Most of this is validation that software is functioning as intended. It should only take a few hours to develop the validation test cases for interfaces matching, functionality, verification of metrics. However, additional time may be needed depending on # of failure scenarios. Additionally, evaluation of automation may take additional time depending on the # of failures.",B
+AEROGEAR-4319,1,0.83,40,I like to think of it sort of like a snowball.,D
+AEROGEAR-4319,1,0.83,20,Since testing SDK with metrics apb server to check if implementation works with backeng is a bit long process it would require the specific time frame.,B
+AEROGEAR-4319,1,0.83,20,"Testing a SDK in a framework environment could be tricky, but half a week will be enough if made by someone with knowledge about the environment and the various sources of errors",B
+AEROGEAR-4322,1,0.79,20,"It is pseudo code / POC, so you are just trying to get the main calls working to demonstrate it.  From the issues log, I get a sense it is not something they have done.  Therefore, the half a week is primarily to research, find/copy code that has be done before and cobble it together.
+I had a comment that answer may be rejected.  Not sure why.  As per above, it is primarily POC task.  I would not expect to include things like formal documentation, regression testing, etc. for this task - just get it up and working.",B
+AEROGEAR-4322,1,0.79,20,Adding digest based authentication using filters will able to accomplish the requirement. It will take half a week to develop and test and deploy.,B
+AEROGEAR-4322,1,0.79,40,The task involves demonstrating how various modules. Once every module is unit tested integration testing might require some code changes or configuration changes which would take minimum of a week for the PoC,B
+AEROGEAR-4322,1,0.79,80,"Building libraries for simple solutions will take some time to develop, especially with how you want everything to work together. The HttpRequest pass/fail test cases are not difficult to figure out so I am estimating (probably less) than 2 weeks, but it is safer to overestimate than underestimate.",B
+AEROGEAR-4322,1,0.79,40,"Since the endpoint is already available , the code to demonstrate error handling and request retries should be relatively straight forward.",B
+LOG4J2-2532,1,0.7,40,The message has various components and variables and check each error condition in a networked environment to check for each condition I think it would take about a week.,B
+LOG4J2-2532,1,0.7,8,This requires parsing and manipulating the log message to remove the length of string.,D
+LOG4J2-2532,1,0.7,20,It is best t take your time with so you get everything done correctly in a decent matter of time without fault. Testing and fixing any mistakes,B
+LOG4J2-2532,1,0.7,8,good one survey,D
+LOG4J2-2532,1,0.7,8,"Login security issue check
+parser error check",C
+LOG4J2-2532,1,0.7,8,Would need to adjust the TLS bytes,C
+LOG4J2-2532,1,0.7,1,I would allow 30-60 minutes for this issue but I think it could be accomplished in less time,C
+LOG4J2-2532,1,0.7,40,it is a very usefull,D
+LOG4J2-2532,1,0.7,4,Half a day is enough to solve and test the problem because it is a small and targeted problem that has no consequences in other parts of the code,B
+LOG4J2-2532,1,0.7,4,Seems like a simple issue to fix,C
+LOG4J2-2532,1,0.7,80,good one,D
+LOG4J2-2532,1,0.7,40,Lovr,D
+LOG4J2-2532,1,0.7,4,It's a coding issue that need further log lines. Once the location of the error is found it shouldn't take much to correct.,B
+LOG4J2-2532,1,0.7,8,"If this want to log via Syslog (RFC5424) the logs seem to have the length of the message
+in front of the message which results in parser errors.",C
+LOG4J2-2532,1,0.7,8,Make code changes at client/server side scripting to hadle dynamic message length to accomodate the dyanamic error handling,B
+LOG4J2-2532,2,0.67,8,Must me an issue with the length of the message passed. It crosses the maximum number of characters allowed. Just figure out and cut short the data length..and test it,B
+LOG4J2-2532,2,0.67,4,It has to do with logging information which won't take long to make it right. Half a day should be plenty of time for one person to look at it and see where the problem lies.,B
+LOG4J2-2532,2,0.67,40,"It's a specified issue that need to be find but doesn't do anything on the rest of the code. It should take a week max, for 1 person only to resolve it.",B
+LOG4J2-2532,2,0.67,1,"I think it's a server key problem, if you got the write key and put it, it will be solved.",B
+LOG4J2-2532,2,0.67,4,The text seems complicated to solve as it has many errors it might take an hour to half a day to solve it successfully.,B
+LOG4J2-2532,3,0.71,1,"I think it's a server key problem, if you got the write key and put it, it will be solved.",B
+LOG4J2-2532,3,0.71,80,It's my opinions.,D
+LOG4J2-2532,3,0.71,8,This is a logging issue and as such I do not think that it would necessitate any work that would take longer than a day. No substantial coding would be necessary.,B
+LOG4J2-2532,3,0.71,8,"A day for one person. It should be less time, but we will give wiggle room to the developer fixing the bug in case it takes too much time being able to replicate the bug.",B
+LOG4J2-2532,3,0.71,8,It involves logged information which won't take long to make it right. Half a day should be plenty of time for one person to look at it and figure out the issue.,B
+LOG4J2-2532,3,0.71,20,"It'a a minor error, a couple days to understand it and fix it and a day to test it well.",B
+AEROGEAR-5552,1,0.71,8,"I believe that it will take 24 hours of labour. This is because of the multiple dependencies that are need to be connected. Whilst using the same dependencies can save time in the short term, the issue will need to be revisited in the future if this approach is used.",B
+AEROGEAR-5552,1,0.71,40,"There are numerous workarounds suggested for this issue. It would be ideal to do a trial and error, as none of them are fool proof and stick to the one which suits the above project. The trial and error including testing would need a week to validate and be approved",B
+AEROGEAR-5552,1,0.71,20,"Downgrading the build would probably be a fix, but it would take some time to do it in the whole project and Qa for any bug that may appear later on",C
+AEROGEAR-5552,1,0.71,80,This seems to be a pretty complex feature which will require lot of analysis and quite a bit of development and testing effort.,B
+AEROGEAR-5552,1,0.71,40,"Need to code for version compatibility - depends on the amount of code
+Testing for both the codes",B
+AEROGEAR-5552,1,0.71,80,good,D
+AEROGEAR-5552,1,0.71,40,The mention of solving a similar problem being solved on the android version could mean reusing the solution used there making this a quick problem to fix. However networking can be a pain to refactor/switch libraries especially if there are dependencies involved which could cause the time required to spike meaning I gave a larger margin.,B
+AEROGEAR-5552,2,0.71,8,to change neccessary configuration at server side to support importing third party vendor application interface as well as client side scripting and testing the same.,B
+AEROGEAR-5552,2,0.71,40,"There are numerous workarounds suggested for this issue. It would be ideal to do a trial and error, as none of them are fool proof and stick to the one which suits the above project. The trial and error including testing would need a week to validate and be approved",B
+AEROGEAR-5552,2,0.71,40,"Assuming the person can devote their time to this problem over the course of a week, and that it does not require resources out of the person's control (other people to collaborate, which would depend on their schedule/workload), this problem should be workable in a week",B
+AEROGEAR-5552,2,0.71,80,This feature is very complex which requires a llot of testing and development.,B
+AEROGEAR-5552,2,0.71,40,This will take almost a week as it is not a very easy task to finish by one person less than one week. The version compatibility will definitely need this amount of time including developing and testing.,B
+AEROGEAR-5552,3,0.81,20,I believe that if they can have more than one person working on the configuration at a time for a longer period of hours they can find a solution to the problem whether it be somehow allowing there to be two or more third party applications or not.,B
+AEROGEAR-5552,3,0.81,40,This require small changes in a lot of files. and need the testing for version compatibility,B
+AEROGEAR-5552,3,0.81,40,"The issue can be resolved and does seems to be well understood but in my opinion it will take a long time to implement and then test every change.
+Getting feedback for selected users along the way would be a good idea",B
+AEROGEAR-5552,3,0.81,80,This feature is very complex which requires a llot of testing and development.,B
+AEROGEAR-5552,3,0.81,40,"You need to make changes both on the client side and the server side, with an extent to which we are not sure right away about. Lots of trial and error would need to be implemented, and there could be a lot of testing involved.",B
+AMBARI-23382,1,0.5,40,Need about a week to troubleshoot and test the softwate after updating.,B
+AMBARI-23382,1,0.5,1,It looks like fixing this problem just involves changing some parameters in a Python script back to the settings they were using before an update was installed. One of the default parameters was changed. It might take 15-20 minutes but I doubt it would even take that long.,B
+AMBARI-23382,1,0.5,40,This will require considerable code changes to obtain and use full host name dynamically .,B
+AMBARI-23382,1,0.5,8,Must be a configuration issue,C
+AMBARI-23382,1,0.5,4,"It's probably only an hour or two task, but let's call it half a day to be conservative.",C
+AMBARI-23382,1,0.5,4,I would simply just change the parameters to avoid any certifications errors.,B
+AMBARI-23382,1,0.5,4,This is a common error and one that can be fixed very easily. Anyone that understands the issue can resolve the problem easily.,C
+AMBARI-23382,1,0.5,40,It should be less if it's just an issue with the SSL cert but I've had issues where python depreciates stuff and requires an update to a later version.,C
+AMBARI-23382,1,0.5,1,"When I googled it, I found that it would take a one line change to the set up files of python.",B
+AMBARI-23382,2,0.7,8,need to fix ssl certificate configuration issue at client side API Jason request and unit test the same.,B
+AMBARI-23382,2,0.7,1,This must be a configuration change or one or two lines of code changes,B
+AMBARI-23382,2,0.7,4,"First a Python update is needed, then testing will be required,
+although it could take  30 minutes, you never know when you test from a updated version so 
+I would say three hours because you can't be sure in advance. ",B
+AMBARI-23382,2,0.7,20,This will require considerable code changes to obtain and use full host name dynamically.,B
+AMBARI-23382,2,0.7,1,I would say that giving it an hour is probably sufficient to solve this issue. There is basic coding involved but there are python scripts out there that can be utilized in an efficient manner.,B
+AMBARI-23382,3,0.67,20,Code changes are needed to provide the full host name dynamically. That is the problem so it might take around half a week or up to one for one person.,B
+AMBARI-23382,3,0.67,8,"Well for ""Ambari-server sync-ldap: Sync event creation failed"" it looks like it's likely an AD settings issue. It might take just an hour but there could be other problems causing this and it would be wise to budget a day for troubleshooting and testing.",B
+AMBARI-23382,3,0.67,8,It seems like the ambari-server can't sync since the hostname is probably incorrect.,C
+AMBARI-23382,3,0.67,4,Just remove the hard-coded name and either pass it as a parameter or as a setting,D
+AMBARI-23382,3,0.67,40,I think this will just involve updating all software to current versions and retesting but want to ensure sufficient time to work out related issues,C
+AMBARI-23382,3,0.67,4,"Depends on the person and if it is the only issue. It seems, to me, to be a more basic error in how the code was entered.",C
+AMBARI-23382,3,0.67,8,"With a full day of work on this, I am sure any person would be able to solve this problem. By using research and online resources in a smart way, one is able to find the error and fix it easily.",B
+AMBARI-23382,3,0.67,1,This must be a configuration change or one or two lines of code changes.,B
+AMBARI-23382,3,0.67,1,"I don't think there is significant enough code changes to be made to warrant over an hour on this project. There are python scripts available that can mitigate the time, and I would definitely put this at about an hour or two.",B
+JBEAP-4256,1,0.59,4,This isn't particularly difficult as long as you already have a place to store logs and a logging solution in place for the rest of the application. At the very minimum you can log to standard out and have that get dumped in to a database.,B
+JBEAP-4256,1,0.59,8,update the trace flag to enable logging in the code,D
+JBEAP-4256,1,0.59,40,"Based on the issue comments, it appears there have been attempts already to varying success - so it is not a straightforward as initially suspected.",B
+JBEAP-4256,1,0.59,20,good,D
+JBEAP-4256,1,0.59,20,Depending on the size of code base and level of logging required this may be a simple but time consuming task.,B
+JBEAP-4256,1,0.59,80,"A new feature like logging could get complicated, especially if it involves authentication (multiple requests, multiple devices.) So, it sounds as if different environments or scenarios need to be tested and evaluated. Could involve more than on developer or user.",B
+JBEAP-4256,1,0.59,4,"Add Trace code 
+Add database change for log
+testing",B
+JBEAP-4256,2,0.57,20,Adding trace logs should be simple enough but it may be time consuming.Therefore I guess two-three days should be enough for this issue.,C
+JBEAP-4256,2,0.57,20,Half a week,D
+JBEAP-4256,2,0.57,4,Implement trace log code changes at client side to verify logs of user transactions using splumk tool or any other log tracker tool,B
+JBEAP-4256,2,0.57,8,Code the logging in database . Trace it out and .. test the logging,B
+JBEAP-4256,2,0.57,20,very nice,D
+JBEAP-4256,2,0.57,1,Add Trace code Add database change for log testing,B
+JBEAP-4256,2,0.57,40,This will require a database change and integrated testing to be sure the SSO code works and is properly recorded. You can't do much in less than a week if there are multiple resources involved.,B
+JBEAP-4256,2,0.57,80,"Depends if logging is already in place. It should be trivial to capture even simple print statements on authentication, the more interesting design issue is writing good log statements and getting it reviewed by others.",B
+JBEAP-4256,3,0.52,40,"though the code should be fairly simple, integration & testing take time",B
+JBEAP-4256,3,0.52,40,"I think it really just depends on the person that you have on the job, but giving it a week is probably justified. It depends on how long it takes to implement trace log code changes.",B
+JBEAP-4256,3,0.52,40,"nswer:
+The rationale or justification for doing any research must be gleaned from the existing literature on the subject. You will need to conduct a thorough literature survey and identify gaps in the current literature. The best way to write this is to introduce the current literature in the background/Introduction section and then highlight the gaps in the literature that have not been addressed or are yet to be understood. This will help set up the need for the current study and thus justify the need for this research",C
+JBEAP-4256,3,0.52,40,The solution will require at least a week because there is missing information. Finding this info might be challenging and take some time the right info is needed and if not things will get complicated.,B
+JBEAP-4256,3,0.52,4,I believe it is the necessary time,D
+JBEAP-4256,3,0.52,8,The task is not inherently complex but might need additional infrastructure if reporting capabilities are not already available.,B
+JBEAP-4256,3,0.52,1,Add Trace code Add database change for log testing.,B
+CALCITE-2738,1,0.48,1,"zabetak commented on a change in pull request #969: [CALCITE-2738] Add support for copying
+of RexDynamicParam and RexRangeRef to RexCopier",B
+CALCITE-2738,1,0.48,40,The whole coding and testing completion would estimated a week work,B
+CALCITE-2738,1,0.48,4,good one,D
+CALCITE-2738,1,0.48,20,This is most likely similar to the implementation for other nodes should not take more than few days.,C
+CALCITE-2738,1,0.48,8,Check the function compatibility issues. or version changes. Fix the issue and test issue,B
+CALCITE-2738,1,0.48,-1,testing and debugging would take most of the time,B
+CALCITE-2738,1,0.48,8,"Since you say that there is an implementation that is similar to the other RexNodes, I feel that it shouldn't take all too long",B
+CALCITE-2738,1,0.48,20,The changing of singular nodes to affect the entire structure will take quite some time to properly recorrelate the entire network.,B
+CALCITE-2738,1,0.48,40,"Copying of RexDynamicParam and RexRangeRef are not supported now. but I think, that the implementation is similar to other RexNodes. So its tricky. And it may take time.",B
+CALCITE-2738,2,,40,"Testing and debugging will take a while, but also changing the implementation will take quite a while. All of that will easily take a few days",B
+CALCITE-2738,2,,80,its like i can learn something and can enjoy experimenting it,D
+CALCITE-2738,2,,8,Implement Rexnode code changes at client side scripting to have copy text or set of string functionality,B
+CALCITE-2738,2,,40,for one person,D
+CALCITE-2738,2,,40,"Tricky implementation from scratch, but since there's already a similar implementations available for use, I'd say it would take about one week.",B
+CALCITE-2738,2,,20,The implementation may be similar but will require to be tested and verified with Unit Testig update,B
+CALCITE-2738,2,0.67,8,Implementation is similar as already specified ...so just copy paste,D
+CALCITE-2738,2,0.67,1,The issue is very easy where one hour is enough to do it,C
+CALCITE-2738,2,0.67,8,"If the implementation is similar to other RexNodes, there must definitely be a work-around where RexDynamicParam and RexRangeRef can be added. The raw coding for each of those two can be stripped and added in. An experienced programmer should definitely be able to finish this within a day.",B
+CALCITE-2738,2,0.67,20,"I think that if there already is a Rex node integration in the system, that finding out how to configure it is just as simple as reverse engineering, but I would give it over a day for some wiggle room.",B
+CALCITE-2738,2,0.67,40,"Copying of RexDynamicParam and RexRangeRef are not supported now. but I think, that the implementation is similar to other RexNodes. So its tricky. And it may take time.",B
+CALCITE-2738,2,0.67,1,The job seems easy but complications can always arise. The person thinks that is similar to other RedNodes but this can turn out to be wrong. Its a problem that can be over in a day but it can also take a long time if problens rise. It can take an hour or it can take half a week.,B
+CALCITE-2738,2,0.67,20,"If there are similar implementations, it just a matter of research and finding the way around. with the proper documentation it shouldn't take more that a week",B
+CALCITE-2738,3,0.67,20,The person is confident in his/her abilities but the solution to the problem might not be that easy. If the solution turns out to be more complicated than expected then solving the problem can take a couple of days.,B
+CALCITE-2738,3,0.67,1,The issue has already been resolved.,B
+CALCITE-2738,3,0.67,40,"I found code on github but not sure how much I trust it, would need to test",B
+CALCITE-2738,3,0.67,8,This is an api change that shouldn't take too long. If there are bugs along the way it might be tought.,B
+CALCITE-2738,3,0.67,20,The implementation may be similar but will require to be tested and verified with Unit Testig update.,B
+WFCORE-2348,1,0.83,1,I will have to learn how to do it and then complete the project which is time consuming,D
+WFCORE-2348,1,0.83,4,"Probably there is an error with the syntax or user configures. The programm displays already a common error message, thus the problem should solved fairly quickly",B
+WFCORE-2348,1,0.83,20,I think that this is an issue that though can be solved with someone who knows what they're doing pretty quickly it still can take alot of time and even more so depending on their pace and if they're making mistakes,C
+WFCORE-2348,1,0.83,4,"This must be a configuration change. Or environment change / security issue. 
+Make the necessary changes and test with all environments ",B
+WFCORE-2348,1,0.83,4,as it should be reconfigured it should hardly take half a day to ease out the error,C
+WFCORE-2348,1,0.83,4,"I think that, without any other problem, a person should fix it in half a day because you need at least one hour to google it, find documentation, another hour to understood the key problem and at least two other hours to fix it and do some test",B
+WFCORE-2348,1,0.83,1,It would take some time to gather this information but with expertise it should take about half a day,C
+WFCORE-2348,1,0.83,8,"Seems like a simple enough issue to fix, would probably take a day at most, and that is more than enough time. Half a day might be underestimating, so a full day just to be safe that it is done up to standard.",B
+WFCORE-2348,1,0.83,20,good,D
+WFCORE-2348,1,0.83,4,It might take a few hours or half a day to correct the scripts of the program. It might be a simple problem but it can also get complicated finding the mistake and finding an apt solution.,B
