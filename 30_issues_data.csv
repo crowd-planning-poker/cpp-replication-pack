@@ -1,4 +1,4 @@
-Key,Title,Description,"Details(comments, project, dictionary)",Expert Estimate,Logged Time
+Key,Title,Description,"Details(comments, project, dictionary)",Expert Estimate,Logged Time,Issue URL
 AEROGEAR-4331,Investigate Dagger2.0 integration for SDK services,"Investigate how to configure and use dagger2 to:
 - Propagate core services
 - Use core module in all services
@@ -34,7 +34,7 @@ Mobile Services AeroGear is an open-source, Red Hat project that brings security
 [terms_def]
 SDK$*$A software development kit is typically a set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform.
 Dagger$*$Dagger is a fully static, compile-time dependency injection framework for both Java and Android. It is an adaptation of an earlier version created by Square and now maintained by Google. Dagger aims to address many of the development and performance issues that have plagued reflection-based solutions.
-",57600,28800
+",57600,28800,https://issues.jboss.org/browse/AEROGEAR-4331
 AMBARI-24426,[Log Search UI] Show user friendly component names in Log Index Filter screen,"Show the user friendly component names on the screen of the Log Index Filter, where the filter level can be set up.","[comments]
 hudson$*$SUCCESS: Integrated in Jenkins build Ambari-branch-2.7 #202 (See [https://builds.apache.org/job/Ambari-branch-2.7/202/])
 [AMBARI-24426] [Log Search UI] Show user friendly component names in Log (github: [https://gitbox.apache.org/repos/asf?p=ambari.git&a=commit&h=715ccd2369623ebd23519ca216d42a58445592b4])
@@ -55,7 +55,7 @@ Ambari is a monitoring, administration and lifecycle management project for Apac
 . Along with other data tools, Ambari helps to support the effective use of ...
 [terms_def]
 UI$*$The user interface, in the industrial design field of human–computer interaction, is the space where interactions between humans and machines occur.
-",21600,3600
+",21600,3600,https://issues.apache.org/jira/browse/AMBARI-24426
 GORA-622,maven-assemly-plugin complains that group id is too big and fails build on macOS Mojave 10.14.6 (18G87),"Building Gora branch under system detailed in the environment, I experience very similar results to what is described at OPENNLP-998
 Pull request coming up to upgrade the maven-assemly-plugin and then specify posix","[comments]
 djkevincr$*$[~lewismc] Thank you for addressing this issue.
@@ -68,7 +68,7 @@ The Apache Gora™ open source framework provides an in-memory data model and pers
 Mojave$*$macOS Mojave is the fifteenth major release of macOS, Apple Inc.'s desktop operating system for Macintosh computers. Mojave was announced at Apple's Worldwide Developers Conference on June 4, 2018, and was released to the public on September 24, 2018.
 Gora$*$The Apache Gora™ open source framework provides an in-memory data model and persistence for big data. Gora supports persisting to column stores, key value stores, document stores, distributed in-memory key/value stores, in-memory data grids, in-memory caches, distributed multi-model stores, and hybrid in-memory architectures.
 OPENNLP$*$Apache OpenNLP is an open source Natural Language Processing Java library. It features an API for use cases like Named Entity Recognition, Sentence Detection, POS tagging and Tokenization.
-",3600,1800
+",3600,1800,https://issues.apache.org/jira/browse/GORA-622
 AMBARI-24551,[Log Search UI] get rid of redundant requests after undoing or redoing several history steps,"After undoing or redoing more than one history items several redundant API requests are sent. This occurs because changes for several filter controls are applied step-by-step, and each control change generates new request.","[comments]
 githubbot$*$aBabiichuk commented on a change in pull request #5: [AMBARI-24551] [Log Search UI] get rid of redundant requests after undoing or redoing several history steps
 URL: https://github.com/apache/ambari-logsearch/pull/5#discussion_r223692185
@@ -753,7 +753,7 @@ index 0000000000..1a0cd46950
 + *
 + *     http://www.apache.org/licenses/LICENSE-2.0
 + *
-+ * Unless required by appl",14400,13200
++ * Unless required by appl",14400,13200,https://issues.apache.org/jira/browse/AMBARI-24551
 BXMSDOC-482,[DOC] Documentation mentions Initiator role which is not in fact implement by BPM Suite yet,"Document URL: 
 https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BPM_Suite/6.1/html/Development_Guide/sect-Task_Permissions.html
 Section Number and Name: 
@@ -772,7 +772,7 @@ Red Hat JBoss BRMS is a powerful open source business rules management system (B
 BPM$*$Red Hat JBoss BRMS. Red Hat JBoss BRMS is a powerful open source business rules management system (BRMS). It helps organisations capture business logic and automate business decisions across heterogeneous physical, virtual, mobile and cloud environments.
 BPMN2$*$Business Process Model and Notation (BPMN) is a graphical representation for specifying business processes in a business process model. Business Process Management Initiative (BPMI) developed BPMN, which has been maintained by the Object Management Group since the two organizations merged in 2005.
 URL$*$A Uniform Resource Locator, colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier, although many people use the two terms interchangeably.
-",7200,4800
+",7200,4800,https://issues.jboss.org/browse/BXMSDOC-482
 JBTIS-1031,Fuse - Fix 'DeploymentTest',Add handle for the prompt in the attachment (it appears if you want to remove a bundle from a server),"[comments]
 tsedmik$*$Another issue with deployment on windows machines:
 {code}
@@ -799,7 +799,7 @@ The project covers both community (JBTIS), production (JBDSIS) and the target pl
 Note that Fuse Tooling has moved to JBIDE / JBDS as of Jun 13, 2017. JBoss Tools is a set of plugins for Eclipse that complements, enhances and goes beyond the support that exists for JBoss and related technologies in the default Eclipse distribution.
 [terms_def]
 Fuse$*$Red Hat Fuse is an open source integration platform based on Apache Camel. It is a distributed integration platform that provides a standardized methodology, infrastructure, and tools to integrate services, microservices, and application components.
-",3600,3600
+",3600,3600,https://issues.jboss.org/browse/JBTIS-1031
 ENTMQBR-1807,As a EAP developer I want lower-case table names to be upper-case in all tests using DB2 11.1,"Failing Test:
 org.jboss.qa.hornetq.test.soak.JdbcStoreSoakTestCase.soakTest
 LOG:
@@ -869,7 +869,7 @@ JBoss A-MQ is an open source JMS message broker that is based on Apache ActiveMQ
 [terms_def]
 EAP$*$The JBoss Enterprise Application Platform is a subscription-based/open-source Java EE-based application server runtime platform used for building, deploying, and hosting highly-transactional Java applications and services.
 SQL$*$SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
-",57600,43200
+",57600,43200,https://issues.jboss.org/browse/ENTMQBR-1807
 FUSEDOC-861,Fabric console reference for the fabric:profile-edit is incorrect,"The console reference for the fabric:profile-edit command has some incorrect examples.
 https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Fuse/6.2/html/Console_Reference/ConsoleFabricProfileEdit.html
 The sections referring the to adding and removing bundles is incorrect.  The example shows the {{--bundle}} option being used when the actual option is {{--bundles}}
@@ -983,7 +983,7 @@ Red Hat Fuse is an open source integration platform based on Apache Camel. It is
 Fabric$*$Fuse Fabric is an open-source integration platform for deep management of Java Containers (JVMs). It is a supported component of the JBoss Fuse Platform.
 Java$*$Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.
 PID$*$In computing, the process identifier (normally referred to as the process ID or PID) is a number used by most operating system kernels—such as those of UNIX, macOS and Microsoft Windows—to uniquely identify an active process.
-",28800,2700
+",28800,2700,https://issues.jboss.org/browse/FUSEDOC-861
 BXMSDOC-368,"Lack of supported policy for ""Integration Pack"" for the Drools integration with Camel","Document URL: 
 https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.1/html-single/Administration_And_Configuration_Guide/index.html#Configuring_Red_Hat_JBoss_BRMS_with_Apache_Camel
 Section Number and Name: 
@@ -1004,7 +1004,7 @@ Camel$*$Apache Camel is an open source framework for message-oriented middleware
 JBOSS$*$JBoss is a division of Red Hat that provides support for the WildFly open source application server program (formerly called JBoss AS) and related middleware services. JBoss is an open source alternative to commercial offerings from IBM WebSphere and SAP NetWeaver.
 BRMS$*$Red Hat JBoss BRMS. Red Hat JBoss BRMS is a powerful open source business rules management system (BRMS). It helps organisations capture business logic and automate business decisions across heterogeneous physical, virtual, mobile and cloud environments.
 URL$*$A Uniform Resource Locator, colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier, although many people use the two terms interchangeably.
-",10800,7200
+",10800,7200,https://issues.jboss.org/browse/BXMSDOC-368
 IGNITE-10890,Web console: UIRouter cleanup,"1. Do not depend on _@uirouter/angularjs/lib/legacy/stateEvents_, replace all legacy $scope events with transition-based API.
 2. Remove _@uirouter/visualizer_, which is only used for development.
 The goal is to decrease bundle size and drop legacy APIs.","[comments]
@@ -1017,7 +1017,7 @@ alexdel$*$Please test queries notebook screen works right.
 Apache Ignite Apache Ignite is an open-source distributed database, caching and processing platform designed to store and compute on large volumes of data across a cluster of nodes. Ignite was open-sourced by GridGain Systems in late 2014 and accepted in the Apache Incubator program that same year.
 [terms_def]
 API$*$An application programming interface is an interface or communication protocol between a client and a server intended to simplify the building of client-side software.
-",21600,10620
+",21600,10620,https://issues.apache.org/jira/browse/IGNITE-10890
 HIVE-21462,Upgrading SQL server backed metastore when changing data type of a column with constraints,SQL server does not allow changing data type of a column which has a constraint or an index on it. The constraint or the index needs to be dropped before changing the data type and needs to be recreated after that. Metastore upgrade scripts aren't doing this and thus upgrade fails.,"[comments]
 hiveqa$*$| (x) *{color:red}-1 overall{color}* |
 \\
@@ -1133,7 +1133,7 @@ ATTACHMENT ID: 12962818 - PreCommit-HIVE-Build
 Hive is a data warehouse infrastructure built on top of Hadoop that provides tools to enable easy data summarization, adhoc querying and analysis of large datasets data stored in Hadoop files. It provides a mechanism to put structure on this data and it also provides a simple query language called QL which is based on SQL and which enables users familiar with SQL to query this data. Apache Hive is a data warehouse software project built on top of Apache Hadoop for providing data query and analysis. Hive gives a SQL-like interface to query data stored in various databases and file systems that integrate with Hadoop.
 [terms_def]
 SQL$*$SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
-",86400,1800
+",86400,1800,https://issues.apache.org/jira/browse/HIVE-21462
 JBEAP-5152,move trace logging for SSO code in Undertow to use 'SECURITY_LOGGER',"There has been added SSO trace logging in Undertow in [this Jira|https://issues.jboss.org/browse/JBEAP-4256]. It is just fine but I think that such log messages should use Undertow's {{SECURITY_LOGGER}} as they relate to security. When user enables such logger, he/she should see all security related problems in undertow on one place. Also another advantage might be that now one has to raise log level of root-logger to TRACE, to see those messages.","[comments]
 swd847$*$I don't want to do this. The having trace messages in their own category allows for finer grained control, and as they are already in a sub package of io.undertow.security enabling TRACE on this will enable them as well.
 iweiss$*$Fair enough. I will rework the PR if there's no objection then.
@@ -1144,7 +1144,7 @@ Cloud-ready, market-leading enterprise platform for next-generation, highly tran
 [terms_def]
 SSO$*$Single sign-on is a property of access control of multiple related, yet independent, software systems. With this property, a user logs in with a single ID and password to gain access to any of several related systems.
 JBEAP$*$JBoss Enterprise Application Platform
-",3600,1800
+",3600,1800,https://issues.jboss.org/browse/JBEAP-5152
 ENTMQCL-923,[jms] when using failover [re]connection attempts should stop upon non-temporary SASL failure,"When using a failover URI, the client continues to try and [re]connect upon encountering SASL failure for a given server. Realistically different servers in the failover list should behave similarly here, so continuing to attempt connection is likely to be futile and lead to a delay signalling the issue when the allowed attempts run out. When the SASL process fails with an outcome other than sys-temp, further [re]connection attempts should stop.","[comments]
 jdanek$*$Is the broker supposed to return SASL failure every time auth fails, or only if I was providing username and password?
 I have a test which uses {{factory.createConnection()}} (that is, without username and password), and if I delete GuestLoginModule from {{etc/login.conf}}, the auth fails, but I do not get real auth error from the Artemis broker.
@@ -1227,7 +1227,7 @@ AMQ JMS is a Java Message Service (JMS) 2.0 client for use in messaging applicat
 [terms_def]
 SASL$*$Simple Authentication and Security Layer is a framework for authentication and data security in Internet protocols. It decouples authentication mechanisms from application protocols, in theory allowing any authentication mechanism supported by SASL to be used in any application protocol that uses SASL.
 URI$*$A Uniform Resource Identifier is a string of characters that unambiguously identifies a particular resource. To guarantee uniformity, all URIs follow a predefined set of syntax rules, but also maintain extensibility through a separately defined hierarchical naming scheme.
-",57600,43200
+",57600,43200,https://issues.jboss.org/browse/ENTMQCL-923
 BXMSDOC-397,'Deploy To Runtime' in release of managed repository can not be used with BRMS business central,"Document URL: 
 https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.2/html/Administration_And_Configuration_Guide/Managing_Assets.html
 Section Number and Name: 
@@ -1260,7 +1260,7 @@ HTTP$*$The Hypertext Transfer Protocol is an application protocol for distribute
 BPMS$*$jBPM is an open-source workflow engine written in Java that can execute business processes described in BPMN 2.0. jBPM is a toolkit for building business applications to help automate business processes and decisions.
 URL$*$A Uniform Resource Locator, colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier, although many people use the two terms interchangeably.
 EJB$*$Enterprise JavaBeans (EJB) is one of several Java APIs for modular construction of enterprise software. EJB is a server-side software component that encapsulates business logic of an application.
-",10800,6000
+",10800,6000,https://issues.jboss.org/browse/BXMSDOC-397
 AEROGEAR-2174,create the basic interfaces/methods/API for performing security checks,"*What*
 Summers has created this gist: https://gist.github.com/secondsun/2e674103c85363f0a602011d44b6b44a.
 We should take the idea and translate that into Java classes/interfaces. This will set the foundation allow us to start implementation for all the other checks.
@@ -1275,7 +1275,7 @@ Mobile Services AeroGear is an open-source, Red Hat project that brings security
 [terms_def]
 Java$*$Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.
 API$*$An application programming interface is an interface or communication protocol between a client and a server intended to simplify the building of client-side software.
-",57600,53400
+",57600,53400,https://issues.jboss.org/browse/AEROGEAR-2174
 BEAM-7542,java.lang.ClassCastException when writing BYTES to BigQuery,"When trying to use BigQueryIO.write() with BigQueryUtils.toTableRow() with a BYTES field it breaks with 
 {noformat}
 java.lang.ClassCastException: [B cannot be cast to java.nio.ByteBuffer at org.apache.beam.sdk.io.gcp.bigquery.BigQueryUtils.fromBeamField(BigQueryUtils.java:280){noformat}
@@ -1293,7 +1293,7 @@ tvalentyn$*$I came across an integration test that exercises BYTES recently: htt
 Apache Beam is a programming model, SDKs, and runners for defining and executing data processing pipelines. Apache Beam is an open source unified programming model to define and execute data processing pipelines, including ETL, batch and stream processing.
 [terms_def]
 BigQuery$*$BigQuery is a RESTful web service that enables interactive analysis of massive datasets working in conjunction with Google Storage. It is a serverless Platform as a Service that may be used complementarily with MapReduce.
-",86400,3600
+",86400,3600,https://issues.apache.org/jira/browse/BEAM-7542
 IGNITE-8958,Web console: upgrade to AngularJS 1.7,"AngularJS 1.7 provides more features that will improve migration to Angular, so let's update and fix any issues that will probably occur along the way.","[comments]
 Klaster_1$*$I've removed the ""javascript:void(0)"" href from dropdown template, please test the fix.
 vsisko$*$Tested. Dialog does not appear.
@@ -1309,7 +1309,7 @@ vsisko$*$# On switch of project version (on some other actions too) browser dial
 Apache Ignite Apache Ignite is an open-source distributed database, caching and processing platform designed to store and compute on large volumes of data across a cluster of nodes. Ignite was open-sourced by GridGain Systems in late 2014 and accepted in the Apache Incubator program that same year.
 [terms_def]
 AngularJS$*$AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
-",172800,16200
+",172800,16200,https://issues.apache.org/jira/browse/IGNITE-8958
 AMBARI-24059,Ambari Views auto create instance should support matching to all known stacks,"The Ambari Views framework currently defines a set of configuration tags that can be used to configure the auto-instance deployment of a view.  Currently, this configuration allows for a matching stack to be explicitly configured, or a wildcard ('*"") can be used to allow more flexible matching against a set of stack version numbers. 
 The current configuration already supports this type of matching: 
  
@@ -1340,7 +1340,7 @@ Ambari is a monitoring, administration and lifecycle management project for Apac
 . Along with other data tools, Ambari helps to support the effective use of ...
 [terms_def]
 Views$*$Apache Ambari includes the Ambari Views Framework, which enables developers to create UI components, or Views, that “plug into” the Ambari Web interface. ... Views are deployed on the Ambari Server, which enables Ambari Admins to create View instances and set access privileges for users and groups.
-",259200,5400
+",259200,5400,https://issues.apache.org/jira/browse/AMBARI-24059
 FUSEDOC-871,"add the doc for org.apache.karaf.jaas.modules.properties.AutoEncryptionSupport in ""Encrypting Stored Passwords"" section""","In  JBoss FUSE 6.2 we introduce a org.apache.karaf.jaas.modules.properties.AutoEncryptionSupport class to automatically encrypt the passwords in users.properties without login if users configure the jaas realm to enable the encryption. So in ""Encrypting Stored Passwords"" section, besides the encryption properties in <jaas:module...,  aslo need add AutoEncryptionSupport bean configuration like
 {code}
 <bean class=""org.apache.karaf.jaas.modules.properties.AutoEncryptionSupport""
@@ -1372,7 +1372,7 @@ Red Hat Fuse is an open source integration platform based on Apache Camel. It is
 [terms_def]
 JBoss$*$JBoss is a division of Red Hat that provides support for the WildFly open source application server program (formerly called JBoss AS) and related middleware services. JBoss is an open source alternative to commercial offerings from IBM WebSphere and SAP NetWeaver.
 SHA$*$The Secure Hash Algorithms are a family of cryptographic hash functions published by the National Institute of Standards and Technology as a U.S. Federal Information Processing Standard, including: SHA-0: A retronym applied to the original version of the 160-bit hash function published in 1993 under the name ""SHA"".
-",57600,12600
+",57600,12600,https://issues.jboss.org/browse/FUSEDOC-871
 QPID-6756,[Java Client] Allow Client to make connection over a provided Socket,"In environments where clients are unable to make outbound connections, such as firewall rules, allow incoming sockets connections to be provided to the Client API.
 ","[comments]
 rgodfrey$*$Reimplement the functionality previously provided by [QPID-784]
@@ -1384,7 +1384,7 @@ lorenz.quack$*$Reviewed. Looks good.
 Qpid provides multiple language implementations of the Advanced Messaged Queuing Protocol (AMQP) specification and related technologies including transactions, queuing, distribution, security, management and heterogeneous multi-platform support for messaging. Apache Qpid is an open-source messaging system which implements the Advanced Message Queuing Protocol. It provides transaction management, queuing, distribution, security, management, clustering, federation and heterogeneous multi-platform support.
 [terms_def]
 API$*$An application programming interface is an interface or communication protocol between a client and a server intended to simplify the building of client-side software.
-",14400,3600
+",14400,3600,https://issues.apache.org/jira/browse/QPID-6756
 JBEAP-11450,Adding application-security-domain in EJB subsystem requires server reload,"When application-security-domain is added in EJB subsystem then it is not used until server is reloaded. However CLI command does not set server to {{reload-required}} state, see:
 {code}
 /subsystem=ejb3/application-security-domain=other:add(security-domain=ApplicationDomain)
@@ -1479,7 +1479,7 @@ Cloud-ready, market-leading enterprise platform for next-generation, highly tran
 [terms_def]
 EJB$*$Enterprise JavaBeans (EJB) is one of several Java APIs for modular construction of enterprise software. EJB is a server-side software component that encapsulates business logic of an application.
 CLI$*$A command-line interface is a means of interacting with a computer program where the user issues commands to the program in the form of successive lines of text. The program which handles the interface is called a command-line interpreter or command-line processor.
-",14400,10800
+",14400,10800,https://issues.jboss.org/browse/JBEAP-11450
 IGNITE-9596,Web console: invisible checkbox is visible,"How it looks:
 !image-2018-09-14-10-58-23-054.png!
 How to reproduce:
@@ -1494,7 +1494,7 @@ alexdel$*$Please check. Checkbox is hidden.
 pkonstantinov$*$Tested on the branch with Firefox, Chrome, Edge, Safari.
 [project_info]
 Apache Ignite Apache Ignite is an open-source distributed database, caching and processing platform designed to store and compute on large volumes of data across a cluster of nodes. Ignite was open-sourced by GridGain Systems in late 2014 and accepted in the Apache Incubator program that same year.
-",10800,1800
+",10800,1800,https://issues.apache.org/jira/browse/IGNITE-9596
 AEROGEAR-4319,Test and verify integration with server side metrics,"Test SDK with metrics apb server to check if implementation works with backeng.
 Validate if interfaces are matching and functionality is working.
 This ticket should be done only when backend work is finished
@@ -1528,7 +1528,7 @@ Mobile Services AeroGear is an open-source, Red Hat project that brings security
 SDK$*$A software development kit is typically a set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform.
 APB$*$An Ansible Playbook Bundle (APB) is a lightweight application definition (meta-container). They are used to define and deploy complex groups of applications, deployment configs, deployments, and services to an OpenShift Origin cluster running the Ansible Service Broker.
 Grafana$*$Grafana is an open source metric analytics & visualization suite. It is most commonly used for visualizing time series data for infrastructure and application analytics but many use it in other domains including industrial sensors, home automation, weather, and process control
-",28800,16500
+",28800,16500,https://issues.jboss.org/browse/AEROGEAR-4319
 AEROGEAR-4322,Spike : Android Core POC for error handling.,"This task is to put together some pseduo code to demonstrate how service modules will be able to depend on each other and be composed.  This should show off error handling and http request retries.
 Scenario : a RESTful endpoint is secured by KeyCloak.
 If the token expires then the HttpRequest will fail with a error.  If the token is refreshed, the service call would work.  The code will demonstrate how to build libraries which can resolve certain simple issues and either retry a request or give the developer more useful feedback.","[comments]
@@ -1549,7 +1549,7 @@ Android$*$Android is a mobile operating system developed by Google. It is based 
 Core$*$Core Software means the computer software (in source and object code format, and including all associated libraries and other components necessary for the compilation and execution thereof) comprising the current (as of the Closing Date and each Credit Date) commercial production versions of the applications commonly
 POC$*$Proof of concept
 HttpRequest$*$An HTTP request header is a component of a network packet sent by a browser or client to the server to request for a specific page or data on the Web server. It is used in Web communications or Internet browsing to transport user requests to the corresponding website's Web server.
-",86400,28800
+",86400,28800,https://issues.jboss.org/browse/AEROGEAR-4322
 LOG4J2-2532,SyslogAppender with RFC5424 and TLS is prepending messagelength,"If I want to log via Syslog (RFC5424) the logs seem to have the length of the message in front of the message which results in parser errors at the syslogserver.
 {{config:}}
 {{<?xml version=""1.0"" encoding=""UTF-8""?>}}
@@ -1584,7 +1584,7 @@ RFC5424$*$is a syslog protocol which is a standard for message logging. It allow
 TLS$*$Transport Layer Security, and its now-deprecated predecessor, Secure Sockets Layer, are cryptographic protocols designed to provide communications security over a computer network. Several versions of the protocols find widespread use in applications such as web browsing, email, instant messaging, and voice over IP.
 UTF$*$UTF-8 is a variable width character encoding capable of encoding all 1,112,064 valid code points in Unicode using one to four 8-bit bytes. The encoding is defined by the Unicode Standard, and was originally designed by Ken Thompson and Rob Pike. The name is derived from Unicode Transformation Format – 8-bit.
 SSL$*$Secure Sockets Layer (SSL) was the most widely deployed cryptographic protocol to provide security over internet communications before it was preceded by TLS (Transport Layer Security) in 1999. Despite the deprecation of the SSL protocol and the adoption of TLS in its place, most people still refer to this type of technology as ‘SSL’.
-",3600,3000
+",3600,3000,https://issues.apache.org/jira/browse/LOG4J2-2532
 AEROGEAR-5552,Allow to override dependency when importing AeroGear Services IOS SDK,"h4. Motivation 
 SDK can depend on external dependencies like alamofire. 
 Alamofire is really popular networking library and it may be used in the user application.
@@ -1621,7 +1621,7 @@ IOS$*$iOS is a mobile operating system created and developed by Apple Inc. exclu
 SDK$*$A software development kit is typically a set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform.
 Android$*$Android is a mobile operating system developed by Google. It is based on a modified version of the Linux kernel and other open source software, and is designed primarily for touchscreen mobile devices such as smartphones and tablets.
 BOM$*$Bill Of Materials
-",57600,28800
+",57600,28800,https://issues.jboss.org/browse/AEROGEAR-5552
 AMBARI-23382,Ambari-server sync-ldap: Sync event creation failed,"As described here [ambari-server sync-ldap no longer working|https://community.hortonworks.com/questions/119756/ambari-server-sync-ldap-no-longer-working.html] sync-ldap fails with 
 {{REASON: Sync event creation failed. Error details: hostname '127.0.0.1' doesn't match }}
 As pointed out by [Berry Osterlund |https://community.hortonworks.com/users/13196/berryosterlund.html]this is because the default behavior for ssl cert verification changed in python 2.7.5-58. 
@@ -1639,7 +1639,7 @@ hudson$*$FAILURE: Integrated in Jenkins build Ambari-trunk-Commit #9020 (See [ht
 [project_info]
 Ambari is a monitoring, administration and lifecycle management project for Apache Hadoop clusters. What is Apache Ambari? - Definition from Techopedia. Ambari offers software tools for provisioning and managing Hadoop data clusters
 . Along with other data tools, Ambari helps to support the effective use of ...
-",14400,7200
+",14400,7200,https://issues.apache.org/jira/browse/AMBARI-23382
 JBEAP-4256,add trace logging to the SSO code in undertow,"Please add trace logging to the SSO code in wildfly/undertow.
 For example, it would be helpful if the sso code logged that it was getting triggered, if re-authentication was happening, etc.
 This is going to be very difficult to support if we do not have this type of information.","[comments]
@@ -1652,13 +1652,13 @@ JBoss Enterprise Application Platform:
 Cloud-ready, market-leading enterprise platform for next-generation, highly transactional enterprise Java applications JBoss Enterprise Application Platform
 [terms_def]
 SSO$*$Single sign-on is a property of access control of multiple related, yet independent, software systems. With this property, a user logs in with a single ID and password to gain access to any of several related systems.
-",57600,28800
+",57600,28800,https://issues.jboss.org/browse/JBEAP-4256
 CALCITE-2738,Add support for copying of RexDynamicParam and RexRangeRef to RexCopier,"Copying of RexDynamicParam and RexRangeRef are not supported now, but I think, that the implementation is similar to other RexNodes, so I can do it.","[comments]
 zabetak$*$Fixed in [a3f81bb7b088fd8c1d0c1df3b0f2b0cf122633de|https://github.com/apache/calcite/commit/a3f81bb7b088fd8c1d0c1df3b0f2b0cf122633de]. Thanks for the PR [~ashlanderr]!
 michaelmior$*$Resolved in release 1.20.0 (2019-06-24)
 [project_info]
 Calcite is a framework that allows efficient translation of queries involving heterogeneous and federated data. Apache Calcite is an open source framework for building databases and data management systems. It includes a SQL parser, an API for building expressions in relational algebra, and a query planning engine.
-",3600,1800
+",3600,1800,https://issues.apache.org/jira/browse/CALCITE-2738
 WFCORE-2348,Error while starting WildFly as service in domain mode using init scripts.,"When starting WildFly as a service in domain mode using init scripts there appears in  console.log error:
 /usr/bin/dirname: unrecognized option '--domain-config=domain.xml'
 Try '/usr/bin/dirname --help' for more information.","[comments]
@@ -1670,4 +1670,4 @@ jira-bugzilla-migration$*$Petr Penicka <ppenicka@redhat.com> changed the Status 
 The core runtime of WildFly WildFly, formerly known as JBoss AS, or simply JBoss, is an application server authored by JBoss, now developed by Red Hat. WildFly is written in Java and implements the Java Platform, Enterprise Edition specification. It runs on multiple platforms.
 [terms_def]
 WildFly$*$WildFly, formerly known as JBoss AS, or simply JBoss, is an application server authored by JBoss, now developed by Red Hat. WildFly is written in Java and implements the Java Platform, Enterprise Edition specification. It runs on multiple platforms.
-",14400,10800
+",14400,10800,https://issues.jboss.org/browse/WFCORE-2348
