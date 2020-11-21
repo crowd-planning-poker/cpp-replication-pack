@@ -10,3 +10,6 @@ Is an MS Excel file that contains above files (30_issues_data.csv, crowd_estimat
 
 ## cpp_replication_python_functions.py
 Is a python file that contains two functions that are used to compute round Kappa, and aggregate crowd estimates.
+
+## direct_url_to_all_issues.csv
+This file contains direct URLs to the selected and used issues in our experiments. May be needed for additional verification purposes.
