@@ -1,5 +1,7 @@
 # calculate the agreement level
 # needs NLTK package
+# This function calculates the agreement between crowd workers in each round. 
+# It uses Fleiss’ Kappa implementation in the NLTK package.
 def calculate_round_kappa(round_estimates=[]):
     from nltk.metrics.agreement import AnnotationTask
 
@@ -21,6 +23,10 @@ def calculate_round_kappa(round_estimates=[]):
     task = AnnotationTask(data=data, distance=distance_cal)
     agreement_level = task.multi_kappa()
     return agreement_level
+
+
+# The main goal of this function is to aggregate crowd estimate for each round and over 
+# all the estimation session to come up with the final estimate.	
 def aggregate_crowd_estimates(issues_estimates={}):
     import statistics
     issues_aggregated_estimates = {}
@@ -69,7 +75,9 @@ def aggregate_crowd_estimates(issues_estimates={}):
 
     return issues_aggregated_estimates
 
-
+# Two functions that are used to help in controlling the time format. 
+# The first one: estimates_hours_format() to group estimates into estimate category. 
+# There were seven categories as explained in the experiment publication. 
 def estimates_hours_format (duration):
     duration = float(duration)
     if duration < 2:
@@ -86,13 +94,8 @@ def estimates_hours_format (duration):
         return 80
     elif duration >= 121:
         return 121
-def remove_systamatic_bias(cat, remove_cat):
-    labels = [1.0, 4.0, 8.0, 20.0, 40.0, 80.0, -1.0]
-    cat_ind = labels.index(cat)
-    new_cat = cat_ind-remove_cat
-    if new_cat < 0:
-        new_cat = 0
-    return labels[new_cat]
+    
+# Tis function, estimates_time_category_format() do the same thing as estimates_hours_format() but it return the category name instead.
 def estimates_time_category_format (duration):
     duration = float(duration)
     if duration < 2:
