@@ -13,3 +13,7 @@ Is a python file that contains two functions that are used to compute round Kapp
 
 ## direct_url_to_all_issues.csv
 This file contains direct URLs to the selected and used issues in our experiments. May be needed for additional verification purposes.
+
+# JOSSE Dataset
+The above 30 issues were selected from JOSSE dataset whcih can be accessed from the following repositry:
+https://github.com/ml-see/josse
